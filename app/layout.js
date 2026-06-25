@@ -1,6 +1,7 @@
 import './globals.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import Script from 'next/script';
 
 export const metadata = {
   metadataBase: new URL('https://www.anacruses.co.uk'),
@@ -16,6 +17,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TF0NCH6E16"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TF0NCH6E16');
+          `}
+        </Script>
+      </head>
       <body>
         <Nav />
         <main>{children}</main>
