@@ -53,6 +53,8 @@ export default function Footer() {
             {[
               ['About Rob Pragnell', '/about'],
               ['Sectors We Work With', '/sectors'],
+              ['ISO Insights', '/insights'],
+              ['Resources & Newsletter', '/resources'],
               ['Training Courses', '/training'],
               ['News & Comment', '/news'],
               ['Contact', '/contact'],
@@ -95,6 +97,19 @@ export default function Footer() {
               <InstagramIcon />
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* Newsletter signup */}
+      <div className="border-t border-navy-light">
+        <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 className="font-bold text-white text-base mb-1">ISO Insights — straight to your inbox</h3>
+            <p className="text-gray-300 text-xs leading-relaxed max-w-lg">Practical ISO guidance, regulatory updates and certification tips. No spam. Unsubscribe any time.</p>
+          </div>
+          <a href="/resources" className="flex-shrink-0 inline-block bg-gold hover:bg-gold-dark text-white font-semibold px-6 py-3 rounded transition-colors text-sm whitespace-nowrap">
+            Sign up for free →
+          </a>
         </div>
       </div>
 
