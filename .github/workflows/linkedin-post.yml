@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'content/news/**.md'
+      - 'content/insights/**.md'
     branches:
       - main
 
@@ -18,8 +19,8 @@ jobs:
       - name: Get latest article details
         id: article
         run: |
-          # Find the most recently added/modified .md file in content/news
-          LATEST=$(git diff --name-only HEAD~1 HEAD -- 'content/news/*.md' | head -1)
+          # Find the most recently added/modified .md file in news or insights
+          LATEST=$(git diff --name-only HEAD~1 HEAD -- 'content/news/*.md' 'content/insights/*.md' | head -1)
           if [ -z "$LATEST" ]; then
             echo "No new article found"
             exit 0
@@ -28,9 +29,18 @@ jobs:
           TITLE=$(grep '^title:' "$LATEST" | head -1 | sed 's/title: *//;s/"//g')
           EXCERPT=$(grep '^excerpt:' "$LATEST" | head -1 | sed 's/excerpt: *//;s/"//g')
           SLUG=$(basename "$LATEST" .md)
+
+          # Determine URL path based on whether file is in news or insights
+          if echo "$LATEST" | grep -q 'content/insights/'; then
+            SECTION="insights"
+          else
+            SECTION="news"
+          fi
+
           echo "title=$TITLE" >> $GITHUB_OUTPUT
           echo "excerpt=$EXCERPT" >> $GITHUB_OUTPUT
           echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "section=$SECTION" >> $GITHUB_OUTPUT
 
       - name: Post to LinkedIn
         if: steps.article.outputs.title != ''
@@ -41,7 +51,9 @@ jobs:
           TITLE="${{ steps.article.outputs.title }}"
           EXCERPT="${{ steps.article.outputs.excerpt }}"
           SLUG="${{ steps.article.outputs.slug }}"
-          URL="https://www.anacruses.co.uk/news/${SLUG}/"
+          SECTION="${{ steps.article.outputs.section }}"
+          URL="https://www.anacruses.co.uk/${SECTION}/${SLUG}/"
+
           TEXT="${TITLE}
 
 ${EXCERPT}
