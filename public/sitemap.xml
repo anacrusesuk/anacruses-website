@@ -91,7 +91,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.anacruses.co.uk/insights/iso-14001-cost-timeline-uk/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacruses.co.uk/insights/iso-14001-internal-audits-what-uk-businesses-get-wrong/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacruses.co.uk/insights/iso-27001-audit-failures/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.anacruses.co.uk/insights/iso-42001-ai-governance-explained/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacruses.co.uk/insights/iso-45001-vs-ohsas-18001-uk/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -103,7 +127,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.anacruses.co.uk/insights/iso-9001-internal-audit-guide/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.anacruses.co.uk/insights/iso-9001-vs-iso-27001-which-first/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacruses.co.uk/insights/ukas-vs-non-ukas-certification/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
