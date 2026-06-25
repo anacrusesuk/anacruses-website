@@ -11,7 +11,7 @@ export default function News() {
 
   return (
     <>
-      <section className="bg-navy text-white py-16">
+      <section className="bg-navy text-white py-10">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">News & Comment</p>
           <h1 className="text-4xl font-bold mb-4">ISO News & Comment</h1>
@@ -21,12 +21,12 @@ export default function News() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+      <section className="py-10">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-5">
           {/* Article grid */}
           <div className="md:col-span-2">
             {articles.length === 0 ? (
-              <div className="card text-center py-12">
+              <div className="card text-center py-8">
                 <p className="text-gray-400">Articles coming soon. Check back on Monday.</p>
               </div>
             ) : (

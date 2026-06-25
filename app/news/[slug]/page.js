@@ -17,13 +17,13 @@ export async function generateMetadata({ params }) {
 
 export default function ArticlePage({ params }) {
   const article = getArticleBySlug(params.slug);
-  if (!article) return <div className="section py-16 text-center text-gray-400">Article not found.</div>;
+  if (!article) return <div className="section py-10 text-center text-gray-400">Article not found.</div>;
 
   const html = marked(article.content ?? '');
 
   return (
     <>
-      <section className="bg-navy text-white py-12">
+      <section className="bg-navy text-white py-8">
         <div className="max-w-3xl mx-auto px-4">
           <Link href="/news" className="text-gold text-sm hover:underline mb-4 inline-block">← Back to News</Link>
           <div className="text-xs text-blue-200 mb-3">{article.date}</div>
@@ -31,7 +31,7 @@ export default function ArticlePage({ params }) {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-8">
         <div className="max-w-3xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2">
             <div

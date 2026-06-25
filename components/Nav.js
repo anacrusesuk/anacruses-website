@@ -1,48 +1,69 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const services = [
-  { label: 'ISO 9001 — Quality',           href: '/services/iso-9001' },
-  { label: 'ISO 14001 — Environmental',     href: '/services/iso-14001' },
+  { label: 'ISO 9001 — Quality',              href: '/services/iso-9001' },
+  { label: 'ISO 14001 — Environmental',        href: '/services/iso-14001' },
   { label: 'ISO 27001 — Information Security', href: '/services/iso-27001' },
-  { label: 'ISO 45001 — Health & Safety',   href: '/services/iso-45001' },
-  { label: 'ISO 42001 — AI Management',     href: '/services/iso-42001' },
-  { label: 'UKAS Laboratory Accreditation', href: '/services/ukas-laboratory' },
-  { label: 'Get Certified — Our Process',   href: '/get-certified' },
-  { label: 'UKAS vs Non-UKAS Explained',    href: '/about' },
+  { label: 'ISO 45001 — Health & Safety',      href: '/services/iso-45001' },
+  { label: 'ISO 42001 — AI Management',        href: '/services/iso-42001' },
+  { label: 'UKAS Laboratory Accreditation',    href: '/services/ukas-laboratory' },
 ];
 
 export default function Nav() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen]   = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking anywhere outside it
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <header className="bg-navy sticky top-0 z-50 shadow-md">
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-28">
+
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-white font-bold text-xl tracking-tight">Anacruses</span>
-          <span className="text-gold font-normal text-sm hidden sm:inline">ISO Consultancy</span>
+        <Link href="/" className="flex items-center">
+          <img src="/images/logo.png" alt="Anacruses Associates Ltd" className="h-24 w-auto" />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-white">
           <Link href="/" className="hover:text-gold transition-colors">Home</Link>
 
-          {/* Services dropdown */}
-          <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-            <button className="flex items-center gap-1 hover:text-gold transition-colors">
+          {/* Services dropdown — click to open, click outside to close */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setServicesOpen(!servicesOpen)}
+              className="flex items-center gap-1 hover:text-gold transition-colors focus:outline-none"
+            >
               Services
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className={`w-3 h-3 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`}
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+
             {servicesOpen && (
-              <div className="absolute top-full left-0 mt-1 bg-white rounded-lg shadow-xl border border-gray-100 w-72 py-2 z-50">
+              <div className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-100 w-72 py-2 z-50">
                 {services.map(s => (
-                  <Link key={s.href} href={s.href}
-                    className="block px-4 py-2 text-slate hover:bg-mist hover:text-navy text-sm transition-colors">
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-3 text-slate hover:bg-mist hover:text-navy text-sm transition-colors border-b border-gray-50 last:border-0"
+                  >
                     {s.label}
                   </Link>
                 ))}
@@ -59,7 +80,11 @@ export default function Nav() {
         </nav>
 
         {/* Mobile burger */}
-        <button className="md:hidden text-white p-2" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
+        <button
+          className="md:hidden text-white p-2"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileOpen
               ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

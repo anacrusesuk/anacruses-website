@@ -39,9 +39,9 @@ export default function Training() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy-DEFAULT text-white py-16">
+      <section className="bg-navy text-white py-10">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="text-gold-DEFAULT font-semibold text-sm uppercase tracking-widest mb-3">Training</p>
+          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Training</p>
           <h1 className="text-4xl font-bold mb-4">ISO Training Courses</h1>
           <p className="text-xl text-blue-100 max-w-2xl">
             Build the in-house expertise that supports your certification — and keeps it working year after year.
@@ -50,10 +50,10 @@ export default function Training() {
       </section>
 
       {/* Intro */}
-      <section className="py-12">
+      <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-4 text-gray-700 leading-relaxed">
-            <h2 className="text-2xl font-bold text-navy-DEFAULT">Why training matters</h2>
+            <h2 className="text-2xl font-bold text-navy">Why training matters</h2>
             <p>
               Achieving ISO certification is a significant step. Maintaining it — and getting real value from it — depends on having people in your organisation who understand the standard, can conduct internal audits, and can identify opportunities for continuous improvement.
             </p>
@@ -65,7 +65,7 @@ export default function Training() {
             </p>
           </div>
           <div className="bg-mist rounded-lg p-8 border border-gray-200">
-            <h3 className="font-bold text-navy-DEFAULT text-lg mb-2">ISOQAR Academy</h3>
+            <h3 className="font-bold text-navy text-lg mb-2">ISOQAR Academy</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               ISOQAR Academy is a leading provider of ISO-based training courses in the UK. Courses are available in classroom, virtual classroom, e-learning and in-house formats, delivered by first-class trainers with real-world audit experience.
             </p>
@@ -83,9 +83,9 @@ export default function Training() {
       </section>
 
       {/* Course types */}
-      <section className="bg-mist py-12">
+      <section className="bg-mist py-8">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-navy-DEFAULT mb-2 text-center">Course types available</h2>
+          <h2 className="text-2xl font-bold text-navy mb-2 text-center">Course types available</h2>
           <p className="text-center text-gray-500 mb-8 max-w-xl mx-auto">
             Whether you are exploring ISO for the first time or preparing your team to become qualified Lead Auditors, there is a course for you.
           </p>
@@ -94,11 +94,11 @@ export default function Training() {
               <div key={c.title} className="card flex gap-4">
                 <div className="text-3xl flex-shrink-0">{c.icon}</div>
                 <div>
-                  <h3 className="font-bold text-navy-DEFAULT mb-0.5">{c.title}</h3>
-                  <p className="text-xs text-gold-DEFAULT font-semibold mb-2">{c.who}</p>
+                  <h3 className="font-bold text-navy mb-0.5">{c.title}</h3>
+                  <p className="text-xs text-gold font-semibold mb-2">{c.who}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{c.desc}</p>
                   <a href={AWIN_LINK} target="_blank" rel="noopener noreferrer"
-                     className="text-gold-DEFAULT text-sm font-semibold mt-3 inline-block hover:text-gold-dark">
+                     className="text-gold text-sm font-semibold mt-3 inline-block hover:text-gold-dark">
                     View {c.title} courses →
                   </a>
                 </div>
@@ -109,9 +109,9 @@ export default function Training() {
       </section>
 
       {/* QR code and main CTA */}
-      <section className="py-12">
+      <section className="py-8">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-navy-DEFAULT mb-3">Ready to browse courses?</h2>
+          <h2 className="text-2xl font-bold text-navy mb-3">Ready to browse courses?</h2>
           <p className="text-gray-600 mb-6">
             Visit ISOQAR Academy to see the full range of available dates, formats and ISO standards covered.
           </p>
@@ -134,7 +134,7 @@ export default function Training() {
       </section>
 
       {/* In-house CTA */}
-      <section className="bg-navy-DEFAULT text-white py-10">
+      <section className="bg-navy text-white py-10">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-xl font-bold mb-3">Need in-house training for your team?</h2>
           <p className="text-blue-100 mb-5 text-sm">

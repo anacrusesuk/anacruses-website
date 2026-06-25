@@ -29,7 +29,7 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy text-white py-16">
+      <section className="bg-navy text-white py-10">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">About</p>
           <h1 className="text-4xl font-bold mb-4">Rob Pragnell</h1>
@@ -38,7 +38,7 @@ export default function About() {
       </section>
 
       {/* Biography */}
-      <section className="py-16">
+      <section className="py-10">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
             <p>
@@ -93,7 +93,7 @@ export default function About() {
       </section>
 
       {/* Anacruses company section */}
-      <section className="bg-mist py-12">
+      <section className="bg-mist py-8">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-navy mb-4">About Anacruses Associates Ltd</h2>
           <div className="max-w-3xl text-gray-700 leading-relaxed space-y-4">

@@ -6,7 +6,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <>
-      <section className="bg-navy text-white py-16">
+      <section className="bg-navy text-white py-10">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Contact</p>
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
@@ -16,7 +16,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-10">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
 
           {/* Form */}

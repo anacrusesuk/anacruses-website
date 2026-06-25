@@ -8,7 +8,7 @@ export const metadata = {
 export default function UKASLaboratory() {
   return (
     <>
-      <section className="bg-navy text-white py-16">
+      <section className="bg-navy text-white py-10">
         <div className="max-w-6xl mx-auto px-4">
           <span className="bg-gold text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">ISO 17025:2017 · UKAS</span>
           <h1 className="text-4xl font-bold mb-4">UKAS Laboratory Accreditation</h1>
@@ -18,7 +18,7 @@ export default function UKASLaboratory() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
 
