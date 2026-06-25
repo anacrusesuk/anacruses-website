@@ -28,8 +28,8 @@ export default function Resources() {
               {[
                 { title: 'ISO standards updates', body: 'When standards change — including the upcoming ISO 9001 and 14001 revisions — you will hear about it from someone who sits on the committees, not a press release.' },
                 { title: 'Practical certification guidance', body: 'The questions clients ask most often, answered honestly. How long it takes, what it costs, what auditors actually look for.' },
-                { title: 'AI governance and ISO 42001', body: 'The standard most businesses haven't heard of yet — but will need. Early briefings on where AI governance is heading.' },
-                { title: 'No spam, ever', body: 'Useful content only, when there's something worth saying. Unsubscribe in one click at any time.' },
+                { title: 'AI governance and ISO 42001', body: `The standard most businesses haven't heard of yet — but will need. Early briefings on where AI governance is heading.` },
+                { title: 'No spam, ever', body: `Useful content only, when there's something worth saying. Unsubscribe in one click at any time.` },
               ].map(item => (
                 <div key={item.title} className="card border-l-4 border-l-gold">
                   <h3 className="font-bold text-navy mb-1">{item.title}</h3>
