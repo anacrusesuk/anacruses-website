@@ -33,7 +33,7 @@ from datetime import datetime
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 
 BREVO_API_KEY  = os.environ.get('BREVO_API_KEY', '')   # set as env var
-BREVO_LIST_ID  = 2                                      # update to your list ID
+BREVO_LIST_ID  = 3                                      # update to your list ID
 FROM_EMAIL     = 'rob@anacruses.co.uk'
 FROM_NAME      = 'Rob Pragnell — Anacruses Associates'
 REPLY_TO       = 'rob@anacruses.co.uk'
@@ -68,7 +68,7 @@ def build_subject(articles):
 
 def build_html(articles):
     """Build the HTML email body."""
-    today = datetime.today().strftime('%-d %B %Y')
+    today = datetime.today().strftime('%d %B %Y')
 
     article_blocks = ''
     for a in articles:
@@ -152,7 +152,7 @@ def build_html(articles):
 
 def build_text(articles):
     """Build plain-text fallback."""
-    today = datetime.today().strftime('%-d %B %Y')
+    today = datetime.today().strftime('%d %B %Y')
     lines = [
         f"ISO INSIGHTS — Anacruses Associates — {today}",
         "=" * 60,
