@@ -9,6 +9,22 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Pass static files through without redirect processing
+[[redirects]]
+  from = "/*.xml"
+  to = "/:splat.xml"
+  status = 200
+
+[[redirects]]
+  from = "/*.txt"
+  to = "/:splat.txt"
+  status = 200
+
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat.html"
+  status = 200
+
 [[redirects]]
   from = "/anacruses-training"
   to = "/training"
