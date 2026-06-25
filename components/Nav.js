@@ -18,21 +18,21 @@ export default function Nav() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="bg-navy-DEFAULT sticky top-0 z-50 shadow-md">
+    <header className="bg-navy sticky top-0 z-50 shadow-md">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="text-white font-bold text-xl tracking-tight">Anacruses</span>
-          <span className="text-gold-DEFAULT font-normal text-sm hidden sm:inline">ISO Consultancy</span>
+          <span className="text-gold font-normal text-sm hidden sm:inline">ISO Consultancy</span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-white">
-          <Link href="/" className="hover:text-gold-DEFAULT transition-colors">Home</Link>
+          <Link href="/" className="hover:text-gold transition-colors">Home</Link>
 
           {/* Services dropdown */}
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-            <button className="flex items-center gap-1 hover:text-gold-DEFAULT transition-colors">
+            <button className="flex items-center gap-1 hover:text-gold transition-colors">
               Services
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -42,7 +42,7 @@ export default function Nav() {
               <div className="absolute top-full left-0 mt-1 bg-white rounded-lg shadow-xl border border-gray-100 w-72 py-2 z-50">
                 {services.map(s => (
                   <Link key={s.href} href={s.href}
-                    className="block px-4 py-2 text-slate hover:bg-mist hover:text-navy-DEFAULT text-sm transition-colors">
+                    className="block px-4 py-2 text-slate hover:bg-mist hover:text-navy text-sm transition-colors">
                     {s.label}
                   </Link>
                 ))}
@@ -50,10 +50,10 @@ export default function Nav() {
             )}
           </div>
 
-          <Link href="/about"    className="hover:text-gold-DEFAULT transition-colors">About</Link>
-          <Link href="/training" className="hover:text-gold-DEFAULT transition-colors">Training</Link>
-          <Link href="/news"     className="hover:text-gold-DEFAULT transition-colors">News</Link>
-          <Link href="/contact"  className="bg-gold-DEFAULT hover:bg-gold-dark text-white px-4 py-2 rounded transition-colors">
+          <Link href="/about"    className="hover:text-gold transition-colors">About</Link>
+          <Link href="/training" className="hover:text-gold transition-colors">Training</Link>
+          <Link href="/news"     className="hover:text-gold transition-colors">News</Link>
+          <Link href="/contact"  className="bg-gold hover:bg-gold-dark text-white px-4 py-2 rounded transition-colors">
             Contact
           </Link>
         </nav>
@@ -71,17 +71,17 @@ export default function Nav() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-navy-dark border-t border-navy-light px-4 py-4 space-y-3 text-sm font-medium text-white">
-          <Link href="/"         className="block hover:text-gold-DEFAULT" onClick={() => setMobileOpen(false)}>Home</Link>
-          <div className="font-semibold text-gold-DEFAULT text-xs uppercase tracking-wider pt-2">Services</div>
+          <Link href="/"         className="block hover:text-gold" onClick={() => setMobileOpen(false)}>Home</Link>
+          <div className="font-semibold text-gold text-xs uppercase tracking-wider pt-2">Services</div>
           {services.map(s => (
-            <Link key={s.href} href={s.href} className="block pl-3 hover:text-gold-DEFAULT" onClick={() => setMobileOpen(false)}>
+            <Link key={s.href} href={s.href} className="block pl-3 hover:text-gold" onClick={() => setMobileOpen(false)}>
               {s.label}
             </Link>
           ))}
-          <Link href="/about"    className="block hover:text-gold-DEFAULT" onClick={() => setMobileOpen(false)}>About</Link>
-          <Link href="/training" className="block hover:text-gold-DEFAULT" onClick={() => setMobileOpen(false)}>Training</Link>
-          <Link href="/news"     className="block hover:text-gold-DEFAULT" onClick={() => setMobileOpen(false)}>News</Link>
-          <Link href="/contact"  className="block bg-gold-DEFAULT px-4 py-2 rounded text-center" onClick={() => setMobileOpen(false)}>Contact</Link>
+          <Link href="/about"    className="block hover:text-gold" onClick={() => setMobileOpen(false)}>About</Link>
+          <Link href="/training" className="block hover:text-gold" onClick={() => setMobileOpen(false)}>Training</Link>
+          <Link href="/news"     className="block hover:text-gold" onClick={() => setMobileOpen(false)}>News</Link>
+          <Link href="/contact"  className="block bg-gold px-4 py-2 rounded text-center" onClick={() => setMobileOpen(false)}>Contact</Link>
         </div>
       )}
     </header>

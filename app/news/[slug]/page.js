@@ -23,9 +23,9 @@ export default function ArticlePage({ params }) {
 
   return (
     <>
-      <section className="bg-navy-DEFAULT text-white py-12">
+      <section className="bg-navy text-white py-12">
         <div className="max-w-3xl mx-auto px-4">
-          <Link href="/news" className="text-gold-DEFAULT text-sm hover:underline mb-4 inline-block">← Back to News</Link>
+          <Link href="/news" className="text-gold text-sm hover:underline mb-4 inline-block">← Back to News</Link>
           <div className="text-xs text-blue-200 mb-3">{article.date}</div>
           <h1 className="text-3xl font-bold leading-tight">{article.title}</h1>
         </div>
@@ -46,16 +46,16 @@ export default function ArticlePage({ params }) {
             </div>
           </div>
           <aside className="space-y-5">
-            <div className="card border-t-4 border-t-gold-DEFAULT">
-              <h3 className="font-bold text-navy-DEFAULT mb-2 text-sm">Need ISO advice?</h3>
+            <div className="card border-t-4 border-t-gold">
+              <h3 className="font-bold text-navy mb-2 text-sm">Need ISO advice?</h3>
               <p className="text-gray-600 text-xs mb-3 leading-relaxed">Rob Pragnell is a CQI/IRCA certified Lead Auditor with 20+ years of experience.</p>
               <Link href="/contact" className="btn-primary inline-block text-xs">Get in touch</Link>
             </div>
             <div className="card">
-              <h3 className="font-bold text-navy-DEFAULT mb-2 text-sm">ISO Training</h3>
+              <h3 className="font-bold text-navy mb-2 text-sm">ISO Training</h3>
               <p className="text-gray-600 text-xs mb-2 leading-relaxed">Accredited courses from foundation to Lead Auditor level.</p>
               <a href="https://tidd.ly/4973Hxg" target="_blank" rel="noopener noreferrer"
-                 className="text-gold-DEFAULT text-xs font-semibold hover:text-gold-dark">Browse courses →</a>
+                 className="text-gold text-xs font-semibold hover:text-gold-dark">Browse courses →</a>
             </div>
           </aside>
         </div>

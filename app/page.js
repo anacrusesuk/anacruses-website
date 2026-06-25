@@ -42,10 +42,10 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="bg-navy-DEFAULT text-white">
+      <section className="bg-navy text-white">
         <div className="max-w-6xl mx-auto px-4 py-20 md:py-28">
           <div className="max-w-3xl">
-            <p className="text-gold-DEFAULT font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-4">
               ISO Consultancy · Hertfordshire & UK-wide
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
@@ -66,7 +66,7 @@ export default function Home() {
       <section className="bg-navy-dark border-t border-navy-light">
         <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
           {credentials.map(c => (
-            <span key={c} className="text-gold-DEFAULT text-xs font-medium flex items-center gap-1">
+            <span key={c} className="text-gold text-xs font-medium flex items-center gap-1">
               <span className="text-gold-light">◆</span> {c}
             </span>
           ))}
@@ -76,7 +76,7 @@ export default function Home() {
       {/* WHY ANACRUSES */}
       <section className="bg-mist py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-navy-DEFAULT mb-2 text-center">Why choose Anacruses?</h2>
+          <h2 className="text-3xl font-bold text-navy mb-2 text-center">Why choose Anacruses?</h2>
           <p className="text-center text-gray-500 mb-10 max-w-xl mx-auto">
             We have been helping UK businesses achieve ISO certification for over two decades. Here is what sets us apart.
           </p>
@@ -86,8 +86,8 @@ export default function Home() {
               { title: 'Independent & Honest', body: 'We are not aligned to any single certification body. We work with you to choose the right body for your sector and budget — and we will tell you if the timing is not right.' },
               { title: 'Results That Stick', body: 'Certification is only the beginning. We build management systems that continue to work after the auditors leave — systems your team actually uses and that genuinely improve how your business operates.' },
             ].map(item => (
-              <div key={item.title} className="card border-t-4 border-t-gold-DEFAULT">
-                <h3 className="text-navy-DEFAULT font-bold text-lg mb-3">{item.title}</h3>
+              <div key={item.title} className="card border-t-4 border-t-gold">
+                <h3 className="text-navy font-bold text-lg mb-3">{item.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
@@ -98,21 +98,21 @@ export default function Home() {
       {/* SERVICES GRID */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-navy-DEFAULT mb-2 text-center">ISO Standards We Cover</h2>
+          <h2 className="text-3xl font-bold text-navy mb-2 text-center">ISO Standards We Cover</h2>
           <p className="text-center text-gray-500 mb-10 max-w-xl mx-auto">
             We help UK businesses certify to the standards their customers and supply chains require.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(s => (
               <Link key={s.href} href={s.href}
-                className="card group hover:border-gold-DEFAULT border border-transparent flex flex-col">
+                className="card group hover:border-gold border border-transparent flex flex-col">
                 <div className="flex items-start justify-between mb-3">
-                  <span className="bg-navy-DEFAULT text-white text-xs font-bold px-2 py-1 rounded">{s.std}</span>
+                  <span className="bg-navy text-white text-xs font-bold px-2 py-1 rounded">{s.std}</span>
                   <span className="text-2xl">{s.icon}</span>
                 </div>
-                <h3 className="font-bold text-navy-DEFAULT mb-2 group-hover:text-gold-DEFAULT transition-colors">{s.title}</h3>
+                <h3 className="font-bold text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">{s.desc}</p>
-                <div className="mt-4 text-gold-DEFAULT text-sm font-semibold">Learn more →</div>
+                <div className="mt-4 text-gold text-sm font-semibold">Learn more →</div>
               </Link>
             ))}
           </div>
@@ -120,10 +120,10 @@ export default function Home() {
       </section>
 
       {/* ABOUT STRIP */}
-      <section className="bg-navy-DEFAULT text-white py-16">
+      <section className="bg-navy text-white py-16">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-10 items-center">
           <div className="flex-grow">
-            <p className="text-gold-DEFAULT font-semibold text-sm uppercase tracking-widest mb-3">Meet the consultant</p>
+            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Meet the consultant</p>
             <h2 className="text-3xl font-bold mb-4">Rob Pragnell</h2>
             <p className="text-blue-100 leading-relaxed mb-4 max-w-2xl">
               Rob is a CQI/IRCA certified Lead Auditor with over 20 years of experience implementing and auditing ISO standards across the UK. He is a TRECCERT-accredited trainer, a contributor to the ISO ESG Committee, and a participant in the BSI BridgeAI standards community.
@@ -139,7 +139,7 @@ export default function Home() {
       {/* PROCESS STRIP */}
       <section className="py-16 bg-mist">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-navy-DEFAULT mb-2 text-center">How certification works</h2>
+          <h2 className="text-3xl font-bold text-navy mb-2 text-center">How certification works</h2>
           <p className="text-center text-gray-500 mb-10">A clear, managed process from first conversation to certificate.</p>
           <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 text-center">
             {[
@@ -150,8 +150,8 @@ export default function Home() {
               ['5', 'Certification', 'External audit with your chosen UKAS-accredited certification body.'],
             ].map(([num, title, desc]) => (
               <div key={num} className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-navy-DEFAULT text-white font-bold text-lg flex items-center justify-center mb-3">{num}</div>
-                <div className="font-bold text-navy-DEFAULT mb-1">{title}</div>
+                <div className="w-12 h-12 rounded-full bg-navy text-white font-bold text-lg flex items-center justify-center mb-3">{num}</div>
+                <div className="font-bold text-navy mb-1">{title}</div>
                 <div className="text-gray-500 text-xs leading-relaxed">{desc}</div>
               </div>
             ))}
@@ -163,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="bg-gold-DEFAULT py-12 text-white text-center">
+      <section className="bg-gold py-12 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-3">Ready to get certified?</h2>
           <p className="mb-6 opacity-90">Book a free, no-obligation consultation. We will tell you exactly what is involved, how long it will take, and what it will cost.</p>

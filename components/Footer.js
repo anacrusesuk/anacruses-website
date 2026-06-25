@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="md:col-span-1">
           <div className="font-bold text-lg mb-2">Anacruses</div>
-          <div className="text-gold-DEFAULT font-medium mb-3">ISO Consultancy</div>
+          <div className="text-gold font-medium mb-3">ISO Consultancy</div>
           <p className="text-gray-300 leading-relaxed text-xs">
             Expert ISO consultancy for UK businesses. CQI/IRCA certified Lead Auditor across ISO 9001, 14001, 27001, 45001 and 42001.
           </p>
@@ -16,7 +16,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <div className="font-semibold text-gold-DEFAULT uppercase tracking-wider text-xs mb-3">Services</div>
+          <div className="font-semibold text-gold uppercase tracking-wider text-xs mb-3">Services</div>
           <ul className="space-y-1 text-gray-300">
             {[
               ['ISO 9001', '/services/iso-9001'],
@@ -26,14 +26,14 @@ export default function Footer() {
               ['ISO 42001', '/services/iso-42001'],
               ['UKAS Laboratory', '/services/ukas-laboratory'],
             ].map(([label, href]) => (
-              <li key={href}><Link href={href} className="hover:text-gold-DEFAULT transition-colors">{label}</Link></li>
+              <li key={href}><Link href={href} className="hover:text-gold transition-colors">{label}</Link></li>
             ))}
           </ul>
         </div>
 
         {/* Company */}
         <div>
-          <div className="font-semibold text-gold-DEFAULT uppercase tracking-wider text-xs mb-3">Company</div>
+          <div className="font-semibold text-gold uppercase tracking-wider text-xs mb-3">Company</div>
           <ul className="space-y-1 text-gray-300">
             {[
               ['About Rob Pragnell', '/about'],
@@ -41,27 +41,27 @@ export default function Footer() {
               ['News & Comment', '/news'],
               ['Contact', '/contact'],
             ].map(([label, href]) => (
-              <li key={href}><Link href={href} className="hover:text-gold-DEFAULT transition-colors">{label}</Link></li>
+              <li key={href}><Link href={href} className="hover:text-gold transition-colors">{label}</Link></li>
             ))}
           </ul>
         </div>
 
         {/* Contact & Legal */}
         <div>
-          <div className="font-semibold text-gold-DEFAULT uppercase tracking-wider text-xs mb-3">Contact</div>
+          <div className="font-semibold text-gold uppercase tracking-wider text-xs mb-3">Contact</div>
           <div className="text-gray-300 space-y-1 mb-4">
             <p>Hertfordshire, UK</p>
             <p>Serving clients across the UK</p>
-            <Link href="/contact" className="text-gold-DEFAULT hover:text-gold-light">Book a free consultation →</Link>
+            <Link href="/contact" className="text-gold hover:text-gold-light">Book a free consultation →</Link>
           </div>
-          <div className="font-semibold text-gold-DEFAULT uppercase tracking-wider text-xs mb-2">Follow</div>
+          <div className="font-semibold text-gold uppercase tracking-wider text-xs mb-2">Follow</div>
           <div className="flex gap-3">
             <a href="https://lnkd.in/eZzbQZPv" target="_blank" rel="noopener noreferrer"
-               className="text-gray-300 hover:text-gold-DEFAULT transition-colors text-xs">LinkedIn</a>
+               className="text-gray-300 hover:text-gold transition-colors text-xs">LinkedIn</a>
             <a href="https://twitter.com/AnacrusesUK" target="_blank" rel="noopener noreferrer"
-               className="text-gray-300 hover:text-gold-DEFAULT transition-colors text-xs">X</a>
+               className="text-gray-300 hover:text-gold transition-colors text-xs">X</a>
             <a href="https://www.facebook.com/AnacrusesAssociates" target="_blank" rel="noopener noreferrer"
-               className="text-gray-300 hover:text-gold-DEFAULT transition-colors text-xs">Facebook</a>
+               className="text-gray-300 hover:text-gold transition-colors text-xs">Facebook</a>
           </div>
         </div>
       </div>

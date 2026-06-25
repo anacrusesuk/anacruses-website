@@ -29,9 +29,9 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy-DEFAULT text-white py-16">
+      <section className="bg-navy text-white py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="text-gold-DEFAULT font-semibold text-sm uppercase tracking-widest mb-3">About</p>
+          <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">About</p>
           <h1 className="text-4xl font-bold mb-4">Rob Pragnell</h1>
           <p className="text-xl text-blue-100 max-w-2xl">ISO Standards Consultant · Lead Auditor · Founder of Anacruses Associates Ltd</p>
         </div>
@@ -56,7 +56,7 @@ export default function About() {
             <p>
               He is also an IOSH Managing Safely trained professional with extensive experience supporting UKAS-accredited laboratories — a specialist area that few generalist ISO consultants cover.
             </p>
-            <p className="font-semibold text-navy-DEFAULT">
+            <p className="font-semibold text-navy">
               When you work with Anacruses, you work with Rob directly — not a junior consultant or a subcontractor. Every client gets the benefit of over two decades of experience, from the first conversation to the certification audit.
             </p>
             <div className="pt-4">
@@ -66,23 +66,23 @@ export default function About() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="card border-t-4 border-t-gold-DEFAULT">
-              <h3 className="font-bold text-navy-DEFAULT mb-3 text-sm uppercase tracking-wide">Qualifications & Affiliations</h3>
+            <div className="card border-t-4 border-t-gold">
+              <h3 className="font-bold text-navy mb-3 text-sm uppercase tracking-wide">Qualifications & Affiliations</h3>
               <ul className="space-y-2">
                 {qualifications.map(q => (
                   <li key={q} className="text-xs text-gray-600 flex gap-2">
-                    <span className="text-gold-DEFAULT mt-0.5 flex-shrink-0">◆</span>
+                    <span className="text-gold mt-0.5 flex-shrink-0">◆</span>
                     <span>{q}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="card border-t-4 border-t-navy-DEFAULT">
-              <h3 className="font-bold text-navy-DEFAULT mb-3 text-sm uppercase tracking-wide">Standards Expertise</h3>
+            <div className="card border-t-4 border-t-navy">
+              <h3 className="font-bold text-navy mb-3 text-sm uppercase tracking-wide">Standards Expertise</h3>
               <ul className="space-y-2">
                 {standards.map(([std, desc]) => (
                   <li key={std} className="text-xs text-gray-600">
-                    <span className="font-bold text-navy-DEFAULT">{std}</span>
+                    <span className="font-bold text-navy">{std}</span>
                     <br />{desc}
                   </li>
                 ))}
@@ -95,7 +95,7 @@ export default function About() {
       {/* Anacruses company section */}
       <section className="bg-mist py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-navy-DEFAULT mb-4">About Anacruses Associates Ltd</h2>
+          <h2 className="text-2xl font-bold text-navy mb-4">About Anacruses Associates Ltd</h2>
           <div className="max-w-3xl text-gray-700 leading-relaxed space-y-4">
             <p>
               Anacruses Associates Ltd was founded to provide independent, expert ISO consultancy to UK businesses of all sizes. The name reflects a core belief: that the journey to certification — and the improvement it drives — matters as much as the certificate itself.
