@@ -1,0 +1,55 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/anacruses-training"
+  to = "/training"
+  status = 301
+
+[[redirects]]
+  from = "/news-and-comment"
+  to = "/news"
+  status = 301
+
+[[redirects]]
+  from = "/get-certified-to-iso-and-ukas-standards"
+  to = "/get-certified"
+  status = 301
+
+[[redirects]]
+  from = "/ukas-v-non-ukas-certification"
+  to = "/ukas-explained"
+  status = 301
+
+[[redirects]]
+  from = "/artificial-intelligence-certification"
+  to = "/services/iso-42001"
+  status = 301
+
+[[redirects]]
+  from = "/quality-certification"
+  to = "/services/iso-9001"
+  status = 301
+
+[[redirects]]
+  from = "/environmental-certification"
+  to = "/services/iso-14001"
+  status = 301
+
+[[redirects]]
+  from = "/health-and-safety-certification"
+  to = "/services/iso-45001"
+  status = 301
+
+[[redirects]]
+  from = "/information-security-certification"
+  to = "/services/iso-27001"
+  status = 301

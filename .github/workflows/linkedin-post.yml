@@ -1,0 +1,70 @@
+name: Post new article to LinkedIn
+
+on:
+  push:
+    paths:
+      - 'content/news/**.md'
+    branches:
+      - main
+
+jobs:
+  linkedin-post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get latest article details
+        id: article
+        run: |
+          # Find the most recently added/modified .md file in content/news
+          LATEST=$(git diff --name-only HEAD~1 HEAD -- 'content/news/*.md' | head -1)
+          if [ -z "$LATEST" ]; then
+            echo "No new article found"
+            exit 0
+          fi
+          echo "file=$LATEST" >> $GITHUB_OUTPUT
+          TITLE=$(grep '^title:' "$LATEST" | head -1 | sed 's/title: *//;s/"//g')
+          EXCERPT=$(grep '^excerpt:' "$LATEST" | head -1 | sed 's/excerpt: *//;s/"//g')
+          SLUG=$(basename "$LATEST" .md)
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "excerpt=$EXCERPT" >> $GITHUB_OUTPUT
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+
+      - name: Post to LinkedIn
+        if: steps.article.outputs.title != ''
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+        run: |
+          TITLE="${{ steps.article.outputs.title }}"
+          EXCERPT="${{ steps.article.outputs.excerpt }}"
+          SLUG="${{ steps.article.outputs.slug }}"
+          URL="https://www.anacruses.co.uk/news/${SLUG}/"
+          TEXT="${TITLE}
+
+${EXCERPT}
+
+Read the full article: ${URL}
+
+#ISO #ISOConsultant #QualityManagement #InformationSecurity #Compliance #Anacruses"
+
+          curl -s -X POST "https://api.linkedin.com/v2/ugcPosts" \
+            -H "Authorization: Bearer ${LINKEDIN_ACCESS_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"author\": \"${LINKEDIN_PERSON_URN}\",
+              \"lifecycleState\": \"PUBLISHED\",
+              \"specificContent\": {
+                \"com.linkedin.ugc.ShareContent\": {
+                  \"shareCommentary\": { \"text\": $(echo "$TEXT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))') },
+                  \"shareMediaCategory\": \"ARTICLE\",
+                  \"media\": [{
+                    \"status\": \"READY\",
+                    \"originalUrl\": \"${URL}\"
+                  }]
+                }
+              },
+              \"visibility\": { \"com.linkedin.ugc.MemberNetworkVisibility\": \"PUBLIC\" }
+            }"
