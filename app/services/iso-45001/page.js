@@ -8,7 +8,10 @@ export const metadata = {
 export default function ISO45001() {
   return (
     <>
-      <section className="bg-navy text-white py-10">
+      <section className="bg-navy text-white py-10 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
+        </div>
         <div className="max-w-6xl mx-auto px-4">
           <span className="bg-gold text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">ISO 45001:2018</span>
           <h1 className="text-4xl font-bold mb-4">Occupational Health & Safety Management Systems</h1>

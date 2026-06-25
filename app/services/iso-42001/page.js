@@ -8,7 +8,10 @@ export const metadata = {
 export default function ISO42001() {
   return (
     <>
-      <section className="bg-navy text-white py-10">
+      <section className="bg-navy text-white py-10 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
+        </div>
         <div className="max-w-6xl mx-auto px-4">
           <span className="bg-gold text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">ISO 42001:2023</span>
           <h1 className="text-4xl font-bold mb-4">Artificial Intelligence Management Systems</h1>
@@ -90,11 +93,11 @@ export default function ISO42001() {
               <h3 className="font-bold text-navy mb-2 text-sm">Rob's ISO 42001 credentials</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">
                 {[
-                  'Working with ISO 42001 since its publication in December 2023',
+                  'ISO 42001 Practitioner — TRECCERT certified (Apr 2025)',
+                  'AIQI ISO/IEC 42001 qualification — UKAS accredited (Mar 2026)',
                   'Contributor to the ISO ESG Committee',
                   'Participant in BSI BridgeAI standards community',
-                  'Member of the Small Business AI Club',
-                  'Among the first independent consultants in the UK actively offering ISO 42001',
+                  'Among the first independent consultants in the UK offering ISO 42001',
                 ].map(c => (
                   <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
                 ))}

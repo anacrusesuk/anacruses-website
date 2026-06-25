@@ -39,7 +39,10 @@ export default function Training() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy text-white py-10">
+      <section className="bg-navy text-white py-10 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
+        </div>
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Training</p>
           <h1 className="text-4xl font-bold mb-4">ISO Training Courses</h1>

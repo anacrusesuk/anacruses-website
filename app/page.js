@@ -16,8 +16,8 @@ const services = [
 
 const credentials = [
   '20+ years\' experience',
-  'CQI/IRCA certified Lead Auditor',
-  'ISO 9001 · 14001 · 27001 · 45001 · 42001',
+  'CQI & TRECCERT certified Lead Auditor',
+  'Lead Auditor — ISO 9001 · 14001 · 27001 · 45001',
   'UKAS accreditation support',
 ];
 
@@ -89,17 +89,20 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="bg-navy text-white">
-        <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
+      <section className="bg-navy text-white relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80" alt="" className="w-full h-full object-cover opacity-10" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-10 md:py-14">
           <div className="max-w-3xl">
             <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-4">
               ISO Consultancy · Hertfordshire & UK-wide
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-              ISO Certification,<br />Delivered Properly.
+              ISO Certification<br />Done Right. First Time.
             </h1>
             <p className="text-xl text-blue-100 leading-relaxed mb-4 max-w-2xl">
-              Expert ISO consultancy for UK businesses that need to get it right — on time, first time, and to a standard that lasts.
+              Expert ISO consultancy for UK businesses — getting you certified, keeping you compliant, and making sure the work pays off long after audit day.
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <Link href="/contact" className="btn-primary">Book a Free Consultation</Link>
@@ -113,8 +116,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* CREDENTIALS BAR */}
       <section className="bg-navy-dark border-t border-navy-light">
         <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
           {credentials.map(c => (
@@ -174,11 +175,19 @@ export default function Home() {
       {/* ABOUT STRIP */}
       <section className="bg-navy text-white py-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-10 items-center">
+          {/* Rob's photo */}
+          <div className="flex-shrink-0">
+            <img
+              src="/images/rob.jpg"
+              alt="Rob Pragnell — ISO Consultant"
+              className="w-48 h-48 rounded-full object-cover object-center border-4 border-gold shadow-xl"
+            />
+          </div>
           <div className="flex-grow">
             <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Meet the consultant</p>
             <h2 className="text-3xl font-bold mb-4">Rob Pragnell</h2>
             <p className="text-blue-100 leading-relaxed mb-4 max-w-2xl">
-              Rob is a CQI/IRCA certified Lead Auditor with over 20 years of experience implementing and auditing ISO standards across the UK. He is a TRECCERT-accredited trainer certified across ISO 9001, 14001, 27001, 45001 and 42001.
+              Rob is a CQI certified Lead Auditor across ISO 9001, 14001 and 45001, and a TRECCERT certified Lead Auditor for ISO 27001. With over 20 years of experience implementing and auditing ISO standards across the UK, he is also a TRECCERT ISO Standards Trainer and an ISO 42001 Practitioner.
             </p>
             <p className="text-blue-100 leading-relaxed mb-4 max-w-2xl">
               Rob works directly with every Anacruses client — you will always deal with the expert, not a junior consultant or a subcontractor.

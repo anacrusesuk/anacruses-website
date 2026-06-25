@@ -2,18 +2,21 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About Rob Pragnell — ISO Consultant',
-  description: 'Rob Pragnell is a CQI/IRCA certified Lead Auditor and founder of Anacruses Associates Ltd, with over 20 years of ISO consultancy experience across the UK.',
+  description: 'Rob Pragnell is a CQI and TRECCERT certified Lead Auditor and founder of Anacruses Associates Ltd, with over 20 years of ISO consultancy experience across the UK.',
 };
 
 const qualifications = [
-  'CQI/IRCA Certified Lead Auditor — ISO 9001, 14001, 27001, 45001 & 42001',
-  'TRECCERT-accredited ISO trainer',
+  'CQI Certified Lead Auditor — ISO 9001, 14001 & 45001',
+  'TRECCERT Certified Lead Auditor — ISO 27001',
+  'ISO 42001 Practitioner — TRECCERT & AIQI (UKAS-accredited)',
+  'ISO 27001 Implementer — BSI',
+  'TRECCERT-accredited ISO Standards Trainer',
   'IOSH Managing Safely',
+  'PRINCE2 Practitioner',
   'Member, IAN (International Associates Network)',
   'Member, Chartered College of Teaching Professional Framework',
   'Contributor, ISO ESG Committee',
   'Participant, BSI BridgeAI Standards Community',
-  'Member, Small Business AI Club',
 ];
 
 const standards = [
@@ -33,7 +36,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">About</p>
           <h1 className="text-4xl font-bold mb-4">Rob Pragnell</h1>
-          <p className="text-xl text-blue-100 max-w-2xl">ISO Standards Consultant · Lead Auditor · Founder of Anacruses Associates Ltd</p>
+          <p className="text-xl text-blue-100 max-w-2xl">ISO Lead Auditor · Consultant · Founder of Anacruses Associates Ltd</p>
         </div>
       </section>
 
@@ -41,23 +44,34 @@ export default function About() {
       <section className="py-10">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
+            {/* Photo on mobile — shows above text */}
+            <div className="md:hidden flex justify-center mb-4">
+              <img src="/images/rob.jpg" alt="Rob Pragnell — ISO Consultant"
+                   className="w-40 h-40 rounded-full object-cover object-center border-4 border-gold shadow-lg" />
+            </div>
             <p>
-              Rob Pragnell is the founder and principal consultant of Anacruses Associates Ltd, bringing over 20 years of hands-on experience helping businesses across the UK achieve and maintain ISO certification. His approach combines deep technical knowledge of international standards with a practical, client-first philosophy — getting organisations certified efficiently, sustainably, and without unnecessary complexity.
+              I started Anacruses because I kept seeing the same thing — businesses going through ISO certification and not seeing the benefits of their hard work. Often businesses will get the certificate on the wall, then not touch or look at their management system for 12 months.
             </p>
             <p>
-              Rob is a certified Lead Auditor (CQI/IRCA) across five ISO standards: ISO 9001 (Quality Management), ISO 14001 (Environmental Management), ISO 27001 (Information Security), ISO 45001 (Health & Safety), and the emerging ISO 42001 (Artificial Intelligence Management). He is also a TRECCERT-accredited trainer, delivering tailored ISO training programmes from foundation level through to Lead Auditor qualification.
+              That is not what certification is supposed to do. Done properly, an ISO management system changes how a business operates — it removes the guesswork, builds the kind of consistency customers notice, and creates a foundation that scales. That is what I set up Anacruses to deliver.
             </p>
             <p>
-              His consultancy experience spans a wide range of sectors — from SMEs seeking their first certification to larger organisations managing integrated management systems across multiple sites. Rob has managed internal audit programmes, developed audit management software, and earned multiple achievement awards in the quality and compliance field.
+              I have been working in ISO standards and management systems for over 20 years, across a wide range of sectors and business sizes — from SMEs seeking their first certification to larger organisations running integrated systems across multiple sites.
             </p>
             <p>
-              Rob is actively involved in shaping the future of ISO standards. He contributes to the ISO Committee for ESG, participates in the BridgeAI standards community operated by BSI, and supports SMEs through the Small Business AI Club. This direct involvement in standards development means Anacruses clients benefit not just from expertise in current requirements, but from insight into where standards are heading.
+              As a CQI/IRCA certified Lead Auditor across ISO 9001, 14001, 27001, and 45001 — and implementer for those standards plus ISO 42001 — I have been on both sides of the audit table, which matters. I know what auditors look for, how findings tend to arise, and how to build a system that holds up when the pressure is on.
             </p>
             <p>
-              He is also an IOSH Managing Safely trained professional with extensive experience supporting UKAS-accredited laboratories — a specialist area that few generalist ISO consultants cover.
+              I am also a TRECCERT-accredited trainer, which means I can train your team — from awareness sessions through to Lead Auditor qualification — without needing to bring in a separate provider.
+            </p>
+            <p>
+              Outside of client work, I have sat on the ISO ESG Committee and contribute to the BSI BridgeAI community, which means I am directly involved in shaping the standards your business will need to meet in the years ahead. When ISO 42001 becomes a procurement requirement, or when the revisions to ISO 9001 and 14001 land, Anacruses clients will not be reading about it in a newsletter — they will have been briefed months in advance.
+            </p>
+            <p>
+              I work directly with every Anacruses client. You will not be handed to a subcontractor or a junior consultant after the first call. If you are talking to me, I am the person doing the work.
             </p>
             <p className="font-semibold text-navy">
-              When you work with Anacruses, you work with Rob directly — not a junior consultant or a subcontractor. Every client gets the benefit of over two decades of experience, from the first conversation to the certification audit.
+              If you want a straight conversation about what certification would actually involve for your business — timescales, cost, realistic expectations — book a free call. No sales pitch, no obligation.
             </p>
             <div className="pt-4">
               <Link href="/contact" className="btn-primary">Book a free consultation with Rob</Link>
@@ -66,6 +80,11 @@ export default function About() {
 
           {/* Sidebar */}
           <div className="space-y-6">
+            {/* Photo — desktop */}
+            <div className="hidden md:flex justify-center">
+              <img src="/images/rob.jpg" alt="Rob Pragnell — ISO Consultant"
+                   className="w-48 h-48 rounded-full object-cover object-center border-4 border-gold shadow-xl" />
+            </div>
             <div className="card border-t-4 border-t-gold">
               <h3 className="font-bold text-navy mb-3 text-sm uppercase tracking-wide">Qualifications & Affiliations</h3>
               <ul className="space-y-2">
@@ -104,7 +123,7 @@ export default function About() {
               We are based in Hertfordshire and work with clients across the UK, delivering consultancy remotely or on-site depending on your preference and the scope of work. We are members of the IAN (International Associates Network) and the Chartered College of Teaching Professional Framework.
             </p>
             <p>
-              Anacruses is not affiliated with any certification body. That independence means we can recommend the right body for your business — not the one that pays the highest commission.
+              Anacruses works closely with leading UKAS-accredited certification bodies — including ISOQAR, with whom we have a strong working relationship — and can recommend the right body for your specific sector, size, and timescales.
             </p>
           </div>
         </div>
