@@ -56,6 +56,7 @@ export default function Footer() {
               ['ISO Insights', '/insights'],
               ['Resources & Newsletter', '/resources'],
               ['Training Courses', '/training'],
+              ['News & Comment', '/news'],
               ['Contact', '/contact'],
             ].map(([label, href]) => (
               <li key={href}><Link href={href} className="hover:text-gold transition-colors">{label}</Link></li>
@@ -100,15 +101,54 @@ export default function Footer() {
       </div>
 
       {/* Newsletter signup */}
-      <div className="border-t border-navy-light">
-        <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>
-            <h3 className="font-bold text-white text-base mb-1">ISO Insights — straight to your inbox</h3>
-            <p className="text-gray-300 text-xs leading-relaxed max-w-lg">Practical ISO guidance, regulatory updates and certification tips. No spam. Unsubscribe any time.</p>
+      <div className="border-t border-navy-light bg-navy">
+        <div className="max-w-6xl mx-auto px-4 py-10">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+
+            {/* Left — copy */}
+            <div>
+              <p className="text-gold font-semibold text-xs uppercase tracking-widest mb-3">Free newsletter</p>
+              <h3 className="font-bold text-white text-2xl mb-3 leading-snug">
+                ISO Insights — straight to your inbox
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                Practical guidance from a working CQI Lead Auditor. What certification actually costs,
+                how long it takes, and what auditors look for — sent fortnightly. No spam, ever.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300">
+                {[
+                  'ISO standards updates — from someone who sits on the committees',
+                  'Practical certification guidance — real answers, not sales pitches',
+                  'AI governance and ISO 42001 — the standard most businesses need to know',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-gold mt-0.5 flex-shrink-0">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Right — Brevo signup form */}
+            <div className="bg-white rounded-lg p-6">
+              <p className="font-bold text-navy text-lg mb-1">Join the list</p>
+              <p className="text-gray-500 text-xs mb-4">Free. Unsubscribe any time. No spam.</p>
+              <iframe
+                src="https://b063a5c1.sibforms.com/serve/MUIFAPGvQY5DN6LOdavajVvyLw4R1MXk_AIA_f-IdW0tmuA8kf5yEURjcB1QlFcgauY8lW7MAgjWIPwfx8315ujTtFrwl6NjI6gGvziVhBZxANAIrkii_YhF4kpUsxN369YhJ5mgMwtnpPgclTmhIUXtzOOHB22zSj0ObwBdTNGfdpI_G52yZ96eUmyFMDQRkS_yqdJfSygUsV-ZWg=="
+                frameBorder="0"
+                scrolling="auto"
+                allowFullScreen
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  minHeight: '160px',
+                  border: 'none',
+                }}
+                title="Newsletter signup"
+              />
+            </div>
+
           </div>
-          <a href="/resources" className="flex-shrink-0 inline-block bg-gold hover:bg-gold-dark text-white font-semibold px-6 py-3 rounded transition-colors text-sm whitespace-nowrap">
-            Sign up for free →
-          </a>
         </div>
       </div>
 
