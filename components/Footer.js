@@ -27,6 +27,26 @@ const InstagramIcon = () => (
 export default function Footer() {
   return (
     <footer className="bg-navy-dark text-white mt-10">
+      {/* Newsletter signup */}
+      <div className="border-t border-navy-light" style={{background: '#1F4E79'}}>
+        <div className="max-w-6xl mx-auto px-4 py-12 text-center">
+          <p style={{color: '#B8860B', fontSize: '11px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '12px'}}>Free newsletter</p>
+          <h3 style={{color: '#ffffff', fontSize: '26px', fontWeight: '700', marginBottom: '10px', lineHeight: '1.2'}}>ISO Insights — straight to your inbox</h3>
+          <p style={{color: '#93c5fd', fontSize: '14px', lineHeight: '1.6', maxWidth: '480px', margin: '0 auto 24px'}}>Practical guidance from a working CQI Lead Auditor. Fortnightly. No spam, ever.</p>
+          <div style={{display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '28px', flexWrap: 'wrap'}}>
+            {['Certification costs & timelines', 'What auditors actually look for', 'ISO standards updates'].map((item, i) => (
+              <span key={i} style={{color: '#93c5fd', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px'}}>
+                <span style={{color: '#B8860B', fontWeight: '700'}}>✓</span> {item}
+              </span>
+            ))}
+          </div>
+          <Link
+            href="/resources"
+            style={{display: 'inline-block', background: '#B8860B', color: '#ffffff', border: 'none', padding: '14px 32px', fontSize: '15px', fontWeight: '700', cursor: 'pointer', whiteSpace: 'nowrap', borderRadius: '6px', textDecoration: 'none'}}
+          >Subscribe free →</Link>
+          <p style={{color: '#64748b', fontSize: '12px', marginTop: '12px'}}>Join professionals across the UK. Unsubscribe any time.</p>
+        </div>
+      </div>
       <div className="max-w-6xl mx-auto px-4 py-8 text-sm" style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'3rem'}}>
 
         {/* Services */}
@@ -56,7 +76,6 @@ export default function Footer() {
               ['ISO Insights', '/insights'],
               ['Resources & Newsletter', '/resources'],
               ['Training Courses', '/training'],
-              ['News & Comment', '/news'],
               ['Contact', '/contact'],
             ].map(([label, href]) => (
               <li key={href}><Link href={href} className="hover:text-gold transition-colors">{label}</Link></li>
@@ -97,27 +116,6 @@ export default function Footer() {
               <InstagramIcon />
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Newsletter signup */}
-      <div className="border-t border-navy-light" style={{background: '#1F4E79'}}>
-        <div className="max-w-6xl mx-auto px-4 py-12 text-center">
-          <p style={{color: '#B8860B', fontSize: '11px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '12px'}}>Free newsletter</p>
-          <h3 style={{color: '#ffffff', fontSize: '26px', fontWeight: '700', marginBottom: '10px', lineHeight: '1.2'}}>ISO Insights — straight to your inbox</h3>
-          <p style={{color: '#93c5fd', fontSize: '14px', lineHeight: '1.6', maxWidth: '480px', margin: '0 auto 24px'}}>Practical guidance from a working CQI Lead Auditor. Fortnightly. No spam, ever.</p>
-          <div style={{display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '28px', flexWrap: 'wrap'}}>
-            {['Certification costs & timelines', 'What auditors actually look for', 'ISO standards updates'].map((item, i) => (
-              <span key={i} style={{color: '#93c5fd', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px'}}>
-                <span style={{color: '#B8860B', fontWeight: '700'}}>✓</span> {item}
-              </span>
-            ))}
-          </div>
-          <Link
-            href="/resources"
-            style={{display: 'inline-block', background: '#B8860B', color: '#ffffff', border: 'none', padding: '14px 32px', fontSize: '15px', fontWeight: '700', cursor: 'pointer', whiteSpace: 'nowrap', borderRadius: '6px', textDecoration: 'none'}}
-          >Subscribe free →</Link>
-          <p style={{color: '#64748b', fontSize: '12px'}}>Join professionals across the UK. Unsubscribe any time.</p>
         </div>
       </div>
 

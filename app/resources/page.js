@@ -28,8 +28,8 @@ export default function Resources() {
               {[
                 { title: 'ISO standards updates', body: 'When standards change — including the upcoming ISO 9001 and 14001 revisions — you will hear about it from someone who sits on the committees, not a press release.' },
                 { title: 'Practical certification guidance', body: 'The questions clients ask most often, answered honestly. How long it takes, what it costs, what auditors actually look for.' },
-                { title: 'AI governance and ISO 42001', body: `The standard most businesses haven't heard of yet — but will need. Early briefings on where AI governance is heading.` },
-                { title: 'No spam, ever', body: `Useful content only, when there's something worth saying. Unsubscribe in one click at any time.` },
+                { title: 'AI governance and ISO 42001', body: 'The standard most businesses haven't heard of yet — but will need. Early briefings on where AI governance is heading.' },
+                { title: 'No spam, ever', body: 'Useful content only, when there's something worth saying. Unsubscribe in one click at any time.' },
               ].map(item => (
                 <div key={item.title} className="card border-l-4 border-l-gold">
                   <h3 className="font-bold text-navy mb-1">{item.title}</h3>
@@ -49,12 +49,12 @@ export default function Resources() {
               <p className="text-gray-500 text-sm mb-4">Join other UK business leaders staying ahead on ISO certification and compliance.</p>
               <iframe
                 width="100%"
-                height="350"
-                src="https://b063a5c1.sibforms.com/v2/serve/MUIFAPGvQY5DN6LOdavajVvyLw4R1MXk_AIA_f-IdW0tmuA8kf5yEURjcB1QlFcgauY8lW7MAgjWIPwfx8315ujTtFrwl6NjI6gGvziVhBZxANAIrkii_YhF4kpUsxN369YhJ5mgMwtnpPgclTmhIUXtzOOHB22zSj0ObwBdTNGfdpI_G52yZ96eUmyFMDQRkS_yqdJfSygUsV-ZWg=="
+                height="480"
+                src="https://b063a5c1.sibforms.com/serve/MUIFAPGvQY5DN6LOdavajVvyLw4R1MXk_AIA_f-IdW0tmuA8kf5yEURjcB1QlFcgauY8lW7MAgjWIPwfx8315ujTtFrwl6NjI6gGvziVhBZxANAIrkii_YhF4kpUsxN369YhJ5mgMwtnpPgclTmhIUXtzOOHB22zSj0ObwBdTNGfdpI_G52yZ96eUmyFMDQRkS_yqdJfSygUsV-ZWg=="
                 frameBorder="0"
-                scrolling="auto"
+                scrolling="no"
                 allowFullScreen
-                style={{display:'block', maxWidth:'100%'}}
+                style={{display:'block', maxWidth:'100%', border:'none'}}
               />
             </div>
           </div>
