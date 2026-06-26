@@ -123,6 +123,12 @@ export default function ISO42001() {
                 ))}
               </ul>
             </div>
+            <div className="card">
+              <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
+              <ul className="space-y-2">
+                  <li key="iso-42001-ai-governance-explained"><Link href="/insights/iso-42001-ai-governance-explained" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 42001: AI Governance Explained →</Link></li>
+              </ul>
+            </div>
           </aside>
         </div>
       </section>

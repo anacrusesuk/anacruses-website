@@ -123,6 +123,14 @@ export default function ISO27001() {
                 ))}
               </ul>
             </div>
+            <div className="card">
+              <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
+              <ul className="space-y-2">
+                  <li key="how-long-does-iso-27001-take-uk-sme"><Link href="/insights/how-long-does-iso-27001-take-uk-sme" className="text-gold hover:text-gold-dark text-xs leading-snug block">How Long Does ISO 27001 Take for a UK SME? →</Link></li>
+                  <li key="iso-27001-audit-failures"><Link href="/insights/iso-27001-audit-failures" className="text-gold hover:text-gold-dark text-xs leading-snug block">The Five Most Common ISO 27001 Audit Failures →</Link></li>
+                  <li key="iso-9001-vs-iso-27001-which-first"><Link href="/insights/iso-9001-vs-iso-27001-which-first" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 9001 vs ISO 27001: Which Should You Do First? →</Link></li>
+              </ul>
+            </div>
           </aside>
         </div>
       </section>

@@ -117,6 +117,13 @@ export default function ISO14001() {
                 ))}
               </ul>
             </div>
+            <div className="card">
+              <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
+              <ul className="space-y-2">
+                  <li key="iso-14001-cost-timeline-uk"><Link href="/insights/iso-14001-cost-timeline-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 14001 Certification: What It Costs and How Long It Takes →</Link></li>
+                  <li key="iso-14001-internal-audits-what-uk-businesses-get-wrong"><Link href="/insights/iso-14001-internal-audits-what-uk-businesses-get-wrong" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 14001 Internal Audits: What UK Businesses Get Wrong →</Link></li>
+              </ul>
+            </div>
           </aside>
         </div>
       </section>

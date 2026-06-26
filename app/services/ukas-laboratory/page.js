@@ -130,6 +130,12 @@ export default function UKASLaboratory() {
                 ))}
               </ul>
             </div>
+            <div className="card">
+              <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
+              <ul className="space-y-2">
+                  <li key="ukas-vs-non-ukas-certification"><Link href="/insights/ukas-vs-non-ukas-certification" className="text-gold hover:text-gold-dark text-xs leading-snug block">UKAS vs Non-UKAS ISO Certification: Why It Matters →</Link></li>
+              </ul>
+            </div>
           </aside>
         </div>
       </section>
