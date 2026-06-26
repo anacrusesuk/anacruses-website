@@ -134,7 +134,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-navy-light">
         <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-400">
-          <span>© {new Date().getFullYear()} Anacruses Associates Ltd. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Anacruses Associates Ltd. All rights reserved. &nbsp;·&nbsp; <Link href="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link></span>
           <span className="flex gap-4">
             <span>Co. No. 14420827</span>
             <span className="hidden md:inline text-gray-600">|</span>

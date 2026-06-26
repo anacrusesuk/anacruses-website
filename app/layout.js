@@ -1,6 +1,7 @@
 import './globals.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import CookieBanner from '../components/CookieBanner';
 import Script from 'next/script';
 
 export const metadata = {
@@ -74,6 +75,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* GA4 consent mode — default denied until user accepts */}
+        <Script id="ga-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+            });
+          `}
+        </Script>
+
+        {/* Google Analytics GA4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TF0NCH6E16"
           strategy="afterInteractive"
@@ -86,6 +100,8 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-TF0NCH6E16');
           `}
         </Script>
+
+        {/* Schema.org structured data */}
         <Script
           id="schema-org"
           type="application/ld+json"
@@ -96,6 +112,7 @@ export default function RootLayout({ children }) {
         <Nav />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
