@@ -76,7 +76,6 @@ export default function Nav() {
           <Link href="/insights" className="hover:text-gold transition-colors">Insights</Link>
           <Link href="/resources" className="hover:text-gold transition-colors">Resources</Link>
           <Link href="/training" className="hover:text-gold transition-colors">Training</Link>
-          <Link href="/news"     className="hover:text-gold transition-colors">News</Link>
           <Link href="/contact"  className="bg-gold hover:bg-gold-dark text-white px-4 py-2 rounded transition-colors">
             Contact
           </Link>
@@ -111,7 +110,6 @@ export default function Nav() {
           <Link href="/insights" className="block hover:text-gold" onClick={() => setMobileOpen(false)}>Insights</Link>
           <Link href="/resources" className="block hover:text-gold" onClick={() => setMobileOpen(false)}>Resources</Link>
           <Link href="/training" className="block hover:text-gold" onClick={() => setMobileOpen(false)}>Training</Link>
-          <Link href="/news"     className="block hover:text-gold" onClick={() => setMobileOpen(false)}>News</Link>
           <Link href="/contact"  className="block bg-gold px-4 py-2 rounded text-center" onClick={() => setMobileOpen(false)}>Contact</Link>
         </div>
       )}

@@ -9,7 +9,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Pass static files through without redirect processing
+# Static file pass-throughs
 [[redirects]]
   from = "/*.xml"
   to = "/:splat.xml"
@@ -25,6 +25,23 @@
   to = "/:splat.html"
   status = 200
 
+# News section retired — redirect to Insights
+[[redirects]]
+  from = "/news/"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/news"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/news/*"
+  to = "/insights/"
+  status = 301
+
+# Legacy Wix redirects
 [[redirects]]
   from = "/anacruses-training"
   to = "/training"
@@ -32,7 +49,7 @@
 
 [[redirects]]
   from = "/news-and-comment"
-  to = "/news"
+  to = "/insights/"
   status = 301
 
 [[redirects]]

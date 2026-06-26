@@ -56,7 +56,6 @@ export default function Footer() {
               ['ISO Insights', '/insights'],
               ['Resources & Newsletter', '/resources'],
               ['Training Courses', '/training'],
-              ['News & Comment', '/news'],
               ['Contact', '/contact'],
             ].map(([label, href]) => (
               <li key={href}><Link href={href} className="hover:text-gold transition-colors">{label}</Link></li>
