@@ -101,54 +101,23 @@ export default function Footer() {
       </div>
 
       {/* Newsletter signup */}
-      <div className="border-t border-navy-light bg-navy">
-        <div className="max-w-6xl mx-auto px-4 py-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-
-            {/* Left — copy */}
-            <div>
-              <p className="text-gold font-semibold text-xs uppercase tracking-widest mb-3">Free newsletter</p>
-              <h3 className="font-bold text-white text-2xl mb-3 leading-snug">
-                ISO Insights — straight to your inbox
-              </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                Practical guidance from a working CQI Lead Auditor. What certification actually costs,
-                how long it takes, and what auditors look for — sent fortnightly. No spam, ever.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                {[
-                  'ISO standards updates — from someone who sits on the committees',
-                  'Practical certification guidance — real answers, not sales pitches',
-                  'AI governance and ISO 42001 — the standard most businesses need to know',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-gold mt-0.5 flex-shrink-0">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Right — Brevo signup form */}
-            <div className="bg-white rounded-lg p-6">
-              <p className="font-bold text-navy text-lg mb-1">Join the list</p>
-              <p className="text-gray-500 text-xs mb-4">Free. Unsubscribe any time. No spam.</p>
-              <iframe
-                src="https://b063a5c1.sibforms.com/serve/MUIFAPGvQY5DN6LOdavajVvyLw4R1MXk_AIA_f-IdW0tmuA8kf5yEURjcB1QlFcgauY8lW7MAgjWIPwfx8315ujTtFrwl6NjI6gGvziVhBZxANAIrkii_YhF4kpUsxN369YhJ5mgMwtnpPgclTmhIUXtzOOHB22zSj0ObwBdTNGfdpI_G52yZ96eUmyFMDQRkS_yqdJfSygUsV-ZWg=="
-                frameBorder="0"
-                scrolling="auto"
-                allowFullScreen
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  minHeight: '160px',
-                  border: 'none',
-                }}
-                title="Newsletter signup"
-              />
-            </div>
-
+      <div className="border-t border-navy-light" style={{background: '#1F4E79'}}>
+        <div className="max-w-6xl mx-auto px-4 py-12 text-center">
+          <p style={{color: '#B8860B', fontSize: '11px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '12px'}}>Free newsletter</p>
+          <h3 style={{color: '#ffffff', fontSize: '26px', fontWeight: '700', marginBottom: '10px', lineHeight: '1.2'}}>ISO Insights — straight to your inbox</h3>
+          <p style={{color: '#93c5fd', fontSize: '14px', lineHeight: '1.6', maxWidth: '480px', margin: '0 auto 24px'}}>Practical guidance from a working CQI Lead Auditor. Fortnightly. No spam, ever.</p>
+          <div style={{display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '28px', flexWrap: 'wrap'}}>
+            {['Certification costs & timelines', 'What auditors actually look for', 'ISO standards updates'].map((item, i) => (
+              <span key={i} style={{color: '#93c5fd', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px'}}>
+                <span style={{color: '#B8860B', fontWeight: '700'}}>✓</span> {item}
+              </span>
+            ))}
           </div>
+          <Link
+            href="/resources"
+            style={{display: 'inline-block', background: '#B8860B', color: '#ffffff', border: 'none', padding: '14px 32px', fontSize: '15px', fontWeight: '700', cursor: 'pointer', whiteSpace: 'nowrap', borderRadius: '6px', textDecoration: 'none'}}
+          >Subscribe free →</Link>
+          <p style={{color: '#64748b', fontSize: '12px'}}>Join professionals across the UK. Unsubscribe any time.</p>
         </div>
       </div>
 
