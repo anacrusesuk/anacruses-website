@@ -22,7 +22,7 @@ export default function Privacy() {
           <div>
             <h2 className="text-xl font-bold text-navy mb-3">Who we are</h2>
             <p>Anacruses Associates Ltd (Company No. 14420827, VAT No. 468 6796 17) is an ISO management systems consultancy based in Hertfordshire, UK. We are the data controller for personal data collected through this website.</p>
-            <p className="mt-2">Contact: <a href="mailto:rob@anacruses.co.uk" className="text-gold hover:underline">rob@anacruses.co.uk</a> &nbsp;|&nbsp; <a href="tel:07792259840" className="text-gold hover:underline">07792 259840</a></p>
+            <p className="mt-2">Contact: <a href="mailto:rob.pragnell@anacruses.co.uk" className="text-gold hover:underline">rob.pragnell@anacruses.co.uk</a> &nbsp;|&nbsp; <a href="tel:07792259840" className="text-gold hover:underline">07792 259840</a></p>
             <p className="mt-2">We are registered with the Information Commissioner&apos;s Office (ICO).</p>
           </div>
 
@@ -71,7 +71,7 @@ export default function Privacy() {
               <li>Withdraw consent at any time (where processing is based on consent)</li>
               <li>Lodge a complaint with the ICO at ico.org.uk</li>
             </ul>
-            <p className="mt-3">To exercise any of these rights, contact us at <a href="mailto:rob@anacruses.co.uk" className="text-gold hover:underline">rob@anacruses.co.uk</a>. We will respond within one calendar month.</p>
+            <p className="mt-3">To exercise any of these rights, contact us at <a href="mailto:rob.pragnell@anacruses.co.uk" className="text-gold hover:underline">rob.pragnell@anacruses.co.uk</a>. We will respond within one calendar month.</p>
           </div>
 
           <div>

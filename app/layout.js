@@ -27,7 +27,7 @@ const schemaOrg = {
       'image': 'https://www.anacruses.co.uk/images/logo.png',
       'description': 'Specialist ISO management systems consultancy based in Hertfordshire. CQI/IRCA certified Lead Auditor with 20+ years experience across ISO 9001, 14001, 27001, 45001 and 42001.',
       'telephone': '+447792259840',
-      'email': 'rob@anacruses.co.uk',
+      'email': 'rob.pragnell@anacruses.co.uk',
       'address': {
         '@type': 'PostalAddress',
         'addressRegion': 'Hertfordshire',
