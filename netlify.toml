@@ -1,6 +1,7 @@
-[build]
-  command = "npm run build"
-  publish = "out"
+[[redirects]]
+  from = "/plans-pricing"
+  to = "/contact/"
+  status = 301
 
 [[headers]]
   for = "/*"
@@ -8,84 +9,5 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://api.brevo.com; frame-src https://b063a5c1.sibforms.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
-
-# Static file pass-throughs
-[[redirects]]
-  from = "/*.xml"
-  to = "/:splat.xml"
-  status = 200
-
-[[redirects]]
-  from = "/*.txt"
-  to = "/:splat.txt"
-  status = 200
-
-[[redirects]]
-  from = "/*.html"
-  to = "/:splat.html"
-  status = 200
-
-# News section retired
-[[redirects]]
-  from = "/news/"
-  to = "/insights/"
-  status = 301
-
-[[redirects]]
-  from = "/news"
-  to = "/insights/"
-  status = 301
-
-[[redirects]]
-  from = "/news/*"
-  to = "/insights/"
-  status = 301
-
-# Legacy Wix redirects
-[[redirects]]
-  from = "/anacruses-training"
-  to = "/training"
-  status = 301
-
-[[redirects]]
-  from = "/news-and-comment"
-  to = "/insights/"
-  status = 301
-
-[[redirects]]
-  from = "/get-certified-to-iso-and-ukas-standards"
-  to = "/get-certified"
-  status = 301
-
-[[redirects]]
-  from = "/ukas-v-non-ukas-certification"
-  to = "/ukas-explained"
-  status = 301
-
-[[redirects]]
-  from = "/artificial-intelligence-certification"
-  to = "/services/iso-42001"
-  status = 301
-
-[[redirects]]
-  from = "/quality-certification"
-  to = "/services/iso-9001"
-  status = 301
-
-[[redirects]]
-  from = "/environmental-certification"
-  to = "/services/iso-14001"
-  status = 301
-
-[[redirects]]
-  from = "/health-and-safety-certification"
-  to = "/services/iso-45001"
-  status = 301
-
-[[redirects]]
-  from = "/information-security-certification"
-  to = "/services/iso-27001"
-  status = 301
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-XSS-Protection = "1; mode=block"
