@@ -22,8 +22,7 @@ export default function Contact() {
           {/* Form */}
           <div>
             <h2 className="text-2xl font-bold text-navy mb-6">Send us a message</h2>
-            {/* Netlify Forms: the name="contact" and data-netlify="true" handle submission automatically */}
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field"
               className="space-y-4">
               <input type="hidden" name="form-name" value="contact" />
               <p className="hidden">
