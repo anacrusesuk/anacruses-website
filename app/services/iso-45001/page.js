@@ -8,6 +8,58 @@ export const metadata = {
 export default function ISO45001() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What replaced OHSAS 18001?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ISO 45001:2018 replaced OHSAS 18001 as the international standard for Occupational Health and Safety Management Systems. OHSAS 18001 was officially withdrawn in March 2021. Organisations that have not yet transitioned should do so as a matter of priority — OHSAS 18001 certificates are no longer to a current standard.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How is ISO 45001 different from OHSAS 18001?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ISO 45001 adopts the Annex SL high-level structure shared by ISO 9001 and ISO 14001, making it easier to integrate with other management systems. It places greater emphasis on leadership commitment, worker participation, and proactive risk management. Context of the organisation and the needs of interested parties are also explicitly addressed.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is ISO 45001 a legal requirement in the UK?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. ISO 45001 is a voluntary standard. UK health and safety law — primarily the Health and Safety at Work Act 1974 and associated regulations — sets the legal baseline. ISO 45001 goes beyond legal compliance to provide a systematic framework for continual improvement in safety performance.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long does ISO 45001 certification take?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'For a UK business implementing from scratch, ISO 45001 certification typically takes 10 to 16 weeks. Transition from OHSAS 18001 to ISO 45001 is typically faster — 6 to 10 weeks — as much of the underlying system is already in place.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much does ISO 45001 certification cost in the UK?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Total first-year cost for a UK SME is typically £5,000 to £14,000, covering consultancy fees and certification body audit fees. Transition from OHSAS 18001 is typically less expensive as less new documentation is required.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <section className="bg-navy text-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
@@ -24,6 +76,10 @@ export default function ISO45001() {
       <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
+
+            <p className="text-gray-600 leading-relaxed border-l-4 border-gold pl-4 py-1">
+              ISO 45001:2018 is the international standard for Occupational Health and Safety Management Systems, replacing the withdrawn OHSAS 18001. It provides a framework for eliminating hazards, reducing OH&S risks, and demonstrating health and safety governance to clients and supply chains in construction, engineering, facilities management, and manufacturing. UK certification typically takes 10 to 18 weeks.
+            </p>
 
             <h2 className="text-2xl font-bold text-navy">What is ISO 45001?</h2>
             <p>
@@ -74,8 +130,39 @@ export default function ISO45001() {
 
             <h2 className="text-2xl font-bold text-navy mt-6">Integrating ISO 45001 with your other standards</h2>
             <p>
-              ISO 45001 shares the same Annex SL high-level structure as ISO 9001 and ISO 14001. If you hold either of those standards — or are implementing them alongside ISO 45001 — a significant proportion of your management system can be integrated. An Integrated Management System covering quality, environment and health and safety is increasingly common in construction, engineering and manufacturing, and Anacruses has delivered a number of these.
+              ISO 45001 shares the same Annex SL high-level structure as ISO 9001 and ISO 14001. If you hold either of those standards — or are implementing them alongside ISO 45001 — a significant proportion of your management system can be integrated. An Integrated Management System covering quality, environment and health and safety is increasingly common in construction, engineering and manufacturing.
             </p>
+
+            <h2 className="text-2xl font-bold text-navy mt-6">Frequently asked questions</h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: 'What replaced OHSAS 18001?',
+                  a: 'ISO 45001:2018. OHSAS 18001 was officially withdrawn in March 2021. Certificates still referencing OHSAS 18001 are no longer to a current standard.',
+                },
+                {
+                  q: 'How is ISO 45001 different from OHSAS 18001?',
+                  a: 'ISO 45001 adopts the Annex SL structure shared by ISO 9001 and 14001, making integration easier. It places greater emphasis on leadership commitment, worker participation, and proactive risk management.',
+                },
+                {
+                  q: 'Is ISO 45001 a legal requirement in the UK?',
+                  a: 'No. UK H&S law sets the legal baseline. ISO 45001 goes beyond legal compliance to provide a systematic framework for continual improvement in safety performance.',
+                },
+                {
+                  q: 'How long does ISO 45001 certification take?',
+                  a: '10 to 16 weeks from scratch. Transition from OHSAS 18001 is typically 6 to 10 weeks as much of the underlying system already exists.',
+                },
+                {
+                  q: 'How much does ISO 45001 cost?',
+                  a: 'Total first-year cost is typically £5,000 to £14,000. Transition from OHSAS 18001 is typically less expensive as less new documentation is required.',
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="border-l-4 border-mist pl-4">
+                  <p className="font-bold text-navy text-sm mb-1">{q}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="pt-4">
               <Link href="/contact" className="btn-primary">Get a quote for ISO 45001 →</Link>
@@ -97,14 +184,12 @@ export default function ISO45001() {
                 ))}
               </ul>
             </div>
-
             <div className="card bg-mist">
               <h3 className="font-bold text-navy mb-2 text-sm">Still on OHSAS 18001?</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
-                OHSAS 18001 was withdrawn in March 2021. If your certificate still references OHSAS 18001, it is no longer to a current standard. Transitioning to ISO 45001 is typically straightforward for organisations with an existing health and safety management system. Get in touch to discuss what is involved.
+                OHSAS 18001 was withdrawn in March 2021. If your certificate still references OHSAS 18001, it is no longer to a current standard. Transitioning to ISO 45001 is typically straightforward for organisations with an existing health and safety management system.
               </p>
             </div>
-
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related services</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">
@@ -112,7 +197,6 @@ export default function ISO45001() {
                   ['ISO 9001 — Quality', '/services/iso-9001'],
                   ['ISO 14001 — Environmental', '/services/iso-14001'],
                   ['Get Certified — Our Process', '/get-certified'],
-                  ['UKAS vs non-UKAS Explained', '/about'],
                 ].map(([label, href]) => (
                   <li key={href}><Link href={href} className="text-gold hover:text-gold-dark">{label} →</Link></li>
                 ))}
@@ -121,7 +205,7 @@ export default function ISO45001() {
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
               <ul className="space-y-2">
-                  <li key="iso-45001-vs-ohsas-18001-uk"><Link href="/insights/iso-45001-vs-ohsas-18001-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 45001 vs OHSAS 18001: What UK Businesses Need to Know →</Link></li>
+                <li><Link href="/insights/iso-45001-vs-ohsas-18001-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 45001 vs OHSAS 18001: What UK Businesses Need to Know →</Link></li>
               </ul>
             </div>
           </aside>

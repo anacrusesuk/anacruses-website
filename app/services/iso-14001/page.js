@@ -8,6 +8,58 @@ export const metadata = {
 export default function ISO14001() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How long does ISO 14001 certification take?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'For a UK SME, ISO 14001 certification typically takes 10 to 16 weeks from gap analysis to certificate. Organisations already holding ISO 9001 or ISO 45001 can often integrate ISO 14001 more quickly due to shared framework elements.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much does ISO 14001 certification cost in the UK?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Total first-year cost for a UK SME is typically £5,000 to £14,000, covering consultancy fees and certification body audit fees. Ongoing annual surveillance audit fees are typically £1,000 to £2,500.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Does ISO 14001 help win public sector contracts?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Many local authorities and government departments assess environmental management as part of their procurement scoring. ISO 14001 provides objective, independently verified evidence of your environmental commitment — which carries significantly more weight than a self-declared environmental policy.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is an environmental aspect in ISO 14001?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'An environmental aspect is an element of your organisation\'s activities, products, or services that interacts with the environment — for example, energy consumption, waste generation, water use, or vehicle emissions. ISO 14001 requires you to identify your significant aspects and manage the impacts associated with them.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the difference between ISO 14001:2015 and ISO 14001:2026?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ISO 14001:2026 is currently in development. The revision is expected to strengthen requirements around climate change, circular economy, and biodiversity. Organisations certified to ISO 14001:2015 will have a transition period after publication before the new version becomes mandatory.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <section className="bg-navy text-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
@@ -24,6 +76,10 @@ export default function ISO14001() {
       <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
+
+            <p className="text-gray-600 leading-relaxed border-l-4 border-gold pl-4 py-1">
+              ISO 14001:2015 is the international standard for Environmental Management Systems. It provides a framework for identifying and controlling the environmental impacts of your operations and for demonstrating environmental responsibility to clients, supply chains, and public sector buyers. UK certification typically takes 10 to 16 weeks for an SME.
+            </p>
 
             <h2 className="text-2xl font-bold text-navy">What is ISO 14001?</h2>
             <p>
@@ -76,6 +132,37 @@ export default function ISO14001() {
               ISO 14001 shares the same high-level structure (Annex SL) as ISO 9001 and ISO 45001. If you already hold ISO 9001, adding ISO 14001 is significantly more efficient — much of the documentation, risk management, and audit framework can be integrated. This is known as an Integrated Management System (IMS) and is an area where Anacruses has considerable expertise.
             </p>
 
+            <h2 className="text-2xl font-bold text-navy mt-6">Frequently asked questions</h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: 'How long does ISO 14001 certification take?',
+                  a: 'For a UK SME, typically 10 to 16 weeks from gap analysis to certificate. Organisations already holding ISO 9001 can often integrate ISO 14001 more quickly.',
+                },
+                {
+                  q: 'How much does ISO 14001 cost?',
+                  a: 'Total first-year cost is typically £5,000 to £14,000, covering consultancy and certification body fees. Anacruses quotes fixed fees.',
+                },
+                {
+                  q: 'Does ISO 14001 help win public sector contracts?',
+                  a: 'Yes. Many local authorities assess environmental management in procurement scoring. ISO 14001 provides independently verified evidence that carries significantly more weight than a self-declared policy.',
+                },
+                {
+                  q: 'What is an environmental aspect?',
+                  a: 'An element of your operations that interacts with the environment — energy use, waste, water, emissions. ISO 14001 requires you to identify significant aspects and manage associated impacts.',
+                },
+                {
+                  q: 'What is changing in ISO 14001:2026?',
+                  a: 'The revision is expected to strengthen requirements around climate change, circular economy, and biodiversity. Certified organisations will have a transition period after publication.',
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="border-l-4 border-mist pl-4">
+                  <p className="font-bold text-navy text-sm mb-1">{q}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+
             <div className="pt-4">
               <Link href="/contact" className="btn-primary">Get a quote for ISO 14001 →</Link>
             </div>
@@ -96,14 +183,12 @@ export default function ISO14001() {
                 ))}
               </ul>
             </div>
-
             <div className="card bg-mist">
               <h3 className="font-bold text-navy mb-2 text-sm">Did you know?</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
                 ISO 14001 certification can give you a material advantage when tendering for public sector contracts. Many local authorities and government departments assess environmental management as part of their procurement scoring — ISO 14001 provides objective evidence of your commitment.
               </p>
             </div>
-
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related services</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">
@@ -120,8 +205,8 @@ export default function ISO14001() {
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
               <ul className="space-y-2">
-                  <li key="iso-14001-cost-timeline-uk"><Link href="/insights/iso-14001-cost-timeline-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 14001 Certification: What It Costs and How Long It Takes →</Link></li>
-                  <li key="iso-14001-internal-audits-what-uk-businesses-get-wrong"><Link href="/insights/iso-14001-internal-audits-what-uk-businesses-get-wrong" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 14001 Internal Audits: What UK Businesses Get Wrong →</Link></li>
+                <li><Link href="/insights/iso-14001-cost-timeline-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 14001 Certification: What It Costs and How Long It Takes →</Link></li>
+                <li><Link href="/insights/iso-14001-internal-audits-what-uk-businesses-get-wrong" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 14001 Internal Audits: What UK Businesses Get Wrong →</Link></li>
               </ul>
             </div>
           </aside>

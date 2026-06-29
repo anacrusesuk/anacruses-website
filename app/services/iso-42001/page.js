@@ -8,6 +8,58 @@ export const metadata = {
 export default function ISO42001() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is ISO 42001?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ISO 42001:2023 is the world\'s first international standard for Artificial Intelligence Management Systems. Published in December 2023, it provides organisations with a structured framework for governing their AI activities — managing risk, ensuring transparency, maintaining human oversight, and demonstrating accountability for AI systems they develop, deploy, or use.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who needs ISO 42001 certification?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ISO 42001 is relevant to organisations that develop, sell, or deploy AI systems; technology companies using AI or machine learning in client-facing applications; businesses using large language models or AI tools in processes affecting clients or employees; and companies supplying to regulated industries or public sector buyers where AI governance is assessed.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How does ISO 42001 relate to the EU AI Act?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The EU AI Act, which came into full force in 2024, creates compliance obligations for AI systems deployed in or affecting EU markets. ISO 42001 is not legally mandated by the Act, but its framework maps closely to many of the Act\'s requirements — making it an efficient route to demonstrating compliance, particularly for high-risk AI systems.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long does ISO 42001 certification take?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Typical implementation timeline is 10 to 16 weeks. For organisations already holding ISO 27001, integration with the existing ISMS is significantly more efficient — the two standards share structural elements and many documentation requirements overlap.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much does ISO 42001 certification cost in the UK?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'As a new standard, certification body fees are still settling. Total first-year cost for a UK SME is typically £6,000 to £16,000 covering consultancy and certification audit fees. Organisations integrating with an existing ISO 27001 system will be at the lower end of that range.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <section className="bg-navy text-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
@@ -24,6 +76,10 @@ export default function ISO42001() {
       <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
+
+            <p className="text-gray-600 leading-relaxed border-l-4 border-gold pl-4 py-1">
+              ISO 42001:2023 is the world's first international standard for Artificial Intelligence Management Systems. It provides a framework for responsible AI governance — managing the risks associated with AI systems, demonstrating ethical AI use to clients and regulators, and providing evidence of compliance with the EU AI Act and emerging UK AI policy. UK certification is a new and growing area; most organisations are currently in the implementation phase.
+            </p>
 
             <h2 className="text-2xl font-bold text-navy">What is ISO 42001?</h2>
             <p>
@@ -57,11 +113,6 @@ export default function ISO42001() {
               ))}
             </ul>
 
-            <h2 className="text-2xl font-bold text-navy mt-6">What ISO 42001 covers</h2>
-            <p>
-              The standard addresses the full lifecycle of AI systems within an organisation — from initial planning and risk assessment through to deployment, monitoring and continual improvement. Key areas include AI risk management, impact assessment, transparency and explainability, human oversight, data governance, and the responsibilities of organisations that develop AI versus those that deploy third-party AI systems.
-            </p>
-
             <h2 className="text-2xl font-bold text-navy mt-6">How Anacruses helps</h2>
             <p>
               Anacruses has been working with ISO 42001 since its publication. Rob Pragnell contributes to the ISO ESG Committee and participates in the BSI BridgeAI standards community — which means our clients benefit from insight into not just current requirements, but where AI governance standards are heading.
@@ -83,6 +134,37 @@ export default function ISO42001() {
               Typical implementation timeline: 10–16 weeks. For organisations already holding ISO 27001, integration with the existing ISMS is significantly more efficient.
             </p>
 
+            <h2 className="text-2xl font-bold text-navy mt-6">Frequently asked questions</h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: 'What is ISO 42001?',
+                  a: 'The world\'s first international standard for Artificial Intelligence Management Systems, published in December 2023. It provides a framework for governing AI activities — managing risk, ensuring transparency, and demonstrating accountability.',
+                },
+                {
+                  q: 'Who needs ISO 42001 certification?',
+                  a: 'Organisations that develop, deploy, or use AI systems — particularly those supplying to regulated industries, public sector buyers, or clients who are beginning to ask governance questions about AI.',
+                },
+                {
+                  q: 'How does ISO 42001 relate to the EU AI Act?',
+                  a: 'ISO 42001 is not legally mandated by the EU AI Act, but its framework maps closely to many of the Act\'s requirements — making it an efficient route to demonstrating compliance for businesses affected by the Act.',
+                },
+                {
+                  q: 'How long does ISO 42001 certification take?',
+                  a: '10 to 16 weeks typically. Organisations already holding ISO 27001 can integrate ISO 42001 more efficiently due to shared structural and documentation elements.',
+                },
+                {
+                  q: 'How much does ISO 42001 cost?',
+                  a: 'Total first-year cost is typically £6,000 to £16,000. Organisations integrating with an existing ISO 27001 system will be at the lower end of that range.',
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="border-l-4 border-mist pl-4">
+                  <p className="font-bold text-navy text-sm mb-1">{q}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+
             <div className="pt-4">
               <Link href="/contact" className="btn-primary">Get a quote for ISO 42001 →</Link>
             </div>
@@ -103,14 +185,12 @@ export default function ISO42001() {
                 ))}
               </ul>
             </div>
-
             <div className="card bg-navy text-white">
               <h3 className="font-bold text-gold mb-2 text-sm">Get ahead of the curve</h3>
               <p className="text-xs text-blue-100 leading-relaxed">
                 ISO 42001 is new enough that very few UK businesses have achieved certification. Early certification positions your organisation as a leader in responsible AI — before it becomes a basic compliance requirement.
               </p>
             </div>
-
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related services</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">
@@ -126,7 +206,7 @@ export default function ISO42001() {
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
               <ul className="space-y-2">
-                  <li key="iso-42001-ai-governance-explained"><Link href="/insights/iso-42001-ai-governance-explained" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 42001: AI Governance Explained →</Link></li>
+                <li><Link href="/insights/iso-42001-ai-governance-explained" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 42001: AI Governance Explained →</Link></li>
               </ul>
             </div>
           </aside>

@@ -8,6 +8,58 @@ export const metadata = {
 export default function ISO9001() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How long does ISO 9001 certification take for a UK SME?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'For a UK SME with no existing quality management system, ISO 9001 certification typically takes 8 to 16 weeks from gap analysis to certificate. The main variables are your starting point, the scope of certification, and how much internal resource you can commit.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much does ISO 9001 certification cost in the UK?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Total first-year cost for a UK SME is typically £5,000 to £15,000, covering consultancy fees of £3,000 to £12,000 and certification body audit fees of £1,500 to £4,000. Ongoing annual surveillance audit fees are typically £1,000 to £2,500.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do I need a consultant to get ISO 9001 certified?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'You do not legally need a consultant. However, businesses without prior ISO experience frequently take significantly longer than necessary, produce systems that fail the first surveillance audit, or spend more correcting mistakes than a consultant would have cost.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is ISO 9001 a legal requirement in the UK?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. ISO 9001 is a voluntary standard. However, it is required by many contracts and procurement frameworks — particularly in defence, automotive, aerospace, and public sector supply chains.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Can a small business with fewer than 10 employees get ISO 9001?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. ISO 9001 is designed to be scalable to any organisation size. A five-person company can achieve a fully compliant, auditable quality management system with documentation proportionate to its size and complexity.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <section className="bg-navy text-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
@@ -24,6 +76,11 @@ export default function ISO9001() {
       <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
+
+            <p className="text-gray-600 leading-relaxed border-l-4 border-gold pl-4 py-1">
+              ISO 9001:2015 is the international standard for Quality Management Systems, adopted by over one million organisations worldwide. UK businesses pursue ISO 9001 certification to meet supply chain requirements, win public sector contracts, and demonstrate quality assurance to clients. Certification typically takes 8 to 16 weeks for a UK SME and costs £5,000 to £15,000 in total.
+            </p>
+
             <h2 className="text-2xl font-bold text-navy">What is ISO 9001?</h2>
             <p>
               ISO 9001:2015 is the international standard for Quality Management Systems. It sets out a framework for consistently delivering products and services that meet customer requirements and regulatory obligations — and for continuously improving how your organisation works.
@@ -31,6 +88,7 @@ export default function ISO9001() {
             <p>
               More than one million organisations worldwide hold ISO 9001 certification. It is recognised across every industry sector and every country. For many UK businesses, it is a condition of being placed on a supplier list, invited to tender, or awarded a contract.
             </p>
+
             <h2 className="text-2xl font-bold text-navy mt-6">Who needs ISO 9001?</h2>
             <p>Any business that:</p>
             <ul className="list-none space-y-2">
@@ -46,6 +104,7 @@ export default function ISO9001() {
                 </li>
               ))}
             </ul>
+
             <h2 className="text-2xl font-bold text-navy mt-6">How Anacruses helps</h2>
             <p>
               We manage the entire process — from understanding where your business currently sits against the standard through to supporting you through the external certification audit. You focus on running your business; we handle the compliance work.
@@ -61,6 +120,39 @@ export default function ISO9001() {
             <p className="text-sm font-semibold text-navy">
               Typical implementation timeline: 8–16 weeks, depending on your organisation's size and current level of documentation.
             </p>
+
+            <h2 className="text-2xl font-bold text-navy mt-6">Frequently asked questions</h2>
+
+            <div className="space-y-4">
+              {[
+                {
+                  q: 'How long does ISO 9001 certification take?',
+                  a: 'For a UK SME starting from scratch, 8 to 16 weeks from gap analysis to certificate. Organisations with existing documented processes move faster.',
+                },
+                {
+                  q: 'How much does ISO 9001 cost in the UK?',
+                  a: 'Total first-year cost is typically £5,000 to £15,000 — covering consultancy fees of £3,000 to £12,000 and certification body audit fees of £1,500 to £4,000. Anacruses quotes fixed fees so you know the total upfront.',
+                },
+                {
+                  q: 'Is ISO 9001 a legal requirement?',
+                  a: 'No — it is voluntary. But it is required by many tender frameworks and procurement processes, making it a commercial necessity in defence, aerospace, and public sector supply chains.',
+                },
+                {
+                  q: 'Can a small business get ISO 9001 certified?',
+                  a: 'Yes. ISO 9001 scales to any size. A five-person company can achieve full certification with documentation proportionate to its complexity.',
+                },
+                {
+                  q: 'What is the difference between ISO 9001:2015 and the proposed 2026 revision?',
+                  a: 'ISO 9001:2026 is currently in development. Early drafts suggest greater emphasis on resilience, digital information, and sustainability. Organisations certified to 2015 will have a transition period — likely three years — after publication.',
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="border-l-4 border-mist pl-4">
+                  <p className="font-bold text-navy text-sm mb-1">{q}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+
             <div className="pt-4">
               <Link href="/contact" className="btn-primary">Get a quote for ISO 9001 →</Link>
             </div>
@@ -92,9 +184,9 @@ export default function ISO9001() {
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
               <ul className="space-y-2">
-                  <li key="iso-9001-certification-cost-uk"><Link href="/insights/iso-9001-certification-cost-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 9001 Certification Cost: What to Actually Budget →</Link></li>
-                  <li key="iso-9001-vs-iso-27001-which-first"><Link href="/insights/iso-9001-vs-iso-27001-which-first" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 9001 vs ISO 27001: Which Should You Do First? →</Link></li>
-                  <li key="iso-9001-internal-audit-guide"><Link href="/insights/iso-9001-internal-audit-guide" className="text-gold hover:text-gold-dark text-xs leading-snug block">How to Run an ISO 9001 Internal Audit That Adds Value →</Link></li>
+                <li><Link href="/insights/iso-9001-certification-cost-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 9001 Certification Cost: What to Actually Budget →</Link></li>
+                <li><Link href="/insights/iso-9001-certification-uk-sme-guide" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 9001 Certification for UK SMEs: Cost, Timeline and What to Expect →</Link></li>
+                <li><Link href="/insights/iso-9001-internal-audit-guide" className="text-gold hover:text-gold-dark text-xs leading-snug block">How to Run an ISO 9001 Internal Audit That Adds Value →</Link></li>
               </ul>
             </div>
           </aside>
