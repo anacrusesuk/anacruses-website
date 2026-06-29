@@ -74,3 +74,7 @@ Yes. ISO 27001 is designed to be scalable to any organisation size. A ten-person
 **What certification body should I use for ISO 27001 in the UK?**
 
 Use a UKAS-accredited certification body. Well-regarded UKAS-accredited bodies for ISO 27001 in the UK include BSI, Bureau Veritas, LRQA, NQA, and Alcumus ISOQAR. The right choice depends on your sector, your clients' preferences, and commercial terms — we advise on this as part of our consultancy.
+
+**Free resource: ISO 27001 Certification Checklist**
+
+Ready to assess your own readiness? Download the free ISO 27001 Certification Checklist — a practical PDF covering all seven areas your certification body will examine, with every required item listed so nothing is missed before your Stage 2 audit. [Download the free checklist →](/iso-27001-checklist)
