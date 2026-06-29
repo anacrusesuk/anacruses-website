@@ -35,8 +35,6 @@ exports.handler = async function (event) {
         updateEnabled: true,
       }),
     });
-
-    // 409 = contact already exists — that's fine, we still send the email
     if (!contactRes.ok && contactRes.status !== 409) {
       const err = await contactRes.text();
       console.error('Brevo contact error:', err);
@@ -47,7 +45,7 @@ exports.handler = async function (event) {
     return { statusCode: 500, body: JSON.stringify({ error: 'Network error saving contact' }) };
   }
 
-  // 2. Send welcome email with PDF link
+  // 2. Send welcome email to the lead
   try {
     const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
@@ -68,26 +66,16 @@ exports.handler = async function (event) {
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6f8;padding:32px 0;">
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
-
-        <!-- Header -->
         <tr>
           <td style="background:#1B2A4A;padding:28px 32px;">
             <p style="margin:0;color:#C9A84C;font-size:12px;font-weight:bold;text-transform:uppercase;letter-spacing:2px;">Anacruses Associates Ltd</p>
             <h1 style="margin:8px 0 0;color:#ffffff;font-size:22px;line-height:1.3;">Your ISO 27001 Certification Checklist</h1>
           </td>
         </tr>
-
-        <!-- Body -->
         <tr>
           <td style="background:#ffffff;padding:32px;">
-            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">
-              ${name ? `Hi ${name},` : 'Hi,'}
-            </p>
-            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">
-              Thank you for downloading the ISO 27001 Certification Checklist. Your PDF is ready below.
-            </p>
-
-            <!-- CTA Button -->
+            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">${name ? `Hi ${name},` : 'Hi,'}</p>
+            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">Thank you for downloading the ISO 27001 Certification Checklist. Your PDF is ready below.</p>
             <table cellpadding="0" cellspacing="0" style="margin:24px 0;">
               <tr>
                 <td style="background:#C9A84C;border-radius:4px;">
@@ -98,15 +86,8 @@ exports.handler = async function (event) {
                 </td>
               </tr>
             </table>
-
-            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">
-              The checklist covers all seven areas your certification body will examine — from scope and risk assessment through to internal audit and continual improvement. Every item marked <strong>Required</strong> must be evidenced before your Stage 2 audit.
-            </p>
-            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">
-              If anything on the checklist raises questions about your own position, I am happy to have a free, no-obligation conversation. You can book a call at the link below or simply reply to this email.
-            </p>
-
-            <!-- Secondary CTA -->
+            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">The checklist covers all seven areas your certification body will examine — from scope and risk assessment through to internal audit and continual improvement. Every item marked <strong>Required</strong> must be evidenced before your Stage 2 audit.</p>
+            <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">If anything on the checklist raises questions about your own position, I am happy to have a free, no-obligation conversation. You can book a call at the link below or simply reply to this email.</p>
             <table cellpadding="0" cellspacing="0" style="margin:8px 0 24px;">
               <tr>
                 <td style="border:2px solid #1B2A4A;border-radius:4px;">
@@ -117,7 +98,6 @@ exports.handler = async function (event) {
                 </td>
               </tr>
             </table>
-
             <p style="margin:0;color:#2D3748;font-size:15px;line-height:1.6;">
               Best regards,<br><br>
               <strong>Rob Pragnell</strong><br>
@@ -128,8 +108,6 @@ exports.handler = async function (event) {
             </p>
           </td>
         </tr>
-
-        <!-- Footer -->
         <tr>
           <td style="background:#1B2A4A;padding:16px 32px;">
             <p style="margin:0;color:#8899aa;font-size:11px;line-height:1.5;">
@@ -139,7 +117,6 @@ exports.handler = async function (event) {
             </p>
           </td>
         </tr>
-
       </table>
     </td></tr>
   </table>
@@ -147,7 +124,6 @@ exports.handler = async function (event) {
 </html>`,
       }),
     });
-
     if (!emailRes.ok) {
       const err = await emailRes.text();
       console.error('Brevo email error:', err);
@@ -156,6 +132,54 @@ exports.handler = async function (event) {
   } catch (err) {
     console.error('Brevo email fetch error:', err);
     return { statusCode: 500, body: JSON.stringify({ error: 'Network error sending email' }) };
+  }
+
+  // 3. Send notification email to Rob
+  try {
+    await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        sender: {
+          name:  'Anacruses Website',
+          email: 'rob.pragnell@anacruses.co.uk',
+        },
+        to: [{ email: 'rob.pragnell@anacruses.co.uk', name: 'Rob Pragnell' }],
+        subject: `New ISO 27001 lead: ${name || email}`,
+        htmlContent: `
+<html><body style="font-family:Arial,sans-serif;padding:24px;color:#2D3748;">
+  <h2 style="color:#1B2A4A;margin-top:0;">New ISO 27001 checklist download</h2>
+  <table style="border-collapse:collapse;width:100%;max-width:480px;">
+    <tr>
+      <td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;width:120px;">Name</td>
+      <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">${name || '(not provided)'}</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;">Email</td>
+      <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;"><a href="mailto:${email}" style="color:#C9A84C;">${email}</a></td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;">Source</td>
+      <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">ISO 27001 Checklist download — anacruses.co.uk</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;">Time</td>
+      <td style="padding:8px 12px;">${new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })}</td>
+    </tr>
+  </table>
+  <p style="margin-top:24px;">
+    <a href="mailto:${email}?subject=Your ISO 27001 Certification Checklist"
+       style="display:inline-block;background:#1B2A4A;color:#ffffff;padding:10px 20px;border-radius:4px;text-decoration:none;font-weight:bold;">
+      Reply to ${name || email} →
+    </a>
+  </p>
+  <p style="color:#888;font-size:12px;margin-top:24px;">This lead has been added to Brevo ISO 27001 Leads (List 6).</p>
+</body></html>`,
+      }),
+    });
+  } catch (err) {
+    // Notification failure should not affect the user experience
+    console.error('Notification email error:', err);
   }
 
   return {
