@@ -1,17 +1,14 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Free ISO 27001 Certification Checklist for UK SMEs | Anacruses',
   description:
     'Download the free ISO 27001 Certification Checklist — everything a UK business needs to verify before its Stage 2 audit. Written by a CQI/IRCA certified Lead Auditor.',
-  robots: { index: true, follow: true },
-}
+};
 
 export default function ISO27001Checklist() {
   return (
     <>
-      {/* Hero */}
       <section className="bg-navy text-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
@@ -32,11 +29,9 @@ export default function ISO27001Checklist() {
         </div>
       </section>
 
-      {/* Main content */}
       <section className="py-10">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
 
-          {/* What's in it */}
           <div>
             <h2 className="text-2xl font-bold text-navy mb-4">What the checklist covers</h2>
             <div className="space-y-4">
@@ -72,8 +67,7 @@ export default function ISO27001Checklist() {
             <div className="mt-6 p-4 bg-mist rounded-lg">
               <p className="text-sm text-gray-600 leading-relaxed">
                 <strong className="text-navy">Already read our ISO 27001 guide?</strong>{' '}
-                This checklist is the practical companion — use it to verify your readiness at each
-                stage of the certification process.{' '}
+                This checklist is the practical companion — use it to verify your readiness at each stage.{' '}
                 <Link href="/insights/how-to-get-iso-27001-certified-uk" className="text-gold hover:underline">
                   Read the complete guide →
                 </Link>
@@ -81,7 +75,6 @@ export default function ISO27001Checklist() {
             </div>
           </div>
 
-          {/* Form */}
           <div>
             <div className="card border-t-4 border-t-gold">
               <h2 className="text-xl font-bold text-navy mb-1">Get the free checklist</h2>
@@ -131,9 +124,6 @@ export default function ISO27001Checklist() {
                   <p id="form-success" className="text-green-600 text-sm font-medium hidden">
                     ✓ Check your inbox — the checklist is on its way.
                   </p>
-                  <p id="form-sending" className="text-gray-400 text-sm hidden">
-                    Sending…
-                  </p>
                 </div>
               </form>
 
@@ -144,7 +134,6 @@ export default function ISO27001Checklist() {
               </p>
             </div>
 
-            {/* Author card */}
             <div className="card border-t-4 border-t-navy mt-5">
               <div className="flex items-center gap-3 mb-3">
                 <img
@@ -169,21 +158,17 @@ export default function ISO27001Checklist() {
         </div>
       </section>
 
-      {/* Script for form submission */}
       <script
         dangerouslySetInnerHTML={{
           __html: `
             document.getElementById('checklist-form').addEventListener('submit', async function(e) {
               e.preventDefault();
-              const email = document.getElementById('email').value.trim();
-              const name  = document.getElementById('name').value.trim();
-              const errEl  = document.getElementById('form-error');
-              const okEl   = document.getElementById('form-success');
-              const sendEl = document.getElementById('form-sending');
-              const btn    = document.getElementById('submit-btn');
+              var email = document.getElementById('email').value.trim();
+              var name  = document.getElementById('name').value.trim();
+              var errEl = document.getElementById('form-error');
+              var btn   = document.getElementById('submit-btn');
 
               errEl.classList.add('hidden');
-              okEl.classList.add('hidden');
 
               if (!email || !email.includes('@')) {
                 errEl.classList.remove('hidden');
@@ -192,25 +177,20 @@ export default function ISO27001Checklist() {
 
               btn.disabled = true;
               btn.textContent = 'Sending…';
-              sendEl.classList.remove('hidden');
 
               try {
-                const res = await fetch('/.netlify/functions/iso27001-download', {
+                var res = await fetch('/.netlify/functions/iso27001-download', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ email, name }),
+                  body: JSON.stringify({ email: email, name: name }),
                 });
-                const data = await res.json();
+                var data = await res.json();
                 if (data.success) {
-                  document.getElementById('checklist-form').classList.add('hidden');
-                  sendEl.classList.add('hidden');
-                  okEl.classList.remove('hidden');
                   window.location.href = '/iso-27001-thank-you';
                 } else {
                   throw new Error(data.error || 'Unknown error');
                 }
               } catch (err) {
-                sendEl.classList.add('hidden');
                 btn.disabled = false;
                 btn.textContent = 'Send me the checklist →';
                 errEl.textContent = 'Something went wrong — please try again or email rob.pragnell@anacruses.co.uk directly.';
@@ -221,5 +201,5 @@ export default function ISO27001Checklist() {
         }}
       />
     </>
-  )
+  );
 }
