@@ -1,9 +1,11 @@
-[functions]
-  directory = "netlify/functions"
+[[redirects]]
+  from = "/contact/"
+  to = "/contact"
+  status = 301
 
 [[redirects]]
   from = "/plans-pricing"
-  to = "/contact/"
+  to = "/contact"
   status = 301
 
 [[headers]]
