@@ -40,8 +40,28 @@ export default function InsightArticle({ params }) {
 
   const allArticles = getInsightsArticles().filter(a => a.slug !== params.slug).slice(0, 3);
 
+  const faqSchema = article.faq && article.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: article.faq.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  } : null;
+
   return (
     <>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       <section className="bg-navy text-white py-10">
         <div className="max-w-6xl mx-auto px-4">
           <Link href="/insights" className="text-gold text-sm hover:text-white transition-colors mb-4 inline-block">← Back to ISO Insights</Link>
@@ -59,6 +79,19 @@ export default function InsightArticle({ params }) {
             <div className="prose max-w-none">
               {renderContent(article.content)}
             </div>
+
+            {faqSchema && (
+              <div className="mt-8 space-y-4">
+                <h2 className="text-xl font-bold text-navy">Frequently asked questions</h2>
+                {article.faq.map((item, i) => (
+                  <div key={i} className="border-l-4 border-gold pl-4">
+                    <p className="font-bold text-navy text-sm mb-1">{item.question}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
             <div className="mt-8 p-5 bg-mist rounded-lg border-l-4 border-gold">
               <p className="font-bold text-navy mb-2">Ready to talk about your business?</p>
               <p className="text-gray-600 text-sm mb-4">Book a free, no-obligation call. We will tell you exactly what certification would involve for your size, sector, and starting point.</p>
@@ -116,7 +149,6 @@ export default function InsightArticle({ params }) {
         </div>
       </section>
 
-      {/* Related articles */}
       {allArticles.length > 0 && (
         <section className="bg-mist py-8">
           <div className="max-w-6xl mx-auto px-4">

@@ -3,6 +3,15 @@ title: "How Long Does ISO 27001 Certification Take for a UK SME?"
 date: "2026-06-18"
 excerpt: "For a UK SME with no existing management system, realistic timelines run 4–9 months from kick-off to certification audit, depending on three factors."
 tag: "ISO 27001"
+faq:
+  - question: "How long does ISO 27001 certification take for a UK SME?"
+    answer: "For a UK SME with no existing information security management system, realistic timelines run 12 to 20 weeks from kick-off to certification audit. The main variables are your starting point (existing security controls and documentation), internal capacity, and certification body availability."
+  - question: "What is the biggest cause of delays in ISO 27001 implementation?"
+    answer: "The biggest cause of delay is evidence. Auditors certify against what you can demonstrate, not what you intend to do. Organisations that treat evidence collection as a pre-audit scramble consistently take longer than those that build it into business-as-usual from week one."
+  - question: "How long in advance should I book the ISO 27001 certification audit?"
+    answer: "UKAS-accredited certification bodies can have 4 to 6 week lead times for Stage 1 and Stage 2 audit slots, particularly in busy periods — typically Q1 and Q4. You should book your audit once your internal audit is complete and corrective actions are addressed, but keep scheduling in mind when planning your overall timeline."
+  - question: "What are the stages of ISO 27001 implementation?"
+    answer: "ISO 27001 implementation follows five stages: gap analysis and scope definition (weeks 1–4), risk assessment and Statement of Applicability, Annex A control implementation and documentation (weeks 5–12), internal audit and management review (weeks 13–16), and the two-stage certification audit with your chosen UKAS-accredited body (weeks 17–20+)."
 ---
 
 For a UK SME with no existing management system, realistic timelines run 4–9 months from kick-off to certification audit, depending on three factors.

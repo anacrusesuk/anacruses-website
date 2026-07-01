@@ -3,6 +3,17 @@ title: "ISO 45001 vs OHSAS 18001: What UK Businesses Need to Know in 2026"
 date: "2026-06-27"
 excerpt: "OHSAS 18001 was withdrawn in 2021. If you're still referencing it in tenders or supplier questionnaires, here's what has replaced it and what that means for you."
 tag: "ISO 45001"
+faq:
+  - question: "What replaced OHSAS 18001?"
+    answer: "ISO 45001:2018 replaced OHSAS 18001 as the international standard for Occupational Health and Safety Management Systems. OHSAS 18001 was formally withdrawn in March 2021. Certificates still referencing OHSAS 18001 are no longer to a current standard."
+  - question: "Is an OHSAS 18001 certificate still valid in 2026?"
+    answer: "No. OHSAS 18001 was withdrawn in March 2021. Any certificate issued to OHSAS 18001 is no longer to a recognised current standard. If your certificate references OHSAS 18001, you are not currently certified to any valid occupational health and safety management system standard. The path back requires a fresh ISO 45001 implementation and certification audit."
+  - question: "What are the main differences between ISO 45001 and OHSAS 18001?"
+    answer: "ISO 45001 adopts the Annex SL high-level structure shared by ISO 9001 and ISO 14001, making it easier to integrate with other management systems. It places greater emphasis on leadership commitment, worker participation and consultation, proactive risk management, and the context of the organisation. It also explicitly addresses opportunities for improvement, not just risk management."
+  - question: "If a tender asks for OHSAS 18001, can I submit an ISO 45001 certificate instead?"
+    answer: "Yes. ISO 45001 is the recognised successor to OHSAS 18001. If a customer's questionnaire asks for OHSAS 18001, respond with your ISO 45001 certificate and a brief note explaining that OHSAS 18001 was withdrawn in March 2021 and ISO 45001 is its replacement. Any competent procurement team will accept this."
+  - question: "How long does it take to transition from OHSAS 18001 to ISO 45001?"
+    answer: "For organisations with a functioning OHSAS 18001 management system, transition to ISO 45001 typically takes 6 to 10 weeks — significantly less than a fresh implementation. The underlying system is already in place; the work involves gap analysis against the new requirements, updating documentation, addressing the strengthened worker participation requirements, and conducting a transition audit."
 ---
 
 OHSAS 18001 was formally withdrawn in March 2021. If you are still referencing it in tender documents, supply chain questionnaires, or insurance submissions in 2026, the chances are that whoever is reading those documents knows the standard no longer exists — and is drawing their own conclusions about how current your health and safety management actually is.

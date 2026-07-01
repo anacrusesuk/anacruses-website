@@ -3,6 +3,15 @@ title: "ISO 14001 Internal Audits: What UK Businesses Get Wrong"
 date: "2026-06-25"
 excerpt: "Most ISO 14001 internal audits miss the point entirely. Here's what a good one actually looks like — and what auditors will check."
 tag: "ISO 14001"
+faq:
+  - question: "What does ISO 14001 require for internal audit?"
+    answer: "Clause 9.2 of ISO 14001:2015 requires internal audits to be conducted at planned intervals to confirm whether the environmental management system conforms to the organisation's own requirements and to ISO 14001, and is effectively implemented and maintained. The audit programme must be risk-based, covering all EMS processes over the audit period, with higher-risk areas receiving greater scrutiny."
+  - question: "What is the most common mistake in ISO 14001 internal audits?"
+    answer: "The most common mistake is treating the internal audit as a document review rather than an operational audit. Checking whether procedures exist is not an internal audit — it is a filing cabinet inspection. A genuine ISO 14001 internal audit evaluates whether environmental controls are actually working, whether significant aspects registers are current, and whether people in the field are aware of and following the procedures that apply to them."
+  - question: "How often should ISO 14001 internal audits be conducted?"
+    answer: "ISO 14001 does not specify a fixed frequency. The standard requires audits at planned intervals, with the frequency informed by the environmental importance of the processes concerned, changes that can affect the organisation, and the results of previous audits. Higher-risk operations, areas with previous nonconformances, or recently changed activities should be audited more frequently than low-risk administrative functions."
+  - question: "What should I expect if my ISO 14001 internal audit returns no findings?"
+    answer: "A clean internal audit report is a red flag, not a badge of honour. It usually means the auditor did not look hard enough, or felt too uncomfortable raising issues with colleagues. Certification auditors are trained to be sceptical of consistently clean internal audit records. A well-run internal audit should always surface observations, if not nonconformities."
 ---
 
 After two decades of certification work, I can tell you that ISO 14001 internal audits are where the wheels most often come off — not at the external audit, but in the months beforehand, when businesses convince themselves their internal process is working when it plainly isn't.

@@ -3,6 +3,15 @@ title: "The Five Most Common ISO 27001 Audit Failures — and How to Avoid Them"
 date: "2026-06-28"
 excerpt: "ISO 27001 has a higher rate of major nonconformities at Stage 2 than most other ISO standards. These are the five that come up most often."
 tag: "ISO 27001"
+faq:
+  - question: "What are the most common reasons for failing an ISO 27001 Stage 2 audit?"
+    answer: "The five most common causes of major nonconformities at ISO 27001 Stage 2 are: a Statement of Applicability that lists controls as applicable without evidence of implementation; a risk treatment plan that identifies risks but does not evidence treatment actions; no supplier security assessment process for cloud and SaaS providers; an internal audit that reviews policy documents rather than testing operational controls; and a scope on the certificate that does not match the operational reality of the business."
+  - question: "What is the Statement of Applicability and why do auditors focus on it?"
+    answer: "The Statement of Applicability (SoA) is a document that lists all 93 Annex A controls from ISO 27001:2022, states whether each is applicable, and justifies exclusions. Auditors treat it as a commitment — they test whether applicable controls are actually operating, not just documented. An SoA with controls marked as applicable but no evidence of implementation is one of the most common sources of major nonconformities."
+  - question: "Why do ISO 27001 audits fail at Stage 2 more often than other standards?"
+    answer: "ISO 27001 is more evidence-intensive than ISO 9001, 14001, or 45001. It requires a formal risk assessment, a Statement of Applicability covering 93 controls, documented evidence that risk treatment actions have been completed, and evidence that operational controls — access reviews, backups, patch records, incident logs — are actually running. Many organisations underestimate the evidence burden and arrive at Stage 2 with documentation but no operational evidence."
+  - question: "What is a supplier security assessment under ISO 27001?"
+    answer: "Clause 5.3 of ISO 27001:2022 Annex A (supplier relationships) requires a documented process for assessing information security risks in supplier relationships before sharing information, and maintaining oversight during the relationship. This applies to cloud providers, SaaS platforms, outsourced IT support, and any supplier that handles your information assets. A supplier list alone does not meet the requirement — a documented assessment process with evidence of application is required."
 ---
 
 ISO 27001 has a higher rate of major nonconformities at Stage 2 than most other management system standards. The reason is that many businesses underestimate how evidence-intensive the standard is — it is not enough to have a policy; you need documented proof that the controls in your Statement of Applicability are actually operating.

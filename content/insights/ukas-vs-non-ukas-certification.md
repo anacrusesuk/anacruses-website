@@ -3,6 +3,17 @@ title: "UKAS vs Non-UKAS ISO Certification: Why It Matters More Than You Think"
 date: "2026-06-29"
 excerpt: "Not all ISO certificates carry the same weight. Here's how to tell the difference — and why the wrong one can cost you a contract."
 tag: "ISO Certification"
+faq:
+  - question: "What is UKAS accreditation?"
+    answer: "UKAS — the United Kingdom Accreditation Service — is the national accreditation body for the UK, operating under a Memorandum of Understanding with the government. Certification bodies accredited by UKAS have been independently assessed to confirm that their audits meet the requirements of ISO 17021, the international standard for management system certification bodies. UKAS accreditation provides third-party assurance of audit quality."
+  - question: "What is the difference between UKAS and non-UKAS ISO certification?"
+    answer: "UKAS-accredited certification carries independent assurance that the certification body's audits meet international standards. Non-UKAS certification bodies operate legally and can issue genuine ISO certificates, but without independent oversight of their audit process. Most public sector procurement, large private sector supply chains, and regulated industries specify UKAS-accredited certification — a non-UKAS certificate may render a tender bid non-compliant."
+  - question: "Which certification bodies are UKAS-accredited for ISO standards in the UK?"
+    answer: "UKAS-accredited certification bodies for ISO management system standards in the UK include BSI, NQA, Alcumus ISOQAR, Bureau Veritas, Lloyd's Register (LRQA), SGS, and others. A full and current list of accredited bodies and the specific standards they are accredited to certify is available on the UKAS website at ukas.com."
+  - question: "Does UKAS-accredited certification cost more than non-accredited?"
+    answer: "Yes — UKAS-accredited certification typically costs more than non-accredited, reflecting the rigour and independence of the process. For most UK businesses in competitive supply chains, that additional cost is easily justified by the commercial value of the certificate. A cheaper non-UKAS certificate that does not satisfy your target customers' procurement requirements has no commercial value."
+  - question: "How do I check if my ISO certificate is UKAS-accredited?"
+    answer: "Your certificate should carry the UKAS crown logo alongside your certification body's name. You can also check the UKAS website to verify that your certification body is listed as accredited for the specific standard and scope you need. If your certificate does not carry the UKAS mark, it is non-UKAS certified."
 ---
 
 One of the most frequent misunderstandings in ISO certification is that a certificate is a certificate. It is not. There are two distinct categories of ISO certification in the UK market, and which one you hold can be the difference between winning and losing a contract.

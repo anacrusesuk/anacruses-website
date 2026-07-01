@@ -3,6 +3,15 @@ title: "How to Run an ISO 9001 Internal Audit That Actually Adds Value"
 date: "2026-06-30"
 excerpt: "Internal audit is one of the most commonly misunderstood requirements in ISO 9001. Here's what it should look like — and what it usually looks like instead."
 tag: "ISO 9001"
+faq:
+  - question: "What does ISO 9001 require for internal audit?"
+    answer: "Clause 9.2 of ISO 9001:2015 requires internal audits to be conducted at planned intervals to confirm whether the QMS conforms to the organisation's own requirements and to ISO 9001, and is effectively implemented and maintained. The audit must cover all QMS processes over the audit programme period, use objective evidence, and be conducted by auditors who are objective and impartial."
+  - question: "How often do you need to conduct an ISO 9001 internal audit?"
+    answer: "ISO 9001 does not specify a fixed frequency — it requires audits at planned intervals. In practice, most organisations conduct at least one full audit cycle per year, with higher-risk processes or areas with previous nonconformances audited more frequently. The audit programme should be risk-based, not simply a fixed schedule."
+  - question: "Can an employee conduct an ISO 9001 internal audit?"
+    answer: "Yes — ISO 9001 does not require external auditors for internal audit. It does require auditors to be objective and impartial, which means they should not audit their own work. A competent employee trained in audit technique can conduct internal audits of processes they are not personally responsible for. Where a business is too small to achieve full independence internally, engaging an external resource for internal audit is a practical solution."
+  - question: "What is the difference between a conformance audit and an effectiveness audit in ISO 9001?"
+    answer: "A conformance audit checks whether processes and documents meet the requirements of the standard and the organisation's own procedures. An effectiveness audit goes further — it checks whether the system is actually achieving its intended results. ISO 9001 Clause 9.2 requires both. Most failed or superficial internal audits only check for conformance, not effectiveness."
 ---
 
 Internal audit is one of the most commonly misunderstood requirements in ISO 9001. Businesses either treat it as a documentation review (read the procedures, tick a box that they exist) or as a fault-finding exercise that generates defensiveness rather than improvement. Neither approach satisfies the standard or serves the business.

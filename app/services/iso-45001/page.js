@@ -165,7 +165,14 @@ export default function ISO45001() {
             </div>
 
             <div className="pt-4">
+              <div className="mt-4 p-4 bg-mist rounded-lg">
+              <p className="text-sm font-semibold text-navy mb-2">Free resource</p>
+              <p className="text-sm text-gray-600 mb-3">Download the free ISO 45001 Certification Checklist — all seven audit areas with required items listed.</p>
+              <Link href="/iso-45001-checklist" className="text-gold text-sm font-semibold hover:underline">Download free checklist →</Link>
+            </div>
+            <div className="pt-4">
               <Link href="/contact" className="btn-primary">Get a quote for ISO 45001 →</Link>
+            </div>
             </div>
           </div>
 
