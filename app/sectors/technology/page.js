@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 
 export const metadata = {
@@ -33,7 +31,7 @@ export default function TechnologyPage() {
         name: 'Can we do ISO 27001 and ISO 42001 together?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. ISO 42001 complements ISO 27001 — both govern data and risk. Many tech firms do both in parallel (saves 20-30% on combined costs vs. sequential). If you\'re using AI and handling customer data, doing both together makes sense and signals comprehensive governance.',
+          text: 'Yes. ISO 42001 complements ISO 27001 — both govern data and risk. Many tech firms do both in parallel (saves 20-30% on combined costs vs. sequential). If you\'re using AI and handling customer data, doing both together makes sense.',
         },
       },
       {
@@ -41,7 +39,7 @@ export default function TechnologyPage() {
         name: 'How long does ISO 27001 take for a SaaS company?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typically 14–20 weeks for first-time certification. Gap analysis (2-3 weeks), build security policies and technical controls (6-10 weeks), internal audit (2 weeks), then certification body audit (4-6 weeks). We've worked with MSPs and SaaS firms — most timelines compress because you already have some security controls.',
+          text: 'Typically 14–20 weeks for first-time certification. Gap analysis (2-3 weeks), build security policies and technical controls (6-10 weeks), internal audit (2 weeks), then certification body audit (4-6 weeks). We\'ve worked with MSPs and SaaS firms — most timelines compress because you already have some security controls.',
         },
       },
       {

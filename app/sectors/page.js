@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 
 export const metadata = {
@@ -55,7 +53,6 @@ export default function SectorsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
       <section className="bg-gradient-to-r from-blue-950 to-blue-900 text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-xs md:text-sm font-semibold text-yellow-400 mb-3 tracking-wide">SECTORS</p>
@@ -68,7 +65,6 @@ export default function SectorsPage() {
         </div>
       </section>
 
-      {/* Sectors Grid */}
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sectors.map((sector) => (
@@ -102,7 +98,6 @@ export default function SectorsPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-blue-950 text-white py-12 mt-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-bold mb-4">Not sure which sector is yours?</h2>
