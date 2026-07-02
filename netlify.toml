@@ -2,12 +2,6 @@
   directory = "netlify/functions"
 
 [[redirects]]
-  from = "https://anacruses.co.uk/*"
-  to = "https://www.anacruses.co.uk/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/thank-you"
   to = "/thank-you/"
   status = 301
