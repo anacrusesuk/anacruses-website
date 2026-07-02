@@ -1,3 +1,13 @@
+// Escapes text so it can never be interpreted as HTML/links inside an email.
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 exports.handler = async function (event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
@@ -6,15 +16,20 @@ exports.handler = async function (event) {
   let email, name;
   try {
     const body = JSON.parse(event.body);
-    email = body.email ? body.email.trim().toLowerCase() : null;
-    name  = body.name  ? body.name.trim()                : '';
+    email = body.email ? body.email.trim().toLowerCase().slice(0, 254) : null;
+    name  = body.name  ? body.name.trim().slice(0, 100)                : '';
   } catch {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request' }) };
   }
 
-  if (!email || !email.includes('@')) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailPattern.test(email)) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Valid email required' }) };
   }
+
+  // Safe versions for dropping into HTML emails (raw email/name still used for the Brevo API calls below).
+  const safeName  = escapeHtml(name);
+  const safeEmail = escapeHtml(email);
 
   const API_KEY = process.env.BREVO_API_KEY;
   const headers = {
@@ -65,7 +80,7 @@ exports.handler = async function (event) {
 <h1 style="margin:8px 0 0;color:#ffffff;font-size:22px;line-height:1.3;">Your ISO 9001 Certification Checklist</h1>
 </td></tr>
 <tr><td style="background:#ffffff;padding:32px;">
-<p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">${name ? `Hi ${name},` : 'Hi,'}</p>
+<p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">${safeName ? `Hi ${safeName},` : 'Hi,'}</p>
 <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">Thank you for downloading the ISO 9001 Certification Checklist. Your PDF is ready below.</p>
 <table cellpadding="0" cellspacing="0" style="margin:24px 0;"><tr>
 <td style="background:#C9A84C;border-radius:4px;">
@@ -109,22 +124,22 @@ Anacruses Associates Ltd<br>
       body: JSON.stringify({
         sender: { name: 'Anacruses Website', email: 'rob.pragnell@anacruses.co.uk' },
         to: [{ email: 'rob.pragnell@anacruses.co.uk', name: 'Rob Pragnell' }],
-        subject: `New ISO 9001 lead: ${name || email}`,
+        subject: `New ISO 9001 lead: ${safeName || safeEmail}`,
         htmlContent: `<html><body style="font-family:Arial,sans-serif;padding:24px;color:#2D3748;">
 <h2 style="color:#1B2A4A;margin-top:0;">New ISO 9001 checklist download</h2>
 <table style="border-collapse:collapse;width:100%;max-width:480px;">
 <tr><td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;width:120px;">Name</td>
-<td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">${name || '(not provided)'}</td></tr>
+<td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">${safeName || '(not provided)'}</td></tr>
 <tr><td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;">Email</td>
-<td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;"><a href="mailto:${email}" style="color:#C9A84C;">${email}</a></td></tr>
+<td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;"><a href="mailto:${safeEmail}" style="color:#C9A84C;">${safeEmail}</a></td></tr>
 <tr><td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;">Source</td>
 <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">ISO 9001 Checklist download — anacruses.co.uk</td></tr>
 <tr><td style="padding:8px 12px;background:#EAF2F8;font-weight:bold;color:#1B2A4A;">Time</td>
 <td style="padding:8px 12px;">${new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })}</td></tr>
 </table>
-<p style="margin-top:24px;"><a href="mailto:${email}?subject=Your ISO 9001 Certification Checklist"
+<p style="margin-top:24px;"><a href="mailto:${safeEmail}?subject=Your ISO 9001 Certification Checklist"
 style="display:inline-block;background:#1B2A4A;color:#ffffff;padding:10px 20px;border-radius:4px;text-decoration:none;font-weight:bold;">
-Reply to ${name || email} →</a></p>
+Reply to ${safeName || safeEmail} →</a></p>
 <p style="color:#888;font-size:12px;margin-top:24px;">This lead has been added to Brevo ISO 9001 Leads (List 7).</p>
 </body></html>`,
       }),
