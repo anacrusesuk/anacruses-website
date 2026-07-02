@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Thank You — Anacruses Associates Ltd',
   description: 'Thank you for your enquiry. We will be in touch within one business day.',
+  robots: { index: false, follow: false },
 };
 
 export default function ThankYou() {

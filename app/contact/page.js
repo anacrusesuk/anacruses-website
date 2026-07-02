@@ -19,7 +19,6 @@ export default function Contact() {
       <section className="py-10">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
 
-          {/* Form */}
           <div>
             <h2 className="text-2xl font-bold text-navy mb-6">Send us a message</h2>
             <form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field"
@@ -85,7 +84,6 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* Info */}
           <div className="space-y-6">
             <div className="card border-t-4 border-t-gold">
               <h3 className="font-bold text-navy mb-3">What happens next?</h3>
