@@ -8,6 +8,58 @@ export const metadata = {
 export default function UKASLaboratory() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is the difference between ISO 17025 and ISO 9001?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ISO 9001 is a general quality management standard. ISO/IEC 17025 includes all the management system requirements of ISO 9001 but adds technical requirements covering measurement uncertainty, method validation, equipment calibration, and traceability.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long does UKAS laboratory accreditation take?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "UKAS accreditation typically takes 9 to 18 months from initial engagement to accreditation, depending on your laboratory's current position and the breadth of scope sought.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What does the UKAS accreditation process involve?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The process includes an application to UKAS, a desk review of your documentation, a formal assessment visit where UKAS assessors witness your testing or calibration methods, and ongoing surveillance assessments to maintain accreditation.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who needs UKAS laboratory accreditation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Environmental, construction materials, calibration, food testing, and medical or pharmaceutical laboratories typically need UKAS accreditation, along with any laboratory whose results are submitted to regulators or used in legal proceedings.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Can Anacruses support us between UKAS surveillance visits?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Anacruses provides ongoing support between UKAS surveillance visits, helping maintain compliance, respond to UKAS findings, and extend your scope of accreditation as your laboratory grows.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <section className="bg-navy text-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />

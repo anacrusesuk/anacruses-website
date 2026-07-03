@@ -3,6 +3,17 @@ title: "How to Get ISO 27001 Certified in the UK: A Complete Guide"
 date: "2026-07-01"
 tag: "ISO 27001"
 excerpt: "A step-by-step guide to ISO 27001 certification for UK businesses — realistic timelines, costs, what the 2022 standard actually requires, and how a Lead Auditor approaches each stage."
+faq:
+  - question: "How long does ISO 27001 certification take?"
+    answer: "For a UK SME implementing from scratch, realistic timelines are 12 to 20 weeks from kick-off to certification audit. Organisations with mature IT security practices move faster, and a focused scope takes less time than a broad one."
+  - question: "How much does ISO 27001 certification cost?"
+    answer: "Consultancy fees typically run £5,000 to £20,000 depending on organisation size and scope. Certification body fees for the initial audit are typically £2,500 to £6,000, plus annual surveillance audits. Total first-year cost for a UK SME is typically £8,000 to £25,000."
+  - question: "Do I need a consultant to get ISO 27001?"
+    answer: "Not in principle. In practice, ISO 27001 is the most technically demanding of the common ISO management standards, and the risk assessment and Statement of Applicability in particular require specialist knowledge to produce correctly."
+  - question: "Can a small business get ISO 27001 certified?"
+    answer: "Yes. ISO 27001 is designed to be scalable to any organisation size. A ten-person IT consultancy can achieve a rigorous, auditable ISMS with a proportionate set of controls."
+  - question: "What certification body should I use for ISO 27001 in the UK?"
+    answer: "Use a UKAS-accredited certification body. Well-regarded options include BSI, Bureau Veritas, LRQA, NQA, and Alcumus ISOQAR. The right choice depends on your sector, your clients' preferences, and commercial terms."
 ---
 
 ISO 27001 certification in the UK involves five stages: gap analysis, risk assessment and Statement of Applicability, implementation of Annex A controls, internal audit, and certification audit with a UKAS-accredited body. For a UK SME, the process takes 12 to 20 weeks and costs between £8,000 and £25,000 in total, including consultancy and certification body fees.

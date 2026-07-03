@@ -3,6 +3,17 @@ title: "ISO 9001 Certification for UK SMEs: Cost, Timeline and What to Expect"
 date: "2026-07-02"
 tag: "ISO 9001"
 excerpt: "Everything a UK SME needs to know about ISO 9001 certification — realistic costs, timelines, what auditors look for, and how to avoid the most common mistakes."
+faq:
+  - question: "How long does ISO 9001 certification take?"
+    answer: "For a UK SME implementing from scratch, the realistic timeline is 8 to 16 weeks from gap analysis to certification, depending on your starting point, scope, and internal capacity."
+  - question: "How much does ISO 9001 certification cost?"
+    answer: "Total first-year cost for a UK SME is typically £5,000 to £15,000, covering consultancy fees of £3,000 to £12,000 and certification body audit fees of £1,500 to £4,000."
+  - question: "What do ISO 9001 auditors actually look for?"
+    answer: "Evidence that top management is genuinely involved, documented objectives that are measurable, process records completed in real time rather than backdated, corrective actions that address root causes, and staff who can explain the QMS without being coached."
+  - question: "Can I get ISO 9001 alongside other ISO standards?"
+    answer: "Yes, and it is often more efficient to do so. ISO 9001, ISO 14001, and ISO 45001 share the same High Level Structure, so pursuing two or three standards simultaneously as an Integrated Management System reduces duplication of effort."
+  - question: "Is ISO 9001 a legal requirement in the UK?"
+    answer: "No. ISO 9001 is a voluntary standard, but it is required by many contracts and procurement frameworks — particularly in defence, automotive, aerospace, and public sector supply chains."
 ---
 
 ISO 9001 certification for a UK SME typically takes 8 to 16 weeks and costs £5,000 to £15,000 in total, covering consultancy fees and certification body audit fees. The process involves five stages: gap analysis, documentation, training, internal audit, and the two-stage external certification audit.

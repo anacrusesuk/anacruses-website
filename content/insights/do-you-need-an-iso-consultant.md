@@ -3,6 +3,15 @@ title: "Do You Need an ISO Consultant? Honest Answers from a Lead Auditor"
 date: "2026-07-03"
 tag: "Getting Started"
 excerpt: "A CQI/IRCA certified Lead Auditor answers the question honestly — when you genuinely need a consultant, when you don't, and what the real cost of getting it wrong looks like."
+faq:
+  - question: "Do I need an ISO consultant to get certified?"
+    answer: "No — there is no legal requirement to use a consultant. But most businesses that attempt certification without specialist support take significantly longer than necessary, produce systems that fail the first surveillance audit, or spend more correcting mistakes than a consultant would have cost."
+  - question: "Can I use a consultant for part of the process only?"
+    answer: "Yes. Some organisations do their own gap analysis and documentation and bring in a consultant only for the internal audit stage, which benefits most from independent review. Others start with a consultant and maintain the system themselves after certification."
+  - question: "How do I know if a consultant is any good?"
+    answer: "Ask them to explain the most common reasons organisations fail their Stage 2 audit for the standard you're pursuing. A consultant who gives a fluent, specific, candid answer has done this enough times to know. A consultant who gives you a sales pitch has not."
+  - question: "Does using a consultant affect how the certification body sees the audit?"
+    answer: "No. The certification body audits your management system, not how it was built. A well-implemented system is a well-implemented system regardless of who did the implementation — the auditor's job is to verify it works."
 ---
 
 You do not legally need an ISO consultant to get certified. Many organisations self-implement successfully. But the majority of businesses that attempt ISO certification without specialist support either take significantly longer than necessary, produce systems that do not survive the first surveillance audit, or spend more correcting mistakes than a consultant would have cost. For most UK SMEs, the break-even point is clear.

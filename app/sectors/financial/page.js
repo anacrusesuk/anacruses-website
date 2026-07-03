@@ -6,8 +6,59 @@ export const metadata = {
 };
 
 export default function FinancialPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Which ISO standards do financial services firms need?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most UK financial services firms pursuing ISO certification need ISO 27001 for information security. Firms using AI in trading, underwriting, or client decisions increasingly add ISO 42001 for AI governance.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does ISO 27001 satisfy FCA requirements?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "ISO 27001 isn't an FCA requirement by name, but the FCA and PRA expect firms to have systematic information security controls. ISO 27001 is internationally recognised evidence that those controls exist and are independently audited.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does ISO 27001 certification take for a financial services firm?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most UK financial services firms complete ISO 27001 certification in 12 to 20 weeks, covering gap analysis, risk assessment, controls implementation, internal audit, and the two-stage certification audit.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is ISO 42001 and do we need it?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "ISO 42001 is the international standard for AI management systems. If you use AI for trading decisions, underwriting, fraud detection, or client-facing tools, it demonstrates you're governing that AI responsibly.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does certification cost for a financial services firm?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'First-year cost typically runs £7,000 to £18,000: ISO 27001 alone is £7,000–£11,000, ISO 42001 alone is £5,000–£8,000, and both together are £10,000–£16,000.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="bg-gradient-to-r from-blue-950 to-blue-900 text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-xs md:text-sm font-semibold text-yellow-400 mb-3 tracking-wide">ISO CERTIFICATION FOR FINANCIAL SERVICES</p>
@@ -70,6 +121,29 @@ export default function FinancialPage() {
           <li>ISO 27001 + ISO 42001: £10,000–16,000</li>
           <li>Add ISO 22301: +£4,000–6,000</li>
         </ul>
+
+        <h2 className="text-2xl font-bold text-blue-950 mb-4">Common Questions</h2>
+
+        <div className="space-y-4 mb-10 text-sm">
+          <div>
+            <h3 className="font-bold text-blue-950 mb-1">Do we need ISO 22301 as well as ISO 27001?</h3>
+            <p className="text-gray-700">
+              Not automatically. ISO 22301 (business continuity) is worth adding if clients specifically ask about your recovery capability after an outage. Many firms add it once ISO 27001 is established rather than doing both together.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-bold text-blue-950 mb-1">Will ISO 27001 slow down our AI rollout?</h3>
+            <p className="text-gray-700">
+              No — if anything it structures it. ISO 42001 doesn't require you to stop using AI, it requires you to document how you assess and manage the risks. Firms that build this in from the start move faster than firms that retrofit governance later.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-bold text-blue-950 mb-1">Does certification help with client due diligence questionnaires?</h3>
+            <p className="text-gray-700">
+              Yes. ISO 27001 certification answers most information security questions in a typical client or partner due diligence questionnaire directly, since you can point to an independently audited certificate rather than completing a lengthy self-assessment each time.
+            </p>
+          </div>
+        </div>
 
         <div className="bg-blue-950 text-white p-8 rounded-lg text-center">
           <h2 className="text-2xl font-bold mb-3">Ready to Secure Your Firm?</h2>
