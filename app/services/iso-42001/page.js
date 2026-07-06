@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedInsights from "../../../components/RelatedInsights";
 
 export const metadata = {
   title: 'ISO 42001 Consultant UK — AI Management System Certification',
@@ -203,12 +204,7 @@ export default function ISO42001() {
                 ))}
               </ul>
             </div>
-            <div className="card">
-              <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
-              <ul className="space-y-2">
-                <li><Link href="/insights/iso-42001-ai-governance-explained" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 42001: AI Governance Explained →</Link></li>
-              </ul>
-            </div>
+            <RelatedInsights tag="ISO 42001" />
           </aside>
         </div>
       </section>

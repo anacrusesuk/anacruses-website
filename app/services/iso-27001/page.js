@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedInsights from "../../../components/RelatedInsights";
 
 export const metadata = {
   title: 'ISO 27001 Consultant UK — Information Security Certification',
@@ -223,14 +224,7 @@ export default function ISO27001() {
                 ))}
               </ul>
             </div>
-            <div className="card">
-              <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
-              <ul className="space-y-2">
-                <li><Link href="/insights/how-to-get-iso-27001-certified-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">How to Get ISO 27001 Certified in the UK: A Complete Guide →</Link></li>
-                <li><Link href="/insights/how-long-does-iso-27001-take-uk-sme" className="text-gold hover:text-gold-dark text-xs leading-snug block">How Long Does ISO 27001 Take for a UK SME? →</Link></li>
-                <li><Link href="/insights/iso-27001-audit-failures" className="text-gold hover:text-gold-dark text-xs leading-snug block">The Five Most Common ISO 27001 Audit Failures →</Link></li>
-              </ul>
-            </div>
+            <RelatedInsights tag="ISO 27001" />
           </aside>
         </div>
       </section>

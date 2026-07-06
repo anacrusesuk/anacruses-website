@@ -3,7 +3,7 @@ title: "The Cyber Security and Resilience Bill: What It Means for Your Business"
 slug: "cyber-security-resilience-bill-what-it-means"
 date: "2026-07-06"
 excerpt: "The UK's biggest cyber law update since 2018 is moving through Parliament. Here's who it affects, what changes, and how ISO 27001 puts you ahead of it."
-category: "Cyber Security"
+tag: "ISO 27001"
 author: "Rob Pragnell"
 faq:
   - question: "What is the Cyber Security and Resilience Bill?"

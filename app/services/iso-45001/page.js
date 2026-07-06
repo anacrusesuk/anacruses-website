@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedInsights from "../../../components/RelatedInsights";
 
 export const metadata = {
   title: 'ISO 45001 Consultant UK — Health & Safety Management Certification',
@@ -209,12 +210,7 @@ export default function ISO45001() {
                 ))}
               </ul>
             </div>
-            <div className="card">
-              <h3 className="font-bold text-navy mb-2 text-sm">Related Insights</h3>
-              <ul className="space-y-2">
-                <li><Link href="/insights/iso-45001-vs-ohsas-18001-uk" className="text-gold hover:text-gold-dark text-xs leading-snug block">ISO 45001 vs OHSAS 18001: What UK Businesses Need to Know →</Link></li>
-              </ul>
-            </div>
+            <RelatedInsights tag="ISO 45001" />
           </aside>
         </div>
       </section>
