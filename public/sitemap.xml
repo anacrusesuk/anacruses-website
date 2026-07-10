@@ -2,163 +2,181 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.anacruses.co.uk/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/about/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/contact/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/sectors/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/training/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/resources/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/services/iso-9001/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/services/iso-14001/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/services/iso-27001/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/services/iso-45001/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/services/iso-42001/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/services/ukas-laboratory/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacruses.co.uk/insights/cyber-security-resilience-bill-what-it-means/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/do-you-need-an-iso-consultant/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/eu-ai-act-uk-businesses-2026/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/how-long-does-iso-27001-take-uk-sme/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/how-to-get-iso-27001-certified-uk/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacruses.co.uk/insights/iso-14001-2026-transition-guide/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-14001-cost-timeline-uk/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-14001-internal-audits-what-uk-businesses-get-wrong/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-27001-audit-failures/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-42001-ai-governance-explained/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-45001-vs-ohsas-18001-uk/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacruses.co.uk/insights/iso-9001-2026-what-changes/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-9001-certification-cost-uk/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-9001-certification-uk-sme-guide/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-9001-internal-audit-guide/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/iso-9001-vs-iso-27001-which-first/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anacruses.co.uk/insights/ukas-vs-non-ukas-certification/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
