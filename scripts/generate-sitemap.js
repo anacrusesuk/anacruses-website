@@ -23,6 +23,13 @@ const STATIC_ROUTES = [
   { path: '/services/iso-45001/',       priority: '0.9', changefreq: 'monthly' },
   { path: '/services/iso-42001/',       priority: '0.9', changefreq: 'monthly' },
   { path: '/services/ukas-laboratory/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/sectors/technology/',       priority: '0.7', changefreq: 'monthly' },
+  { path: '/sectors/construction/',     priority: '0.7', changefreq: 'monthly' },
+  { path: '/sectors/manufacturing/',    priority: '0.7', changefreq: 'monthly' },
+  { path: '/sectors/laboratory/',       priority: '0.7', changefreq: 'monthly' },
+  { path: '/sectors/financial/',        priority: '0.7', changefreq: 'monthly' },
+  { path: '/sectors/healthcare/',       priority: '0.7', changefreq: 'monthly' },
+  { path: '/privacy/',                  priority: '0.3', changefreq: 'yearly'  },
 ];
 
 function getSlugsFromDir(dir) {
