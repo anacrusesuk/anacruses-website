@@ -13,7 +13,79 @@
 
 [[redirects]]
   from = "/plans-pricing"
-  to = "/contact"
+  to = "/contact/"
+  status = 301
+
+# --- Retired Wix URL redirects (added 23 July 2026) ---
+
+[[redirects]]
+  from = "/quality-certification"
+  to = "/services/iso-9001/"
+  status = 301
+
+[[redirects]]
+  from = "/environmental-certification"
+  to = "/services/iso-14001/"
+  status = 301
+
+[[redirects]]
+  from = "/information-security-certification"
+  to = "/services/iso-27001/"
+  status = 301
+
+[[redirects]]
+  from = "/health-and-safety-certification"
+  to = "/services/iso-45001/"
+  status = 301
+
+[[redirects]]
+  from = "/artificial-intelligence-certification"
+  to = "/services/iso-42001/"
+  status = 301
+
+[[redirects]]
+  from = "/laboratory-testing-certification"
+  to = "/services/ukas-laboratory/"
+  status = 301
+
+[[redirects]]
+  from = "/anacruses-training"
+  to = "/training/"
+  status = 301
+
+[[redirects]]
+  from = "/company-values"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/sustainability"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/get-certified-to-iso-and-ukas-standards"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/ukas-v-non-ukas-certification"
+  to = "/services/ukas-laboratory/"
+  status = 301
+
+[[redirects]]
+  from = "/business-risk-management"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/product-certification"
+  to = "/"
   status = 301
 
 [[headers]]
