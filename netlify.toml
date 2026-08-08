@@ -88,6 +88,21 @@
   to = "/"
   status = 301
 
+[[redirects]]
+  from = "/news-and-comment"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/news-and-comment/*"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/post/*"
+  to = "/insights/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
