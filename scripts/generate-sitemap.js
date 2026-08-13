@@ -15,6 +15,7 @@ const STATIC_ROUTES = [
   { path: '/contact/',                  priority: '0.8', changefreq: 'monthly' },
   { path: '/sectors/',                  priority: '0.7', changefreq: 'monthly' },
   { path: '/training/',                 priority: '0.7', changefreq: 'monthly' },
+  { path: '/get-certified/',            priority: '0.7', changefreq: 'monthly' },
   { path: '/resources/',                priority: '0.7', changefreq: 'monthly' },
   { path: '/insights/',                 priority: '0.9', changefreq: 'weekly'  },
   { path: '/services/iso-9001/',        priority: '0.9', changefreq: 'monthly' },
