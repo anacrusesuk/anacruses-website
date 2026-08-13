@@ -176,7 +176,7 @@ export default function ISO9001() {
                   ['ISO 14001 — Environmental', '/services/iso-14001'],
                   ['ISO 45001 — Health & Safety', '/services/iso-45001'],
                   ['ISO 27001 — Information Security', '/services/iso-27001'],
-                  ['Integrated Management Systems', '/get-certified'],
+                  ['Get Certified — Our Process', '/get-certified'],
                 ].map(([label, href]) => (
                   <li key={href}><Link href={href} className="text-gold hover:text-gold-dark">{label} →</Link></li>
                 ))}
