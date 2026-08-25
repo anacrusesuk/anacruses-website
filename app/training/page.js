@@ -52,6 +52,15 @@ export default function Training() {
         </div>
       </section>
 
+      {/* Discount banner */}
+      <section className="bg-gold py-4">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+          <p className="text-white font-semibold text-sm sm:text-base">
+            Save 20% on any ISOQAR Academy course — use code <span className="font-bold tracking-wide">ANACRUSES20</span> at checkout.
+          </p>
+        </div>
+      </section>
+
       {/* Intro */}
       <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
@@ -81,6 +90,7 @@ export default function Training() {
               Browse all ISO training courses →
             </a>
             <p className="text-xs text-gray-400 mt-3">Opens ISOQAR Academy in a new tab.</p>
+            <p className="text-xs text-gold-dark font-semibold mt-2">Use code ANACRUSES20 at checkout for 20% off.</p>
           </div>
         </div>
       </section>
@@ -126,8 +136,11 @@ export default function Training() {
           >
             Browse ISOQAR Academy Training Courses
           </a>
-          <p className="text-gray-400 text-xs mt-2 mb-8">
+          <p className="text-gray-400 text-xs mt-2 mb-2">
             You will be taken to ISOQAR Academy's website in a new tab.
+          </p>
+          <p className="text-gold-dark font-semibold text-sm mb-8">
+            Use code ANACRUSES20 at checkout for 20% off any course.
           </p>
           <div className="flex justify-center">
             <img src="/images/awin_qrcode.png" alt="Scan to browse ISOQAR Academy courses" className="w-36 h-36" />
