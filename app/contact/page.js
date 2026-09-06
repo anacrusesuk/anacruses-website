@@ -1,3 +1,5 @@
+import ContactForm from '../../components/ContactForm';
+
 export const metadata = {
   title: 'Contact — Book a Free ISO Consultation',
   description: 'Get in touch with Anacruses Associates Ltd. Book a free, no-obligation consultation with ISO consultant Rob Pragnell.',
@@ -21,69 +23,7 @@ export default function Contact() {
 
           <div>
             <h2 className="text-2xl font-bold text-navy mb-6">Send us a message</h2>
-            <form name="contact" method="POST" action="/thank-you/" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field"
-              className="space-y-4">
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>Do not fill this out: <input name="bot-field" /></label>
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Full name *</label>
-                  <input type="text" name="name" required
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Company name *</label>
-                  <input type="text" name="company" required
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email address *</label>
-                  <input type="email" name="email" required
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone number</label>
-                  <input type="tel" name="phone"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy" />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Type of enquiry *</label>
-                <select name="enquiry_type" required
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy bg-white">
-                  <option value="">Please select…</option>
-                  <option>New ISO certification</option>
-                  <option>Maintenance of existing certification</option>
-                  <option>Integrated management system</option>
-                  <option>UKAS laboratory accreditation</option>
-                  <option>ISO training</option>
-                  <option>ISO 42001 — AI management</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your message</label>
-                <textarea name="message" rows={5}
-                  placeholder="Tell us about your business and what you are hoping to achieve…"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy resize-y" />
-              </div>
-
-              <div data-netlify-recaptcha="true"></div>
-
-              <button type="submit"
-                className="w-full bg-gold hover:bg-gold-dark text-white font-semibold py-3 rounded transition-colors text-sm tracking-wide">
-                Send Message
-              </button>
-              <p className="text-xs text-gray-400 text-center">We aim to respond within one business day.</p>
-            </form>
+            <ContactForm />
           </div>
 
           <div className="space-y-6">
