@@ -21,7 +21,7 @@ export default function Contact() {
 
           <div>
             <h2 className="text-2xl font-bold text-navy mb-6">Send us a message</h2>
-            <form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field"
+            <form name="contact" method="POST" action="/thank-you/" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field"
               className="space-y-4">
               <input type="hidden" name="form-name" value="contact" />
               <p className="hidden">
@@ -75,6 +75,8 @@ export default function Contact() {
                   placeholder="Tell us about your business and what you are hoping to achieve…"
                   className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy resize-y" />
               </div>
+
+              <div data-netlify-recaptcha="true"></div>
 
               <button type="submit"
                 className="w-full bg-gold hover:bg-gold-dark text-white font-semibold py-3 rounded transition-colors text-sm tracking-wide">
