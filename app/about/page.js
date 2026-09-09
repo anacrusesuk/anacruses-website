@@ -2,13 +2,14 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About Rob Pragnell — ISO Consultant',
-  description: 'Rob Pragnell is a CQI and TRECCERT certified Lead Auditor and founder of Anacruses Associates Ltd, with over 20 years of ISO consultancy experience across the UK.',
+  description: 'Rob Pragnell is a CQI/IRCA certified Lead Auditor across ISO 9001, 14001, 27001, 45001 and 42001, and founder of Anacruses Associates Ltd, with over 20 years of ISO consultancy experience across the UK.',
 };
 
 const qualifications = [
   'CQI Certified Lead Auditor — ISO 9001, 14001 & 45001',
   'TRECCERT Certified Lead Auditor — ISO 27001',
-  'ISO 42001 Practitioner — TRECCERT & AIQI (UKAS-accredited)',
+  'CQI/IRCA Certified Lead Auditor — ISO 42001',
+  'ISO 42001 Lead Implementer',
   'ISO 27001 Implementer — BSI',
   'TRECCERT-accredited ISO Standards Trainer',
   'IOSH Managing Safely',
@@ -59,7 +60,7 @@ export default function About() {
               I have been working in ISO standards and management systems for over 20 years, across a wide range of sectors and business sizes — from SMEs seeking their first certification to larger organisations running integrated systems across multiple sites.
             </p>
             <p>
-              As a CQI/IRCA certified Lead Auditor across ISO 9001, 14001, 27001, and 45001 — and implementer for those standards plus ISO 42001 — I have been on both sides of the audit table, which matters. I know what auditors look for, how findings tend to arise, and how to build a system that holds up when the pressure is on.
+              As a CQI/IRCA certified Lead Auditor across ISO 9001, 14001, 27001, 45001 and 42001 — and implementer for those standards — I have been on both sides of the audit table, which matters. I know what auditors look for, how findings tend to arise, and how to build a system that holds up when the pressure is on.
             </p>
             <p>
               I am also a TRECCERT-accredited trainer, which means I can train your team — from awareness sessions through to Lead Auditor qualification — without needing to bring in a separate provider.
