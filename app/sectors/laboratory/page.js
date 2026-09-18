@@ -50,6 +50,14 @@ export default function LaboratoryPage() {
           text: 'First-year accreditation typically costs £8,000 to £18,000 depending on scope: £8,000–£12,000 for narrow ISO 17025 scope, up to £18,000 for broad scope, and £14,000–£22,000 for both ISO 17025 and ISO 17065.',
         },
       },
+      {
+        '@type': 'Question',
+        name: 'Do we need any other ISO standards alongside our lab accreditation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Often, yes — it depends on what the lab handles day to day. ISO 14001 and 45001 come up for labs working with hazardous materials or with strong environmental and safety obligations. ISO 27001 is increasingly relevant where test data and results are held in a LIMS or shared digitally with clients. And where AI-assisted analysis or automated result interpretation is part of the workflow, ISO 42001 is becoming a live question too. We can support any of these alongside your 17025/17065 accreditation.',
+        },
+      },
     ],
   };
 
@@ -141,6 +149,12 @@ export default function LaboratoryPage() {
             <h3 className="font-bold text-blue-950 mb-1">Can we extend our scope of accreditation later?</h3>
             <p className="text-gray-700">
               Yes. Most laboratories start with a defined scope and extend it as the business grows — adding new test methods or calibration ranges through a scope extension application, rather than starting the whole process again.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-bold text-blue-950 mb-1">Do we need any other ISO standards alongside our lab accreditation?</h3>
+            <p className="text-gray-700">
+              Often, yes — it depends on what the lab handles day to day. ISO 14001 and 45001 come up for labs working with hazardous materials or with strong environmental and safety obligations. ISO 27001 is increasingly relevant where test data and results are held in a LIMS or shared digitally with clients. And where AI-assisted analysis or automated result interpretation is part of the workflow, ISO 42001 is becoming a live question too. We can support any of these alongside your 17025/17065 accreditation.
             </p>
           </div>
         </div>
