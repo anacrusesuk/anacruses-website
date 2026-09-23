@@ -171,6 +171,11 @@ export default function UKASLaboratory() {
               </Link>
             </div>
 
+            <div className="card border-t-4 border-t-gold">
+              <h3 className="font-bold text-navy mb-2 text-sm">Free tool</h3>
+              <p className="text-xs text-gray-600 leading-relaxed mb-3">Many laboratories need ISO 9001 alongside UKAS accreditation. Answer four quick questions and get an instant day-count and cost estimate.</p>
+              <Link href="/iso-readiness-assessment" className="text-gold text-xs font-semibold hover:underline">Get your estimate →</Link>
+            </div>
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related services</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">

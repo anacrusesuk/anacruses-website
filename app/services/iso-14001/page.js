@@ -190,6 +190,11 @@ export default function ISO14001() {
                 ISO 14001 certification can give you a material advantage when tendering for public sector contracts. Many local authorities and government departments assess environmental management as part of their procurement scoring — ISO 14001 provides objective evidence of your commitment.
               </p>
             </div>
+            <div className="card border-t-4 border-t-gold">
+              <h3 className="font-bold text-navy mb-2 text-sm">Free tool</h3>
+              <p className="text-xs text-gray-600 leading-relaxed mb-3">Not sure where you'd land on cost or timeline? Answer four quick questions and get an instant day-count and cost estimate for ISO 14001.</p>
+              <Link href="/iso-readiness-assessment" className="text-gold text-xs font-semibold hover:underline">Get your estimate →</Link>
+            </div>
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related services</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">

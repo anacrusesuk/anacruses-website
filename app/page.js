@@ -214,6 +214,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* READINESS ASSESSMENT CTA */}
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="card border-t-4 border-t-gold text-center py-10">
+            <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Free tool</p>
+            <h2 className="text-3xl font-bold text-navy mb-3">Not sure where you'd land on cost or timeline?</h2>
+            <p className="text-gray-600 mb-6 max-w-xl mx-auto">
+              Answer four quick questions and get an instant day-count and cost estimate for your certification — the same reference we use to scope every real engagement.
+            </p>
+            <Link href="/iso-readiness-assessment" className="btn-primary inline-block">
+              Get your free estimate →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ SECTION */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4">

@@ -2,11 +2,11 @@ import Link from 'next/link';
 import RelatedInsights from "../../../components/RelatedInsights";
 
 export const metadata = {
-  title: 'ISO 45001 Consultant UK — Health & Safety Management Certification',
-  description: 'ISO 45001 health and safety management certification for UK businesses. Expert consultancy from a CQI/IRCA certified Lead Auditor. IOSH Managing Safely trained.',
+  title: 'ISO 42001 Consultant UK — AI Management System Certification',
+  description: 'ISO 42001 artificial intelligence management system certification. Expert consultancy from a BSI BridgeAI participant and ISO ESG Committee contributor.',
 };
 
-export default function ISO45001() {
+export default function ISO42001() {
   return (
     <>
       <script
@@ -18,42 +18,42 @@ export default function ISO45001() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'What replaced OHSAS 18001?',
+                name: 'What is ISO 42001?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'ISO 45001:2018 replaced OHSAS 18001 as the international standard for Occupational Health and Safety Management Systems. OHSAS 18001 was officially withdrawn in March 2021. Organisations that have not yet transitioned should do so as a matter of priority — OHSAS 18001 certificates are no longer to a current standard.',
+                  text: 'ISO 42001:2023 is the world\'s first international standard for Artificial Intelligence Management Systems. Published in December 2023, it provides organisations with a structured framework for governing their AI activities — managing risk, ensuring transparency, maintaining human oversight, and demonstrating accountability for AI systems they develop, deploy, or use.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'How is ISO 45001 different from OHSAS 18001?',
+                name: 'Who needs ISO 42001 certification?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'ISO 45001 adopts the Annex SL high-level structure shared by ISO 9001 and ISO 14001, making it easier to integrate with other management systems. It places greater emphasis on leadership commitment, worker participation, and proactive risk management. Context of the organisation and the needs of interested parties are also explicitly addressed.',
+                  text: 'ISO 42001 is relevant to organisations that develop, sell, or deploy AI systems; technology companies using AI or machine learning in client-facing applications; businesses using large language models or AI tools in processes affecting clients or employees; and companies supplying to regulated industries or public sector buyers where AI governance is assessed.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'Is ISO 45001 a legal requirement in the UK?',
+                name: 'How does ISO 42001 relate to the EU AI Act?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'No. ISO 45001 is a voluntary standard. UK health and safety law — primarily the Health and Safety at Work Act 1974 and associated regulations — sets the legal baseline. ISO 45001 goes beyond legal compliance to provide a systematic framework for continual improvement in safety performance.',
+                  text: 'The EU AI Act, which came into full force in 2024, creates compliance obligations for AI systems deployed in or affecting EU markets. ISO 42001 is not legally mandated by the Act, but its framework maps closely to many of the Act\'s requirements — making it an efficient route to demonstrating compliance, particularly for high-risk AI systems.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'How long does ISO 45001 certification take?',
+                name: 'How long does ISO 42001 certification take?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'For a UK business implementing from scratch, ISO 45001 certification typically takes 10 to 16 weeks. Transition from OHSAS 18001 to ISO 45001 is typically faster — 6 to 10 weeks — as much of the underlying system is already in place.',
+                  text: 'Typical implementation timeline is 10 to 16 weeks. For organisations already holding ISO 27001, integration with the existing ISMS is significantly more efficient — the two standards share structural elements and many documentation requirements overlap.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'How much does ISO 45001 certification cost in the UK?',
+                name: 'How much does ISO 42001 certification cost in the UK?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Total first-year cost for a UK SME is typically £5,000 to £14,000, covering consultancy fees and certification body audit fees. Transition from OHSAS 18001 is typically less expensive as less new documentation is required.',
+                  text: 'As a new standard, certification body fees are still settling. Total first-year cost for a UK SME is typically £6,000 to £16,000 covering consultancy and certification audit fees. Organisations integrating with an existing ISO 27001 system will be at the lower end of that range.',
                 },
               },
             ],
@@ -63,13 +63,13 @@ export default function ISO45001() {
 
       <section className="bg-navy text-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-10" />
         </div>
         <div className="max-w-6xl mx-auto px-4">
-          <span className="bg-gold text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">ISO 45001:2018</span>
-          <h1 className="text-4xl font-bold mb-4">Occupational Health & Safety Management Systems</h1>
+          <span className="bg-gold text-white text-xs font-bold px-2 py-1 rounded mb-4 inline-block">ISO 42001:2023</span>
+          <h1 className="text-4xl font-bold mb-4">Artificial Intelligence Management Systems</h1>
           <p className="text-xl text-blue-100 max-w-2xl">
-            The international gold standard for workplace health and safety — and the formal replacement for OHSAS 18001.
+            The world's first international standard for AI governance. Build client trust in your AI systems — and get ahead of the regulatory curve.
           </p>
         </div>
       </section>
@@ -79,26 +79,34 @@ export default function ISO45001() {
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
 
             <p className="text-gray-600 leading-relaxed border-l-4 border-gold pl-4 py-1">
-              ISO 45001:2018 is the international standard for Occupational Health and Safety Management Systems, replacing the withdrawn OHSAS 18001. It provides a framework for eliminating hazards, reducing OH&S risks, and demonstrating health and safety governance to clients and supply chains in construction, engineering, facilities management, and manufacturing. UK certification typically takes 10 to 18 weeks.
+              ISO 42001:2023 is the world's first international standard for Artificial Intelligence Management Systems. It provides a framework for responsible AI governance — managing the risks associated with AI systems, demonstrating ethical AI use to clients and regulators, and providing evidence of compliance with the EU AI Act and emerging UK AI policy. UK certification is a new and growing area; most organisations are currently in the implementation phase.
             </p>
 
-            <h2 className="text-2xl font-bold text-navy">What is ISO 45001?</h2>
+            <h2 className="text-2xl font-bold text-navy">What is ISO 42001?</h2>
             <p>
-              ISO 45001:2018 is the international standard for Occupational Health and Safety Management Systems. It replaced OHSAS 18001 as the recognised framework for managing workplace health and safety risks — reducing incidents, protecting employees and contractors, and demonstrating a systematic, proactive approach to safety governance.
+              ISO 42001:2023 is the international standard for Artificial Intelligence Management Systems (AIMS). Published in December 2023, it is the world's first ISO standard specifically addressing the responsible development, deployment and use of AI systems. It provides organisations with a structured framework for governing their AI activities — managing risk, ensuring transparency, maintaining human oversight, and demonstrating accountability.
             </p>
             <p>
-              If your organisation still holds OHSAS 18001 certification, it should already have transitioned to ISO 45001 — the OHSAS standard was officially withdrawn in March 2021. If you have not yet made that transition, Anacruses can help.
+              ISO 42001 follows the same Annex SL high-level structure as ISO 9001, 14001, 27001 and 45001 — which means it can be integrated into an existing management system with considerably less effort than a standalone implementation.
             </p>
 
-            <h2 className="text-2xl font-bold text-navy mt-6">Who needs ISO 45001?</h2>
+            <h2 className="text-2xl font-bold text-navy mt-6">Why ISO 42001 matters now</h2>
+            <p>
+              AI is moving from a technical feature to a boardroom governance issue. Clients, investors, regulators and supply chain partners are beginning to ask the same questions about AI that they have asked about data protection and information security — what AI are you using? Who oversees it? What happens when it goes wrong? ISO 42001 gives you a defensible, internationally recognised answer.
+            </p>
+            <p>
+              The EU AI Act, which came into full force in 2024, creates significant compliance obligations for AI systems deployed in or affecting EU markets. While ISO 42001 is not legally mandated by the Act, its framework maps closely to many of the Act's requirements — making it an efficient route to demonstrating compliance.
+            </p>
+
+            <h2 className="text-2xl font-bold text-navy mt-6">Who needs ISO 42001?</h2>
             <ul className="list-none space-y-2">
               {[
-                'Construction, engineering, civil and rail businesses where H&S is assessed in pre-qualification questionnaires',
-                'Facilities management, utilities and infrastructure organisations',
-                'Manufacturing businesses with significant machinery, chemical or physical hazards',
-                'Any organisation tendering for contracts where safety performance is evaluated',
-                'Businesses that want to move beyond legal compliance to proactive safety leadership',
-                'Organisations that have experienced incidents or near-misses and want a structured improvement framework',
+                'Organisations that develop, sell, or deploy AI systems as part of their products or services',
+                'Technology and software companies using AI or machine learning in client-facing applications',
+                'Businesses that use AI tools (including large language models) in processes that affect clients or employees',
+                'Companies supplying to the public sector or regulated industries where AI governance is assessed',
+                'Any organisation that wants to demonstrate responsible, trustworthy AI use to clients and stakeholders',
+                'Businesses building an ESG framework that includes technology governance',
               ].map(item => (
                 <li key={item} className="flex gap-2 text-sm">
                   <span className="text-gold flex-shrink-0 mt-1">◆</span>{item}
@@ -106,18 +114,16 @@ export default function ISO45001() {
               ))}
             </ul>
 
-            <h2 className="text-2xl font-bold text-navy mt-6">What ISO 45001 requires</h2>
-            <p>
-              ISO 45001 goes beyond simply documenting health and safety procedures. It requires organisations to demonstrate a systematic approach to identifying hazards and assessing risks, engaging workers in safety governance, setting measurable H&S objectives, and driving continual improvement in safety performance. Leadership commitment is explicitly required — this standard cannot be delegated entirely to a safety officer.
-            </p>
-
             <h2 className="text-2xl font-bold text-navy mt-6">How Anacruses helps</h2>
             <p>
-              We begin with a gap analysis against the ISO 45001 requirements — reviewing your existing H&S arrangements, documentation, and incident records. We then build or enhance your Occupational Health and Safety Management System, covering hazard identification, risk assessment, legal register, objectives, competence records, emergency procedures, and audit programme.
+              Anacruses has been working with ISO 42001 since its publication. Rob Pragnell contributes to the ISO ESG Committee and participates in the BSI BridgeAI standards community — which means our clients benefit from insight into not just current requirements, but where AI governance standards are heading.
+            </p>
+            <p>
+              We start by mapping your AI systems — what you develop, what you use, and what you deploy on behalf of clients. We then build your AI Management System: risk assessment, impact assessments, governance policies, roles and responsibilities, and the documented evidence that auditors will require.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 my-6 text-center text-xs">
-              {['Gap Analysis', 'Hazard & Risk', 'Documentation', 'Internal Audit', 'Certification'].map((s, i) => (
+              {['AI System Mapping', 'Risk & Impact', 'Governance Docs', 'Internal Audit', 'Certification'].map((s, i) => (
                 <div key={s} className="bg-mist rounded p-3">
                   <div className="w-7 h-7 rounded-full bg-navy text-white font-bold text-sm flex items-center justify-center mx-auto mb-2">{i+1}</div>
                   <div className="font-semibold text-navy">{s}</div>
@@ -126,36 +132,31 @@ export default function ISO45001() {
             </div>
 
             <p className="text-sm font-semibold text-navy">
-              Typical implementation timeline: 10–16 weeks. Transition from OHSAS 18001 to ISO 45001 is typically faster — 6–10 weeks.
-            </p>
-
-            <h2 className="text-2xl font-bold text-navy mt-6">Integrating ISO 45001 with your other standards</h2>
-            <p>
-              ISO 45001 shares the same Annex SL high-level structure as ISO 9001 and ISO 14001. If you hold either of those standards — or are implementing them alongside ISO 45001 — a significant proportion of your management system can be integrated. An Integrated Management System covering quality, environment and health and safety is increasingly common in construction, engineering and manufacturing.
+              Typical implementation timeline: 10–16 weeks. For organisations already holding ISO 27001, integration with the existing ISMS is significantly more efficient.
             </p>
 
             <h2 className="text-2xl font-bold text-navy mt-6">Frequently asked questions</h2>
             <div className="space-y-4">
               {[
                 {
-                  q: 'What replaced OHSAS 18001?',
-                  a: 'ISO 45001:2018. OHSAS 18001 was officially withdrawn in March 2021. Certificates still referencing OHSAS 18001 are no longer to a current standard.',
+                  q: 'What is ISO 42001?',
+                  a: 'The world\'s first international standard for Artificial Intelligence Management Systems, published in December 2023. It provides a framework for governing AI activities — managing risk, ensuring transparency, and demonstrating accountability.',
                 },
                 {
-                  q: 'How is ISO 45001 different from OHSAS 18001?',
-                  a: 'ISO 45001 adopts the Annex SL structure shared by ISO 9001 and 14001, making integration easier. It places greater emphasis on leadership commitment, worker participation, and proactive risk management.',
+                  q: 'Who needs ISO 42001 certification?',
+                  a: 'Organisations that develop, deploy, or use AI systems — particularly those supplying to regulated industries, public sector buyers, or clients who are beginning to ask governance questions about AI.',
                 },
                 {
-                  q: 'Is ISO 45001 a legal requirement in the UK?',
-                  a: 'No. UK H&S law sets the legal baseline. ISO 45001 goes beyond legal compliance to provide a systematic framework for continual improvement in safety performance.',
+                  q: 'How does ISO 42001 relate to the EU AI Act?',
+                  a: 'ISO 42001 is not legally mandated by the EU AI Act, but its framework maps closely to many of the Act\'s requirements — making it an efficient route to demonstrating compliance for businesses affected by the Act.',
                 },
                 {
-                  q: 'How long does ISO 45001 certification take?',
-                  a: '10 to 16 weeks from scratch. Transition from OHSAS 18001 is typically 6 to 10 weeks as much of the underlying system already exists.',
+                  q: 'How long does ISO 42001 certification take?',
+                  a: '10 to 16 weeks typically. Organisations already holding ISO 27001 can integrate ISO 42001 more efficiently due to shared structural and documentation elements.',
                 },
                 {
-                  q: 'How much does ISO 45001 cost?',
-                  a: 'Total first-year cost is typically £5,000 to £14,000. Transition from OHSAS 18001 is typically less expensive as less new documentation is required.',
+                  q: 'How much does ISO 42001 cost?',
+                  a: 'Total first-year cost is typically £6,000 to £16,000. Organisations integrating with an existing ISO 27001 system will be at the lower end of that range.',
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="border-l-4 border-mist pl-4">
@@ -166,59 +167,57 @@ export default function ISO45001() {
             </div>
 
             <div className="pt-4">
-              <div className="mt-4 p-4 bg-mist rounded-lg">
-              <p className="text-sm font-semibold text-navy mb-2">Free resource</p>
-              <p className="text-sm text-gray-600 mb-3">Download the free ISO 45001 Certification Checklist — all seven audit areas with required items listed.</p>
-              <Link href="/iso-45001-checklist" className="text-gold text-sm font-semibold hover:underline">Download free checklist →</Link>
-            </div>
-            <div className="pt-4">
-              <Link href="/contact" className="btn-primary">Get a quote for ISO 45001 →</Link>
-            </div>
+              <Link href="/contact" className="btn-primary">Get a quote for ISO 42001 →</Link>
             </div>
           </div>
 
           <aside className="space-y-5">
             <div className="card border-t-4 border-t-gold">
-              <h3 className="font-bold text-navy mb-2 text-sm">Rob's ISO 45001 credentials</h3>
+              <h3 className="font-bold text-navy mb-2 text-sm">Rob's ISO 42001 credentials</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">
                 {[
-                  'CQI/IRCA Certified Lead Auditor — ISO 45001',
-                  'IOSH Managing Safely trained',
-                  'Experience across construction, rail, civils and manufacturing',
-                  'OHSAS 18001 to ISO 45001 transition experience',
-                  'Integrated management system (IMS) expertise',
+                  'ISO 42001 Practitioner — TRECCERT certified (Apr 2025)',
+                  'AIQI ISO/IEC 42001 qualification — UKAS accredited (Mar 2026)',
+                  'Contributor to the ISO ESG Committee',
+                  'Participant in BSI BridgeAI standards community',
+                  'Among the first independent consultants in the UK offering ISO 42001',
                 ].map(c => (
                   <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
                 ))}
               </ul>
             </div>
-            <div className="card bg-mist">
-              <h3 className="font-bold text-navy mb-2 text-sm">Still on OHSAS 18001?</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                OHSAS 18001 was withdrawn in March 2021. If your certificate still references OHSAS 18001, it is no longer to a current standard. Transitioning to ISO 45001 is typically straightforward for organisations with an existing health and safety management system.
+            <div className="card bg-navy text-white">
+              <h3 className="font-bold text-gold mb-2 text-sm">Get ahead of the curve</h3>
+              <p className="text-xs text-blue-100 leading-relaxed">
+                ISO 42001 is new enough that very few UK businesses have achieved certification. Early certification positions your organisation as a leader in responsible AI — before it becomes a basic compliance requirement.
               </p>
+            </div>
+            <div className="card border-t-4 border-t-gold">
+              <h3 className="font-bold text-navy mb-2 text-sm">Free tool</h3>
+              <p className="text-xs text-gray-600 leading-relaxed mb-3">Not sure where you'd land on cost or timeline? Answer four quick questions and get an instant day-count and cost estimate for ISO 42001.</p>
+              <Link href="/iso-readiness-assessment" className="text-gold text-xs font-semibold hover:underline">Get your estimate →</Link>
             </div>
             <div className="card">
               <h3 className="font-bold text-navy mb-2 text-sm">Related services</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">
                 {[
+                  ['ISO 27001 — Information Security', '/services/iso-27001'],
                   ['ISO 9001 — Quality', '/services/iso-9001'],
-                  ['ISO 14001 — Environmental', '/services/iso-14001'],
                   ['Get Certified — Our Process', '/get-certified'],
                 ].map(([label, href]) => (
                   <li key={href}><Link href={href} className="text-gold hover:text-gold-dark">{label} →</Link></li>
                 ))}
               </ul>
             </div>
-            <RelatedInsights tag="ISO 45001" />
+            <RelatedInsights tag="ISO 42001" />
           </aside>
         </div>
       </section>
 
       <section className="bg-gold py-10 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-xl font-bold mb-3">Ready to get ISO 45001 certified?</h2>
-          <p className="opacity-90 mb-5 text-sm">Book a free consultation. We will review your existing H&S arrangements and explain exactly what is needed — whether you are starting from scratch or transitioning from OHSAS 18001.</p>
+          <h2 className="text-xl font-bold mb-3">Interested in ISO 42001?</h2>
+          <p className="opacity-90 mb-5 text-sm">This is an emerging standard and many organisations are still at the 'what does it mean for us?' stage. Book a free conversation — no commitment required.</p>
           <Link href="/contact" className="inline-block bg-white text-gold-dark font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors">
             Book a Free Consultation
           </Link>
