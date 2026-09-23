@@ -45,6 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-gray-300">
+              <li><Link href="/iso-readiness-assessment" className="hover:text-white transition">Readiness &amp; Cost Estimator</Link></li>
               <li><Link href="/insights" className="hover:text-white transition">Insights</Link></li>
               <li><Link href="/sectors" className="hover:text-white transition">Sectors</Link></li>
               <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
