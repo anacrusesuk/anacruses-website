@@ -19,6 +19,7 @@ const STANDARDS = [
   { code: '27001', label: 'ISO 27001 — Information Security' },
   { code: '45001', label: 'ISO 45001 — Health & Safety' },
   { code: '42001', label: 'ISO 42001 — AI Management' },
+  { code: '17025', label: 'ISO 17025 — Laboratory Testing & Calibration' },
   { code: 'not_sure', label: "Not sure which standard — just know we need something" },
 ];
 
@@ -30,11 +31,21 @@ const STATUS_OPTIONS = [
 ];
 
 // Flat day rates by standard — 9001/14001/45001 (QHSE) vs 27001/42001 (information
-// security / AI), which run higher given the specialist skill involved.
+// security / AI), which run higher given the specialist skill involved. ISO 17025
+// (laboratory) sits above both, reflecting the technical specialism involved.
 const QHSE_STANDARDS = ['9001', '14001', '45001'];
 const INFOSEC_STANDARDS = ['27001', '42001'];
+const LAB_STANDARDS = ['17025'];
 const RATE_QHSE = 750;
 const RATE_INFOSEC = 850;
+const RATE_LAB = 950; // Confirmed 24 Sept 2026
+
+// A lab audit takes longer with more sites — Rob's guidance is 0.5–1 extra day per
+// additional site, hence a genuine range rather than a single figure for this tier.
+function labAuditDayRange(labSites) {
+  const extra = Math.max(0, labSites - 1);
+  return { low: 4 + extra * 0.5, high: 4 + extra * 1 };
+}
 
 const TIERS = [
   { key: 1, label: 'Audit only', days: 4 },
@@ -49,6 +60,8 @@ const TIERS = [
 function rateForStandards(standards) {
   const real = standards.filter((s) => s !== 'not_sure');
   if (real.length === 0) return null; // not sure — no rate can be shown yet
+  const usesLab = real.some((s) => LAB_STANDARDS.includes(s));
+  if (usesLab) return RATE_LAB;
   const usesInfosec = real.some((s) => INFOSEC_STANDARDS.includes(s));
   return usesInfosec ? RATE_INFOSEC : RATE_QHSE;
 }
@@ -56,6 +69,32 @@ function rateForStandards(standards) {
 function money(days, rate) {
   const fmt = (n) => '£' + n.toLocaleString('en-GB');
   return fmt(days * rate);
+}
+
+// Builds the day-count and price labels shown for one tier, handling the lab
+// audit-scaling range for tiers 1 and 3 (which include an audit component).
+function tierDisplay(tier, result) {
+  const fmt = (n) => '£' + n.toLocaleString('en-GB');
+  if (!result.rate) {
+    return { days: `${tier.days}+ days`, price: `${tier.days}+ days` };
+  }
+  if (result.isLab && (tier.key === 1 || tier.key === 3)) {
+    const { low, high } = labAuditDayRange(result.labSites);
+    const baseDays = tier.key === 3 ? 15 : 0; // Tier 3 adds the flat 15-day implementation
+    const lowTotal = baseDays + low;
+    const highTotal = baseDays + high;
+    const daysLabel = low === high
+      ? `${lowTotal}+ days at £${result.rate}/day`
+      : `${lowTotal}–${highTotal}+ days at £${result.rate}/day`;
+    const priceLabel = low === high
+      ? money(lowTotal, result.rate)
+      : `${fmt(lowTotal * result.rate)}–${fmt(highTotal * result.rate)}`;
+    return { days: daysLabel, price: priceLabel };
+  }
+  return {
+    days: `${tier.days}+ days at £${result.rate}/day`,
+    price: money(tier.days, result.rate),
+  };
 }
 
 function suggestedTierKey(standards, status) {
@@ -77,6 +116,7 @@ export default function IsoReadinessAssessment() {
   const [step, setStep] = useState(1);
   const [sector, setSector] = useState('');
   const [standards, setStandards] = useState([]);
+  const [labSites, setLabSites] = useState(1);
   const [status, setStatus] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -129,11 +169,12 @@ export default function IsoReadinessAssessment() {
           standards,
           status,
           suggestedTier: suggested,
+          labSites: standards.includes('17025') ? labSites : null,
         }),
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.error || 'Unknown error');
-      setResult({ suggested, rate });
+      setResult({ suggested, rate, isLab: standards.includes('17025'), labSites });
       setStep(5);
     } catch (err) {
       setError('Something went wrong — please try again, or email rob.pragnell@anacruses.co.uk directly.');
@@ -248,6 +289,23 @@ export default function IsoReadinessAssessment() {
                   </label>
                 ))}
               </div>
+
+              {standards.includes('17025') && (
+                <div className="mt-4 px-4 py-3 rounded border border-gold bg-mist">
+                  <label className="block text-sm font-medium text-navy mb-1">
+                    How many lab sites or locations does this cover?
+                  </label>
+                  <p className="text-gray-500 text-xs mb-2">A lab audit takes a bit longer with more sites — this refines your estimate.</p>
+                  <input
+                    type="number"
+                    min={1}
+                    value={labSites}
+                    onChange={(e) => setLabSites(Math.max(1, parseInt(e.target.value, 10) || 1))}
+                    className="w-24 border border-gray-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-gold"
+                  />
+                </div>
+              )}
+
               <div className="mt-8 flex justify-between">
                 <button type="button" onClick={() => setStep(1)} className="text-navy text-sm font-medium hover:underline">
                   ← Back
@@ -382,32 +440,44 @@ export default function IsoReadinessAssessment() {
                 </p>
 
                 <div className="space-y-3">
-                  {TIERS.map((t) => (
-                    <div
-                      key={t.key}
-                      className={`flex items-center justify-between px-4 py-3 rounded border ${
-                        result.suggested === t.key ? 'border-gold bg-mist' : 'border-gray-200'
-                      }`}
-                    >
-                      <div>
-                        <p className="font-bold text-navy text-sm">
-                          {t.label}
-                          {result.suggested === t.key && (
-                            <span className="ml-2 text-gold text-xs font-semibold uppercase tracking-wide">
-                              Likely fit
-                            </span>
-                          )}
-                        </p>
-                        <p className="text-gray-500 text-xs">
-                          {t.days}+ days{result.rate ? ` at £${result.rate}/day` : ''}
+                  {TIERS.map((t) => {
+                    const display = tierDisplay(t, result);
+                    return (
+                      <div
+                        key={t.key}
+                        className={`flex items-center justify-between px-4 py-3 rounded border ${
+                          result.suggested === t.key ? 'border-gold bg-mist' : 'border-gray-200'
+                        }`}
+                      >
+                        <div>
+                          <p className="font-bold text-navy text-sm">
+                            {t.label}
+                            {result.suggested === t.key && (
+                              <span className="ml-2 text-gold text-xs font-semibold uppercase tracking-wide">
+                                Likely fit
+                              </span>
+                            )}
+                          </p>
+                          <p className="text-gray-500 text-xs">{display.days}</p>
+                        </div>
+                        <p className="font-bold text-navy text-sm whitespace-nowrap ml-4">
+                          {display.price}
                         </p>
                       </div>
-                      <p className="font-bold text-navy text-sm whitespace-nowrap ml-4">
-                        {result.rate ? money(t.days, result.rate) : `${t.days}+ days`}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
+
+                {result.isLab && (
+                  <div className="mt-3 px-4 py-3 rounded border border-gray-200 bg-mist">
+                    <p className="font-bold text-navy text-sm">Witnessed assessments</p>
+                    <p className="text-gray-600 text-xs mt-1">
+                      Priced individually, based on the number of labs, test methods and
+                      individuals involved — this varies too much to estimate here.
+                      We'll work this out together on the call.
+                    </p>
+                  </div>
+                )}
 
                 {result.suggested === null && (
                   <p className="text-sm text-gray-600 mt-4">

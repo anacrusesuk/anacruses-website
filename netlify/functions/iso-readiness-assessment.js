@@ -12,10 +12,12 @@ function escapeHtml(str) {
 const ASSESSMENT_LIST_ID = 10;
 
 // Flat day rates by standard — 9001/14001/45001 (QHSE) vs 27001/42001 (information
-// security / AI). Mirrors the same logic in the page component.
+// security / AI) vs 17025 (laboratory). Mirrors the same logic in the page component.
 const INFOSEC_STANDARDS = ['27001', '42001'];
+const LAB_STANDARDS = ['17025'];
 const RATE_QHSE = 750;
 const RATE_INFOSEC = 850;
+const RATE_LAB = 950; // Confirmed 24 Sept 2026
 
 const TIER_INFO = {
   1: { label: 'Audit only', days: 4 },
@@ -27,6 +29,8 @@ const TIER_INFO = {
 function rateForStandards(standards) {
   const real = (standards || []).filter((s) => s !== 'not_sure');
   if (real.length === 0) return null;
+  const usesLab = real.some((s) => LAB_STANDARDS.includes(s));
+  if (usesLab) return RATE_LAB;
   const usesInfosec = real.some((s) => INFOSEC_STANDARDS.includes(s));
   return usesInfosec ? RATE_INFOSEC : RATE_QHSE;
 }
@@ -34,6 +38,13 @@ function rateForStandards(standards) {
 function money(days, rate) {
   const fmt = (n) => '£' + n.toLocaleString('en-GB');
   return fmt(days * rate);
+}
+
+// Lab audits take longer with more sites — 0.5–1 extra day per additional site.
+function labAuditDayRange(labSites) {
+  const sites = labSites || 1;
+  const extra = Math.max(0, sites - 1);
+  return { low: 4 + extra * 0.5, high: 4 + extra * 1 };
 }
 
 exports.handler = async function (event) {
@@ -116,6 +127,8 @@ exports.handler = async function (event) {
   const standards = Array.isArray(body.standards) ? body.standards.slice(0, 10) : [];
   const status = body.status ? String(body.status).slice(0, 50) : '';
   const suggestedTier = [1, 2, 3, 4].includes(body.suggestedTier) ? body.suggestedTier : null;
+  const labSites = Number.isInteger(body.labSites) && body.labSites > 0 ? body.labSites : 1;
+  const isLab = standards.includes('17025');
 
   const safeSector = escapeHtml(sector);
   const safeStandards = escapeHtml(standards.join(', '));
@@ -152,12 +165,28 @@ exports.handler = async function (event) {
 
   // Build the tier table for the result email. If no real standard was selected
   // (only "not sure"), show day counts without a cost — no rate can be shown yet.
+  // For lab work (17025), tiers 1 and 3 show a day/price range rather than a single
+  // figure, since audit length genuinely varies with the number of sites involved.
   const emailRate = rateForStandards(standards);
+  const fmtMoney = (n) => '£' + n.toLocaleString('en-GB');
   const tierRowsHtml = Object.entries(TIER_INFO)
     .map(([key, t]) => {
-      const isSuggested = Number(key) === suggestedTier;
-      const rateLine = emailRate ? `${t.days}+ days at £${emailRate}/day` : `${t.days}+ days`;
-      const costCell = emailRate ? money(t.days, emailRate) : '—';
+      const tierKey = Number(key);
+      const isSuggested = tierKey === suggestedTier;
+      let rateLine = emailRate ? `${t.days}+ days at £${emailRate}/day` : `${t.days}+ days`;
+      let costCell = emailRate ? money(t.days, emailRate) : '—';
+      if (emailRate && isLab && (tierKey === 1 || tierKey === 3)) {
+        const { low, high } = labAuditDayRange(labSites);
+        const baseDays = tierKey === 3 ? 15 : 0;
+        const lowTotal = baseDays + low;
+        const highTotal = baseDays + high;
+        rateLine = low === high
+          ? `${lowTotal}+ days at £${emailRate}/day`
+          : `${lowTotal}–${highTotal}+ days at £${emailRate}/day`;
+        costCell = low === high
+          ? money(lowTotal, emailRate)
+          : `${fmtMoney(lowTotal * emailRate)}–${fmtMoney(highTotal * emailRate)}`;
+      }
       return `
     <tr>
       <td style="padding:10px 12px;border-bottom:1px solid #e2e8f0;${isSuggested ? 'background:#F5F7FA;' : ''}">
@@ -170,6 +199,9 @@ exports.handler = async function (event) {
     </tr>`;
     })
     .join('');
+  const witnessedAssessmentsHtml = isLab
+    ? `<p style="margin:0 0 16px;padding:12px 16px;background:#F5F7FA;border-radius:4px;color:#2D3748;font-size:14px;line-height:1.6;"><strong style="color:#1F4E79;">Witnessed assessments</strong><br>Priced individually, based on the number of labs, test methods and individuals involved — this varies too much to estimate here. We'll work this out together on the call.</p>`
+    : '';
 
   // 2. Send the estimate email to the lead
   try {
@@ -202,6 +234,7 @@ exports.handler = async function (event) {
             <table cellpadding="0" cellspacing="0" style="width:100%;margin:0 0 20px;border-collapse:collapse;">
               ${tierRowsHtml}
             </table>
+            ${witnessedAssessmentsHtml}
             <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">This is a starting point, not a quote — the right tier for you depends on details a quick call sorts out far better than a form ever could.</p>
             <table cellpadding="0" cellspacing="0" style="margin:8px 0 24px;">
               <tr>
