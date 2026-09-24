@@ -177,11 +177,10 @@ export default function ISO42001() {
               <ul className="text-xs text-gray-600 space-y-1.5">
                 {[
                   'TRECCERT certified ISO/IEC 42001 Lead Auditor',
-                  'ISO 42001 Lead Implementer',
-                  'AIQI ISO/IEC 42001 qualification — UKAS accredited (Mar 2026)',
+                  'ISO 42001 Practitioner',
                   'Contributor to the ISO ESG Committee',
                   'Participant in BSI BridgeAI standards community',
-                  'Among the first independent consultants in the UK offering ISO 42001',
+                  'Delivering ISO 42001 consultancy since 2024',
                 ].map(c => (
                   <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
                 ))}

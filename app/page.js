@@ -187,7 +187,7 @@ export default function Home() {
             <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Meet the consultant</p>
             <h2 className="text-3xl font-bold mb-4">Rob Pragnell</h2>
             <p className="text-blue-100 leading-relaxed mb-4 max-w-2xl">
-              Rob is a CQI/IRCA and TRECCERT certified Lead Auditor across ISO 9001, 14001, 27001, 45001 and 42001. With over 20 years of experience implementing and auditing ISO standards across the UK, he is also a TRECCERT ISO Standards Trainer and an ISO 42001 Lead Implementer.
+              Rob is a CQI/IRCA and TRECCERT certified Lead Auditor across ISO 9001, 14001, 27001, 45001 and 42001. With over 20 years of experience implementing and auditing ISO standards across the UK, he is also a TRECCERT ISO Standards Trainer and an ISO 42001 Practitioner.
             </p>
             <p className="text-blue-100 leading-relaxed mb-4 max-w-2xl">
               Rob works directly with every Anacruses client — you will always deal with the expert, not a junior consultant or a subcontractor.
