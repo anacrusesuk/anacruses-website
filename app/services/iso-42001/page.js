@@ -176,7 +176,8 @@ export default function ISO42001() {
               <h3 className="font-bold text-navy mb-2 text-sm">Rob's ISO 42001 credentials</h3>
               <ul className="text-xs text-gray-600 space-y-1.5">
                 {[
-                  'ISO 42001 Practitioner — TRECCERT certified (Apr 2025)',
+                  'TRECCERT certified ISO/IEC 42001 Lead Auditor',
+                  'ISO 42001 Lead Implementer',
                   'AIQI ISO/IEC 42001 qualification — UKAS accredited (Mar 2026)',
                   'Contributor to the ISO ESG Committee',
                   'Participant in BSI BridgeAI standards community',

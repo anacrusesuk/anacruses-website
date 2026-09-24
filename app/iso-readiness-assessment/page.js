@@ -29,8 +29,12 @@ const STATUS_OPTIONS = [
   { value: 'not_sure', label: "Not sure — that's part of what I want to find out" },
 ];
 
-const DAY_RATE_LOW = 650;
-const DAY_RATE_HIGH = 750;
+// Flat day rates by standard — 9001/14001/45001 (QHSE) vs 27001/42001 (information
+// security / AI), which run higher given the specialist skill involved.
+const QHSE_STANDARDS = ['9001', '14001', '45001'];
+const INFOSEC_STANDARDS = ['27001', '42001'];
+const RATE_QHSE = 750;
+const RATE_INFOSEC = 850;
 
 const TIERS = [
   { key: 1, label: 'Audit only', days: 4 },
@@ -39,11 +43,19 @@ const TIERS = [
   { key: 4, label: 'Integrated, multi-standard', days: 25 },
 ];
 
-function moneyRange(days) {
-  const low = days * DAY_RATE_LOW;
-  const high = days * DAY_RATE_HIGH;
+// Determines the applicable day rate from the standards actually selected. If any
+// information-security/AI standard is involved, that rate applies — mixing in
+// higher-value work moves the whole engagement to that rate, not just part of it.
+function rateForStandards(standards) {
+  const real = standards.filter((s) => s !== 'not_sure');
+  if (real.length === 0) return null; // not sure — no rate can be shown yet
+  const usesInfosec = real.some((s) => INFOSEC_STANDARDS.includes(s));
+  return usesInfosec ? RATE_INFOSEC : RATE_QHSE;
+}
+
+function money(days, rate) {
   const fmt = (n) => '£' + n.toLocaleString('en-GB');
-  return `${fmt(low)}–${fmt(high)}`;
+  return fmt(days * rate);
 }
 
 function suggestedTierKey(standards, status) {
@@ -102,6 +114,7 @@ export default function IsoReadinessAssessment() {
     }
 
     const suggested = suggestedTierKey(standards, status);
+    const rate = rateForStandards(standards);
     setSubmitting(true);
 
     try {
@@ -120,7 +133,7 @@ export default function IsoReadinessAssessment() {
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.error || 'Unknown error');
-      setResult({ suggested });
+      setResult({ suggested, rate });
       setStep(5);
     } catch (err) {
       setError('Something went wrong — please try again, or email rob.pragnell@anacruses.co.uk directly.');
@@ -159,7 +172,7 @@ export default function IsoReadinessAssessment() {
           <p className="text-gold font-semibold text-sm uppercase tracking-widest mb-3">Free Tool</p>
           <h1 className="text-4xl font-bold mb-4 max-w-2xl">ISO Readiness &amp; Cost Estimator</h1>
           <p className="text-xl text-blue-100 max-w-2xl">
-            Four quick questions. A rough day-count and cost range for your certification, worked out
+            Four quick questions. A rough day-count and cost for your certification, worked out
             the same way we scope every real engagement — refined on a call, not a sales pitch.
           </p>
         </div>
@@ -295,7 +308,7 @@ export default function IsoReadinessAssessment() {
           {step === 4 && (
             <form onSubmit={handleSubmit} className="card" noValidate>
               <h2 className="text-xl font-bold text-navy mb-1">Where should we send your estimate?</h2>
-              <p className="text-gray-500 text-sm mb-6">Your rough day-count and cost range, worked out from your answers — sent immediately.</p>
+              <p className="text-gray-500 text-sm mb-6">Your rough day-count and cost, worked out from your answers — sent immediately.</p>
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-navy mb-1">
@@ -363,7 +376,9 @@ export default function IsoReadinessAssessment() {
                   ✓ Your estimate is on its way to your inbox
                 </h2>
                 <p className="text-gray-500 text-sm mb-6">
-                  Here's the same range, right on the page — refined properly once we actually talk.
+                  {result.rate
+                    ? "Here's the same figures, right on the page — refined properly once we actually talk."
+                    : "Since you weren't sure which standard applies yet, here's the day count for each tier — exact cost depends on which standard it turns out to be."}
                 </p>
 
                 <div className="space-y-3">
@@ -383,9 +398,13 @@ export default function IsoReadinessAssessment() {
                             </span>
                           )}
                         </p>
-                        <p className="text-gray-500 text-xs">{t.days}+ days at £{DAY_RATE_LOW}–£{DAY_RATE_HIGH}/day</p>
+                        <p className="text-gray-500 text-xs">
+                          {t.days}+ days{result.rate ? ` at £${result.rate}/day` : ''}
+                        </p>
                       </div>
-                      <p className="font-bold text-navy text-sm whitespace-nowrap ml-4">{moneyRange(t.days)}</p>
+                      <p className="font-bold text-navy text-sm whitespace-nowrap ml-4">
+                        {result.rate ? money(t.days, result.rate) : `${t.days}+ days`}
+                      </p>
                     </div>
                   ))}
                 </div>

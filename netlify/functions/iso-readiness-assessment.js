@@ -8,15 +8,14 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-// IMPORTANT: this list ID is a placeholder. Anacruses's existing Brevo lists (per
-// the other checklist functions) run 6/7/8 for the ISO 27001/9001/45001 checklists.
-// Create a new Brevo list for mini-assessment leads (e.g. "ISO Readiness Assessment")
-// and replace this number with its real ID before deploying — sending to a
-// nonexistent or wrong list will not error loudly, it will just misfile the lead.
-const ASSESSMENT_LIST_ID = 10; // Verified live: "ISO Readiness Assessment" list in Brevo
+// The "ISO Readiness Assessment" list in Brevo. Confirmed live at ID 10.
+const ASSESSMENT_LIST_ID = 10;
 
-const DAY_RATE_LOW = 650;
-const DAY_RATE_HIGH = 750;
+// Flat day rates by standard — 9001/14001/45001 (QHSE) vs 27001/42001 (information
+// security / AI). Mirrors the same logic in the page component.
+const INFOSEC_STANDARDS = ['27001', '42001'];
+const RATE_QHSE = 750;
+const RATE_INFOSEC = 850;
 
 const TIER_INFO = {
   1: { label: 'Audit only', days: 4 },
@@ -25,9 +24,16 @@ const TIER_INFO = {
   4: { label: 'Integrated, multi-standard', days: 25 },
 };
 
-function moneyRange(days) {
+function rateForStandards(standards) {
+  const real = (standards || []).filter((s) => s !== 'not_sure');
+  if (real.length === 0) return null;
+  const usesInfosec = real.some((s) => INFOSEC_STANDARDS.includes(s));
+  return usesInfosec ? RATE_INFOSEC : RATE_QHSE;
+}
+
+function money(days, rate) {
   const fmt = (n) => '£' + n.toLocaleString('en-GB');
-  return `${fmt(days * DAY_RATE_LOW)}\u2013${fmt(days * DAY_RATE_HIGH)}`;
+  return fmt(days * rate);
 }
 
 exports.handler = async function (event) {
@@ -144,18 +150,22 @@ exports.handler = async function (event) {
     return { statusCode: 500, body: JSON.stringify({ error: 'Network error saving contact' }) };
   }
 
-  // Build the tier table for the result email
+  // Build the tier table for the result email. If no real standard was selected
+  // (only "not sure"), show day counts without a cost — no rate can be shown yet.
+  const emailRate = rateForStandards(standards);
   const tierRowsHtml = Object.entries(TIER_INFO)
     .map(([key, t]) => {
       const isSuggested = Number(key) === suggestedTier;
+      const rateLine = emailRate ? `${t.days}+ days at £${emailRate}/day` : `${t.days}+ days`;
+      const costCell = emailRate ? money(t.days, emailRate) : '—';
       return `
     <tr>
       <td style="padding:10px 12px;border-bottom:1px solid #e2e8f0;${isSuggested ? 'background:#F5F7FA;' : ''}">
         <strong style="color:#1F4E79;">${t.label}</strong>${isSuggested ? ' <span style="color:#B8860B;font-size:11px;font-weight:bold;text-transform:uppercase;">Likely fit</span>' : ''}<br>
-        <span style="color:#718096;font-size:12px;">${t.days}+ days at £${DAY_RATE_LOW}\u2013£${DAY_RATE_HIGH}/day</span>
+        <span style="color:#718096;font-size:12px;">${rateLine}</span>
       </td>
       <td style="padding:10px 12px;border-bottom:1px solid #e2e8f0;text-align:right;white-space:nowrap;${isSuggested ? 'background:#F5F7FA;' : ''}">
-        <strong style="color:#1F4E79;">${moneyRange(t.days)}</strong>
+        <strong style="color:#1F4E79;">${costCell}</strong>
       </td>
     </tr>`;
     })
@@ -188,7 +198,7 @@ exports.handler = async function (event) {
         <tr>
           <td style="background:#ffffff;padding:32px;">
             <p style="margin:0 0 16px;color:#2D3748;font-size:15px;line-height:1.6;">${name ? `Hi ${safeName},` : 'Hi,'}</p>
-            <p style="margin:0 0 20px;color:#2D3748;font-size:15px;line-height:1.6;">Based on what you told us${safeCompany ? ` about ${safeCompany}` : ''}, here's a rough day-count and cost range for each type of engagement — the same reference we use to scope every real project.</p>
+            <p style="margin:0 0 20px;color:#2D3748;font-size:15px;line-height:1.6;">Based on what you told us${safeCompany ? ` about ${safeCompany}` : ''}, here's a rough day-count and cost for each type of engagement — the same reference we use to scope every real project.</p>
             <table cellpadding="0" cellspacing="0" style="width:100%;margin:0 0 20px;border-collapse:collapse;">
               ${tierRowsHtml}
             </table>

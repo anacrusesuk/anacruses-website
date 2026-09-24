@@ -111,7 +111,7 @@ export default function InsightArticle({ params }) {
                   <p className="text-gray-500 text-xs">CQI Lead Auditor · 20+ years</p>
                 </div>
               </div>
-              <p className="text-gray-600 text-xs leading-relaxed">CQI & TRECCERT certified Lead Auditor across ISO 9001, 14001, 27001 & 45001. ISO 42001 Practitioner.</p>
+              <p className="text-gray-600 text-xs leading-relaxed">CQI/IRCA & TRECCERT certified Lead Auditor across ISO 9001, 14001, 27001, 45001 & 42001.</p>
               <Link href="/about" className="text-gold text-xs hover:underline mt-2 inline-block">Full biography →</Link>
             </div>
 
