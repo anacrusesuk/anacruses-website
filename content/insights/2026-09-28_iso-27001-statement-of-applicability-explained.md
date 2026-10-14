@@ -3,6 +3,8 @@ title: "The ISO 27001 Statement of Applicability: What It Actually Needs to Show
 slug: "iso-27001-statement-of-applicability-explained"
 date: "2026-09-28"
 standard: "ISO 27001"
+tag: "ISO 27001"
+excerpt: "The Statement of Applicability is one of the first documents an ISO 27001 auditor asks for. Here is what it needs to show, and where organisations go wrong."
 ---
 
 The Statement of Applicability is the document every ISO 27001 auditor turns to first, and the one most businesses get wrong. It's not a checklist you tick and file away. It's supposed to show, control by control, what you've implemented, what you haven't, and why. Get that reasoning right and the rest of your audit gets a lot easier.
