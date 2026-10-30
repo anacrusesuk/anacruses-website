@@ -53,7 +53,7 @@ export default function ISO14001() {
                 name: 'What is the difference between ISO 14001:2015 and ISO 14001:2026?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'ISO 14001:2026 is currently in development. The revision is expected to strengthen requirements around climate change, circular economy, and biodiversity. Organisations certified to ISO 14001:2015 will have a transition period after publication before the new version becomes mandatory.',
+                  text: 'ISO 14001:2026 was published in April 2026. It adds a new Clause 6.3 on change management, broadens environmental context to include biodiversity, pollution and resource availability, and builds in the 2024 climate change amendment. Certificates to ISO 14001:2015 remain valid during a transition period of around three years.',
                 },
               },
             ],
@@ -77,6 +77,13 @@ export default function ISO14001() {
       <section className="py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
+
+            <div className="card border-l-4 border-l-gold">
+              <p className="text-sm text-gray-700">
+                <strong className="text-navy">ISO 14001:2026 is now published.</strong> Certificates to the 2015 edition remain valid during the transition period.{' '}
+                <Link href="/services/iso-14001-2026" className="text-gold hover:underline">See the ISO 14001:2026 page →</Link>
+              </p>
+            </div>
 
             <p className="text-gray-600 leading-relaxed border-l-4 border-gold pl-4 py-1">
               ISO 14001:2015 is the international standard for Environmental Management Systems. It provides a framework for identifying and controlling the environmental impacts of your operations and for demonstrating environmental responsibility to clients, supply chains, and public sector buyers. UK certification typically takes 10 to 16 weeks for an SME.
@@ -154,7 +161,7 @@ export default function ISO14001() {
                 },
                 {
                   q: 'What is changing in ISO 14001:2026?',
-                  a: 'The revision is expected to strengthen requirements around climate change, circular economy, and biodiversity. Certified organisations will have a transition period after publication.',
+                  a: 'ISO 14001:2026 was published in April 2026. It adds a new change management clause (6.3), broadens environmental context to include biodiversity, pollution and resource availability, and builds in the 2024 climate change amendment. 2015 certificates stay valid during the transition period.',
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="border-l-4 border-mist pl-4">

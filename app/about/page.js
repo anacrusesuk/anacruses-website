@@ -20,8 +20,8 @@ const qualifications = [
 ];
 
 const standards = [
-  ['ISO 9001:2015', 'Quality Management Systems'],
-  ['ISO 14001:2015', 'Environmental Management Systems'],
+  ['ISO 9001:2015 / 2026', 'Quality Management Systems'],
+  ['ISO 14001:2015 / 2026', 'Environmental Management Systems'],
   ['ISO 27001:2022', 'Information Security Management Systems'],
   ['ISO 45001:2018', 'Occupational Health and Safety'],
   ['ISO 42001:2023', 'Artificial Intelligence Management Systems'],
