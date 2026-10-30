@@ -78,6 +78,13 @@ export default function ISO9001() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
           <div className="md:col-span-2 space-y-5 text-gray-700 leading-relaxed">
 
+            <div className="card border-l-4 border-l-gold">
+              <p className="text-sm text-gray-700">
+                <strong className="text-navy">ISO 9001:2026 is now published.</strong> Certificates to the 2015 edition remain valid during the transition period.{' '}
+                <Link href="/services/iso-9001-2026" className="text-gold hover:underline">See the ISO 9001:2026 page →</Link>
+              </p>
+            </div>
+
             <p className="text-gray-600 leading-relaxed border-l-4 border-gold pl-4 py-1">
               ISO 9001:2015 is the international standard for Quality Management Systems, adopted by over one million organisations worldwide. UK businesses pursue ISO 9001 certification to meet supply chain requirements, win public sector contracts, and demonstrate quality assurance to clients. Certification typically takes 8 to 16 weeks for a UK SME and costs £5,000 to £15,000 in total.
             </p>
@@ -143,8 +150,8 @@ export default function ISO9001() {
                   a: 'Yes. ISO 9001 scales to any size. A five-person company can achieve full certification with documentation proportionate to its complexity.',
                 },
                 {
-                  q: 'What is the difference between ISO 9001:2015 and the proposed 2026 revision?',
-                  a: 'ISO 9001:2026 is currently in development. Early drafts suggest greater emphasis on resilience, digital information, and sustainability. Organisations certified to 2015 will have a transition period — likely three years — after publication.',
+                  q: 'What is the difference between ISO 9001:2015 and ISO 9001:2026?',
+                  a: 'ISO 9001:2026 was published in September 2026. The changes are targeted: climate change in context, quality culture and ethics in leadership, a restructured risk and opportunity clause, and broader awareness requirements. Certificates to 2015 stay valid during a transition period of around three years. See our ISO 9001:2026 page for detail.',
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="border-l-4 border-mist pl-4">

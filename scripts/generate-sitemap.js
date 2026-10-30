@@ -20,6 +20,8 @@ const STATIC_ROUTES = [
   { path: '/insights/',                 priority: '0.9', changefreq: 'weekly'  },
   { path: '/services/iso-9001/',        priority: '0.9', changefreq: 'monthly' },
   { path: '/services/iso-14001/',       priority: '0.9', changefreq: 'monthly' },
+  { path: '/services/iso-9001-2026/',   priority: '0.9', changefreq: 'monthly' },
+  { path: '/services/iso-14001-2026/',  priority: '0.9', changefreq: 'monthly' },
   { path: '/services/iso-27001/',       priority: '0.9', changefreq: 'monthly' },
   { path: '/services/iso-45001/',       priority: '0.9', changefreq: 'monthly' },
   { path: '/services/iso-42001/',       priority: '0.9', changefreq: 'monthly' },

@@ -6,8 +6,8 @@ export const metadata = {
 };
 
 const services = [
-  { std: 'ISO 9001', title: 'Quality Management', desc: 'The foundation of supply chain compliance. Required by most large buyers and public sector contracts.', href: '/services/iso-9001', icon: '✓' },
-  { std: 'ISO 14001', title: 'Environmental Management', desc: 'Demonstrate your environmental responsibility and win contracts where sustainability is assessed.', href: '/services/iso-14001', icon: '🌿' },
+  { std: 'ISO 9001', title: 'Quality Management', desc: 'The foundation of supply chain compliance. Required by most large buyers and public sector contracts. 2026 edition now published.', href: '/services/iso-9001', icon: '✓' },
+  { std: 'ISO 14001', title: 'Environmental Management', desc: 'Demonstrate your environmental responsibility and win contracts where sustainability is assessed. 2026 edition now published.', href: '/services/iso-14001', icon: '🌿' },
   { std: 'ISO 27001', title: 'Information Security', desc: 'Mandatory in IT, finance and healthcare supply chains. Protect your data and prove it to clients.', href: '/services/iso-27001', icon: '🔒' },
   { std: 'ISO 45001', title: 'Health & Safety', desc: 'The international replacement for OHSAS 18001. Required by construction, engineering and facilities sectors.', href: '/services/iso-45001', icon: '⚠' },
   { std: 'ISO 42001', title: 'Artificial Intelligence', desc: 'The new frontier. Build trust in your AI systems with the world\'s first international AI management standard.', href: '/services/iso-42001', icon: '🤖' },

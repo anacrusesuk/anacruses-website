@@ -35,6 +35,8 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link href="/services/iso-9001" className="hover:text-white transition">ISO 9001</Link></li>
               <li><Link href="/services/iso-14001" className="hover:text-white transition">ISO 14001</Link></li>
+              <li><Link href="/services/iso-9001-2026" className="hover:text-white transition">ISO 9001:2026</Link></li>
+              <li><Link href="/services/iso-14001-2026" className="hover:text-white transition">ISO 14001:2026</Link></li>
               <li><Link href="/services/iso-27001" className="hover:text-white transition">ISO 27001</Link></li>
               <li><Link href="/services/iso-45001" className="hover:text-white transition">ISO 45001</Link></li>
               <li><Link href="/services/iso-42001" className="hover:text-white transition">ISO 42001</Link></li>

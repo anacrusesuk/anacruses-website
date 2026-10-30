@@ -5,6 +5,8 @@ import Link from 'next/link';
 const services = [
   { label: 'ISO 9001 — Quality',              href: '/services/iso-9001' },
   { label: 'ISO 14001 — Environmental',        href: '/services/iso-14001' },
+  { label: 'ISO 9001:2026 — Transition',       href: '/services/iso-9001-2026' },
+  { label: 'ISO 14001:2026 — Transition',      href: '/services/iso-14001-2026' },
   { label: 'ISO 27001 — Information Security', href: '/services/iso-27001' },
   { label: 'ISO 45001 — Health & Safety',      href: '/services/iso-45001' },
   { label: 'ISO 42001 — AI Management',        href: '/services/iso-42001' },
