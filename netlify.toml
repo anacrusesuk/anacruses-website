@@ -79,6 +79,11 @@
   status = 301
 
 [[redirects]]
+  from = "/iso-ukas-auditing"
+  to = "/services/ukas-laboratory/"
+  status = 301
+
+[[redirects]]
   from = "/business-risk-management"
   to = "/about/"
   status = 301
