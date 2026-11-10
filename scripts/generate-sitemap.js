@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://www.anacruses.co.uk';
+const BASE_URL = 'https://anacruses.co.uk';
 const TODAY = new Date().toISOString().split('T')[0];
 
 const STATIC_ROUTES = [

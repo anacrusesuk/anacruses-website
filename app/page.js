@@ -79,7 +79,7 @@ export default function Home() {
           "@type": "ProfessionalService",
           "name": "Anacruses Associates Ltd",
           "description": "Expert ISO consultancy for UK businesses. CQI/IRCA certified Lead Auditor.",
-          "url": "https://www.anacruses.co.uk",
+          "url": "https://anacruses.co.uk",
           "telephone": "07792259840",
           "email": "assurance@anacruses.co.uk",
           "address": { "@type": "PostalAddress", "addressRegion": "Hertfordshire", "addressCountry": "GB" },

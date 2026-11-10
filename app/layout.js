@@ -5,7 +5,7 @@ import CookieBanner from '../components/CookieBanner';
 import Script from 'next/script';
 
 export const metadata = {
-  metadataBase: new URL('https://www.anacruses.co.uk'),
+  metadataBase: new URL('https://anacruses.co.uk'),
   title: { default: 'Anacruses — ISO Consultant UK', template: '%s | Anacruses' },
   description: 'Expert ISO consultancy for UK businesses. CQI/IRCA & TRECCERT certified Lead Auditor — ISO 9001, 14001, 27001, 45001 & 42001. 20+ years experience.',
   openGraph: {
@@ -20,11 +20,11 @@ const schemaOrg = {
   '@graph': [
     {
       '@type': 'ProfessionalService',
-      '@id': 'https://www.anacruses.co.uk/#business',
+      '@id': 'https://anacruses.co.uk/#business',
       'name': 'Anacruses Associates Ltd',
-      'url': 'https://www.anacruses.co.uk',
-      'logo': 'https://www.anacruses.co.uk/images/logo.png',
-      'image': 'https://www.anacruses.co.uk/images/logo.png',
+      'url': 'https://anacruses.co.uk',
+      'logo': 'https://anacruses.co.uk/images/logo.png',
+      'image': 'https://anacruses.co.uk/images/logo.png',
       'description': 'Expert ISO consultancy for UK businesses. CQI & TRECCERT certified Lead Auditor.',
       'address': {
         '@type': 'PostalAddress',
@@ -39,13 +39,13 @@ const schemaOrg = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://www.anacruses.co.uk/#breadcrumbs',
+      '@id': 'https://anacruses.co.uk/#breadcrumbs',
       'itemListElement': [
         {
           '@type': 'ListItem',
           'position': 1,
           'name': 'Home',
-          'item': 'https://www.anacruses.co.uk',
+          'item': 'https://anacruses.co.uk',
         },
       ],
     },
